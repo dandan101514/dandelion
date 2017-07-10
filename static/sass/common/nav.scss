@@ -1,0 +1,72 @@
+// 导航样式  Start
+
+.top {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 999;
+  height: 130px;
+  background: #fff;
+  .menu {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    padding-left: 60px;
+    h1.logo {
+      float: left;
+      height: 130px;
+      line-height: 130px;
+      font-size: 16px;
+      font-weight: 700;
+      a {
+        display: inline-block;
+        width: 75px;
+        height: 60px;
+        background: url("../../images/logo.png") center center no-repeat;
+        position: relative;
+        top: 20px;
+      }
+    }
+    .nav {
+      float: left;
+      height: 130px;
+      line-height: 130px;
+      margin-left: 40px;
+      li {
+        display: inline-block;
+        min-width: 105px;
+        padding: 0 20px;
+        a {
+          display: inline-block;
+          height: 35px;
+          line-height: 35px;
+          font-size: 16px;
+          font-weight: 700;
+          padding: 0 20px !important;
+          background: none !important;
+          &:hover {
+            color: #399bff;
+            border-bottom: 2px solid #399bff;
+          }
+        }
+      }
+    }
+    .change_language {
+      display: inline-block;
+      float: left;
+      height: 30px;
+      line-height: 30px;
+      font-size: 18px;
+      font-weight: 700;
+      cursor: pointer;
+      margin-left: 60px;
+      position: relative;
+      top: 50px;
+      &:hover {
+        color: #399bff;
+      }
+    }
+  }
+}
+// 导航样式  Over
