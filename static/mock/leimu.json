@@ -1,0 +1,112 @@
+{
+    "code": "1000",
+    "message": "SUCCESS",
+    "obj": {
+        "root": {
+            "data": {
+                "nodeId": "",
+                "parentId": null,
+                "text": null,
+                "showFlag": null,
+                "level": 1,
+                "goodsCount": null
+            },
+            "childList": [{
+                "data": {
+                    "nodeId": "00001",
+                    "parentId": "",
+                    "text": "食品类",
+                    "showFlag": null, 
+                    "level": 1,
+                    "goodsCount": 0 ,
+                },
+                "childList": [{
+                    "data": {
+                        "nodeId": "10001",
+                        "parentId": "00001",
+                        "text": "肉禽蛋品",
+                        "showFlag": 1,
+                        "level": 2,
+                        "goodsCount": 4
+                    },
+                    "childList": [{
+                        "data": {
+                            "nodeId": "10003",
+                            "parentId": "10001",
+                            "text": "土鸡蛋",
+                            "showFlag": 1,
+                            "level": 3,
+                            "goodsCount": 3
+                        },
+                        "childList": []
+                    }, {
+                        "data": {
+                            "nodeId": "10004",
+                            "parentId": "10001",
+                            "text": "普通鸡蛋",
+                            "showFlag": 1,
+                            "level": 3,
+                            "goodsCount": 1
+                        },
+                        "childList": []
+                    }, {
+                        "data": {
+                            "nodeId": "10005",
+                            "parentId": "10001",
+                            "text": "咸鸡蛋",
+                            "showFlag": 1,
+                            "level": 3,
+                            "goodsCount": 0
+                        },
+                        "childList": []
+                    }]
+                }, {
+                    "data": {
+                        "nodeId": "10002",
+                        "parentId": "00001",
+                        "text": "新鲜水果",
+                        "showFlag": 1,
+                        "level": 2,
+                        "goodsCount": 0
+                    },
+                    "childList": [{
+                        "data": {
+                            "nodeId": "10006",
+                            "parentId": "10002",
+                            "text": "苹果",
+                            "showFlag": 1,
+                            "level": 3,
+                            "goodsCount": 2
+                        },
+                        "childList": []
+                    }, {
+                        "data": {
+                            "nodeId": "10007",
+                            "parentId": "10002",
+                            "text": "香蕉",
+                            "showFlag": 1,
+                            "level": 3,
+                            "goodsCount": 1
+                        },
+                        "childList": []
+                    }, {
+                        "data": {
+                            "nodeId": "10008",
+                            "parentId": "10002",
+                            "text": "橘子",
+                            "showFlag": 1,
+                            "level": 3,
+                            "goodsCount": 0
+                        },
+                        "childList": []
+                    }]
+                }]
+            }]
+        }
+    }
+}
+
+
+
+
+

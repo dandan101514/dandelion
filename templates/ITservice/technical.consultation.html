@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name=" Keywords" content="......">      <!--content中，网页关键字-->
+    <meta name=" description" content="......">   <!--content中，网页描述文字-->
+    <meta name="author" content="......">        <!--标注作者-->
+    <title>IT服务-技术咨询</title>
+    <link rel="stylesheet" href="../../bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../../static/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../static/css/common/reset.css">
+    <link rel="stylesheet" href="../../static/css/common/nav.css">
+    <link rel="stylesheet" href="../../static/css/common/foot.css">
+    <link rel="stylesheet" href="../../static/css/view/itservice.css">
+
+
+    <script src="https://cdn.bootcss.com/jquery/3.0.0/jquery.js"></script>
+    <script type="text/javascript" src="../../bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../static/js/common/nav.js"></script>
+    <script type="text/javascript" src="../../static/js/common/foot.js"></script>
+    <script type="text/javascript" src="../../static/js/common/public.js"></script>
+    <script type="text/javascript" src="../../static/js/views/ITservice/itservice.js"></script>
+
+    <style>
+      p{
+        margin-bottom:15px;
+      }
+    </style>
+  </head>
+  <body>
+    <!--  导航 开始 -->
+    <div class="top"></div>
+    <!--  导航结束  -->
+
+    <!--  下拉导航  开始  -->
+    <nav class="nav_content" style="margin-top:130px;"></nav>
+    <!--  下拉导航  开始  -->
+
+    <!--  技术咨询 banner  开始  -->
+    <div class="banner">
+      <img src="../../static/images/itserverimg/itserverbanner1.png" alt="">
+      <div class="banner_details">
+        <h1>技术咨询</h1>
+      </div>
+    </div>
+    <!--  技术咨询 banner  结束  -->
+
+    <!--  技术咨询  开始  -->
+    <div class="container content_body">
+      <div class="company_profile">
+        <div class="content_title" style="height:auto;"></div>
+      </div>
+
+      <div class="second_content" style="height:auto;">
+        <!-- 服务范围 -->
+        <div class="fuwufanwei" style="margin-bottom:110px;"></div>
+
+        <!-- 重点行业 -->
+        <div class="zhongdianhangye" style="margin-bottom:110px;"></div>
+
+        <!-- 服务流程 -->
+        <div class="fuwuliuchen"></div>
+
+      </div>
+    </div>
+    <!--  技术咨询  结束  -->
+
+    <!--  底部内容 开始  -->
+    <footer class="footer_content"></footer>
+
+  </body>
+
+  <script type="text/javascript">
+    $(function(){
+
+      var dataFirst = datas[0].first     //页面标题
+      var dataSecond = datas[1].second   //服务范围
+      var dataThird = datas[2].third     //重点行业
+      var dataFourth = datas[3].fourth   //服务流程
+
+      // 页面标题块内容
+      $(".content_title").html(
+        '<h2 class="fl">'+dataFirst.title+'</h2>'+
+        '<hr class="title_hr fr" style="width:88%;">'+
+        '<div style="clear:both;"></div>'+
+        '<div class="content_text" style="margin-top:50px;"></div>'
+      );
+      
+      $.each(dataFirst.text,function(i,v){
+        $(".content_text").append(
+          '<p class="jishuText">'+v.detail+'</p>'
+        );
+      });
+
+
+    // 服务范围
+    $.each(dataSecond,function(i,v){
+      $(".fuwufanwei").append(
+        '<div class="row">'+
+          '<div class="col-sm-6 fuwufanwei_left">'+
+            '<h3 style="padding-top:35px;">'+this.title+'</h3>'+
+            '<p>'+this.text+'</p>'+
+          '</div>'+
+          '<div class="col-sm-6 pull-right text-right">'+
+          '<img src="'+this.url+'" alt="">'+
+          '</div>'+
+        '</div>'
+      );
+    });
+
+    // 行业重点
+    $.each(dataThird,function(i,v){
+      $(".zhongdianhangye").append(
+        '<div class="row">'+
+          '<div class="col-sm-6 zhongdianhangye_left">'+
+          '<img src="'+this.url+'" alt="">'+
+          '</div>'+
+          '<div class="col-sm-6 pull-right">'+
+            '<h3 style="padding-top:45px;">'+this.title+'</h3>'+
+            '<p>'+this.text+'</p>'+
+          '</div>'+
+        '</div>'
+      );
+    });
+    // 服务流程
+    $.each(dataFourth,function(i,v){
+      $(".fuwuliuchen").append(
+        '<h3 style="padding-bottom:70px;">'+v.title+'</h3>'+
+        '<ul class="fuwuliuchenUl list-inline">'+'</ul>'
+      );
+
+      $.each(v.contents,function(j,vle){
+        $(".fuwuliuchenUl").append(
+          '<li class="imgLi">'+'<img src="'+vle.contentsUrl+'" />'+'</i>'+'<p>'+vle.contentsText+'</p>'+'</li>'+
+          '<li class="iconLi">'+'<i class="fa fa-3x fa-angle-right" style="font-weight:100;" aria-hidden="true">'+'</i>'+'</li>'
+        );
+      });
+    });
+      
+  });
+
+    var datas = [
+      {"first":
+        {"title":"技术咨询",
+        "text":[
+          {"detail":"企业信息化，是利用IT技术来实施企业的管理，优化内部流程，提高企业的生产力和运行效率，从而提升企业的核心竞争力。所以，企业信息化不是一个方案，而是一个流程，它首先是个战略问题，其次是个管理问题，最后才是技术问题。这中间的每一步都需要专业的人才来进行规划和设计，而不是几个应用系统的使用培训就能解决的。"},
+          {"detail":"企业信息化，是利用IT技术来实施企业的管理，优化内部流程，提高企业的生产力和运行效率，从而提升企业的核心竞争力。所以，企业信息化不是一个方案，而是一个流程，它首先是个战略问题，其次是个管理问题，最后才是技术问题。这中间的每一步都需要专业的人才来进行规划和设计，而不是几个应用系统的使用培训就能解决的"}
+        ]}
+      },
+      {"second":[
+        {"title":"服务范围",
+         "url":"../../static/images/itserverimg/itserver01.png",
+         "text":"业务解决方案咨询、企业架构咨询、项目管理咨询业务咨询规划、技术基础架构咨询、SOA及网络服务咨询、客户关系管理（CRM）咨询"
+        }
+      ]},
+      {"third":[
+        {"title":"重点行业",
+         "url":"../../static/images/itserverimg/itserver02.png",
+         "text":"金融服务、通信与媒体、消费工业产品、公共部门（政府、教育、医疗）、移动、互联网"
+        }
+      ]},
+      {"fourth":[
+        {"title":"服务流程",
+         "url":null,
+         "text":null,
+         "contents":[
+          {"contentsUrl":"../../static/images/itserverimg/itservericon01.png",
+           "contentsText":"了解客户基本情况建立顾问咨询组",
+          },
+          {"contentsUrl":"../../static/images/itserverimg/itservericon02.png",
+           "contentsText":"内外部调研调研数据及信息统计分析",
+          },
+          {"contentsUrl":"../../static/images/itserverimg/itservericon03.png",
+           "contentsText":"实施方案拟定沟通、交流",
+          },
+          {"contentsUrl":"../../static/images/itserverimg/itservericon04.png",
+           "contentsText":"项目调整、实施、总结后续服务",
+          }
+        ]}
+      ]}
+    ]
+  </script>
+</html>

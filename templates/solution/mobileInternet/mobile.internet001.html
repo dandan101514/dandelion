@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name=" Keywords" content="......">      <!--content中，网页关键字-->
+    <meta name=" description" content="......">   <!--content中，网页描述文字-->
+    <meta name="author" content="......">        <!--标注作者-->
+    <title>移动互联网-移动医疗解决方案</title>
+    <link rel="stylesheet" href="../../../bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../static/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../../static/css/common/reset.css">
+    <link rel="stylesheet" href="../../../static/css/common/nav.css">
+    <link rel="stylesheet" href="../../../static/css/common/foot.css">
+    <link rel="stylesheet" href="../../../static/css/view/solution/solution.css">
+
+    <script src="https://cdn.bootcss.com/jquery/3.0.0/jquery.js"></script>
+    <script type="text/javascript" src="../../../bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../static/js/common/nav.js"></script>
+    <script type="text/javascript" src="../../../static/js/common/foot.js"></script>
+    <script type="text/javascript" src="../../../static/js/common/public.js"></script>
+    <script type="text/javascript" src="../../../static/js/views/solution/solution.js"></script>
+  </head>
+  <body>
+    <!--  导航 开始 -->
+    <div class="top"></div>
+    <!--  导航结束  -->
+
+    <!--  下拉导航  开始  -->
+    <nav class="nav_content" style="margin-top:130px;"></nav>
+    <!--  下拉导航  开始  -->
+
+    <!--  移动医疗解决方案 banner  开始  -->
+    <div class="banner">
+      <img src="../../../static/images/itserverimg/itserverbanner1.png" alt="">
+      <div class="banner_details">
+        <h1>移动互联网</h1>
+        <span>广亿多媒体信息发布平台主要针对高端酒店、商场超市、医疗行业、连锁机构、会展场馆、企业楼宇、交通枢纽、金融</span>
+        <span>及电信营业厅等用户需求定制开发的内容丰富的信息显示平台和稳定成熟的多媒体数字信息发布系统</span>
+      </div>
+    </div>
+    <!--  移动医疗解决方案 banner  结束  -->
+
+    <!--  移动医疗解决方案  开始  -->
+    <div class="container content_body">
+      <div class="company_profile">
+        <div class="content_title"></div>
+      </div>
+      <div class="second_content"></div>
+    </div>
+    <!--  移动医疗解决方案  开始  -->
+
+    <!--  底部内容 开始  -->
+    <footer class="footer_content"></footer>
+
+  </body>
+
+  <script type="text/javascript">
+    $(function(){
+
+      var dataFirst = datas[0].first
+      var dataSecond = datas[1].second
+
+      $(".content_title").html(
+        '<h2 class="fl">'+dataFirst.title+'</h2>'+
+        '<hr class="title_hr fr" style="width:73.5%;">'
+      )
+
+      $.each(dataSecond,function(i,el){
+
+        $(".second_content").append(
+            '<div class="content_lists" style="margin-bottom:100px;">'+
+              '<h3>'+this.title+'</h3>'+
+            '</div>'
+        );
+
+        $.each(this.text,function(index,v){
+
+          $(".content_lists").eq(i).append(
+            '<p style="text-indent:2em;margin-bottom:15px;">'+v.detail+'</p>'
+          );
+
+          if(v.url != null){
+            $(".content_lists").eq(i).append(
+              '<img style="margin:100px auto 60px;display:block;" src="'+v.url+'"/>'
+            );
+          };
+          
+        });
+
+      });
+
+      $(".content_lists").eq(1).find("p").css({"textIndent":"0"});
+
+    });
+
+    var datas = [
+      {"first":
+        {"title":"移动医疗解决方案","text":null}
+      },
+      {"second":[
+        {"title":"介绍",
+         "url":null,
+         "text":[
+          {"secondTitle":null,"url":"../../../static/images/mobileInternet/yidongyiliao.png","detail":"广亿掌上医院系统 “以客户（患者/保健对象）为中心”，为客户提供完整的、连续的、个性化的、闭环的医疗健康信息服务，帮助医院优化就医流程，为客户创造便捷、高效、优质的医疗服务环境；加强医院宣传和信息公开水平，提高医患双方沟通水平，提升客户满意度。"}
+        ]},
+        {"title":"产品特色",
+        "url":null,
+        "text":[
+          {"secondTitle":null,"url":null,"detail":"1. 支持Android、iOS主流操作系统，提供医疗机构专属app"},
+          {"secondTitle":null,"url":null,"detail":"2. 支持基于微信的二次开发"},
+          {"secondTitle":null,"url":null,"detail":"3. 能够与HIS、EMR、PACS/RIS、LIS、第三方支付平台无缝集成"},
+          {"secondTitle":null,"url":null,"detail":"4. 基于SOA的架构设计，增强的信息安全设计"}
+        ]}
+      ]}
+    ]
+  </script>
+</html>

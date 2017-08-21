@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name=" Keywords" content="......">      <!--content中，网页关键字-->
+    <meta name=" description" content="......">   <!--content中，网页描述文字-->
+    <meta name="author" content="......">        <!--标注作者-->
+    <title>证券保险-保险监管系统-反洗钱报送监控系统</title>
+    <link rel="stylesheet" href="../../../bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../static/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../../static/css/common/reset.css">
+    <link rel="stylesheet" href="../../../static/css/common/nav.css">
+    <link rel="stylesheet" href="../../../static/css/common/foot.css">
+    <link rel="stylesheet" href="../../../static/css/view/solution/solution.css">
+
+    <script src="https://cdn.bootcss.com/jquery/3.0.0/jquery.js"></script>
+    <script type="text/javascript" src="../../../bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../static/js/common/nav.js"></script>
+    <script type="text/javascript" src="../../../static/js/common/foot.js"></script>
+    <script type="text/javascript" src="../../../static/js/common/public.js"></script>
+    <script type="text/javascript" src="../../../static/js/views/solution/solution.js"></script>
+  </head>
+  <body>
+    <!--  导航 开始 -->
+    <div class="top"></div>
+    <!--  导航结束  -->
+
+    <!--  下拉导航  开始  -->
+    <nav class="nav_content" style="margin-top:130px;"></nav>
+    <!--  下拉导航  开始  -->
+
+    <!--  保险监管系统 banner  开始  -->
+    <div class="banner">
+      <img src="../../../static/images/itserverimg/itserverbanner1.png" alt="">
+      <div class="banner_details">
+        <h1>证券/保险</h1>
+        <span>商业银行需要积极主动地认识、管理和有效控制信用风险，通过实施全面有效的信用风险管理</span>
+        <span>将能够帮助银行处置风险，以最低成本实现最大安全保障的科学管理</span>
+      </div>
+    </div>
+    <!--  保险监管系统 banner  结束  -->
+
+    <!--  保险监管系统  开始  -->
+    <div class="container content_body">
+      <div class="company_profile">
+        <div class="content_title"></div>
+      </div>
+      <div class="second_content"></div>
+    </div>
+    <!--  保险监管系统  开始  -->
+
+    <!--  底部内容 开始  -->
+    <footer class="footer_content"></footer>
+
+  </body>
+
+  <script type="text/javascript">
+    $(function(){
+
+      var dataFirst = datas[0].first
+      var dataSecond = datas[1].second
+
+      $(".content_title").html(
+        '<h2 class="fl">'+dataFirst.title+'</h2>'+
+        '<hr class="title_hr fr" style="width:60.5%;">'
+      )
+
+      $.each(dataSecond,function(i,el){
+
+        $(".second_content").append(
+            '<div class="content_lists" style="margin-bottom:100px;">'+
+              '<h3>'+this.title+'</h3>'+
+            '</div>'
+        );
+
+        $.each(this.text,function(index,v){
+          if(v.secondTitle != null ){
+            $(".content_lists").eq(i).append(
+              '<h4>'+v.secondTitle+'</h4>'             
+            );
+          };
+
+          $(".content_lists").eq(i).append(
+            '<p style="text-indent:2em;margin-bottom:15px;">'+v.detail+'</p>'
+          );
+
+          if(v.url != null){
+            $(".content_lists").eq(i).append(
+              '<img style="margin:100px auto 60px;display:block;" src="'+v.url+'"/>'
+            );
+          };
+          
+        });
+
+      });
+
+      $(".content_lists").eq(1).find("p").css({"textIndent":"0"});
+
+    });
+
+    var datas = [
+      {"first":
+        {"title":"保险监管系统-反洗钱报送监控系统","text":null}
+      },
+      {"second":[
+        {"title":"概述",
+         "url":null,
+         "text":[
+          {"secondTitle":null,"url":null,"detail":"根据《金融机构反洗钱规定》、《人民币大额和可疑支付交易报告管理办法》、《金融机构大额和可疑外汇资金交易报告管理办法》规定，为保障中国反洗钱监测分析中心向银行业金融机构采集人民币、外币大额可疑交易数据，国有商业银行、股份制商业银行和国家邮政局邮政储汇局开始向中国反洗钱监测分析中心报送人民币大额、外币大额和外币可疑交易数据。"},
+          {"secondTitle":null,"url":null,"detail":"为贯彻落实反洗钱法及相关配套规定，中国反洗钱监测分析中心于 2007年2月制定并下发了《保险业大额交易和可疑交易数据报送接口规范（试行）》，开始接受保险机构大额和可疑交易数据报送。"},
+          {"secondTitle":null,"url":null,"detail":"为解决保险公司可疑交易数据报送问题，广亿自主研发了反洗钱报送监控系统，目前已在国内保险行业得到了广泛应用。该系统是针对中国人民银行提出的监管要求量身设计研发，主要涵盖三大功能模块：系统管理、系统设置、数据统管理。"}
+        ]},
+        {"title":"系统特点",
+        "url":null,
+        "text":[
+          {"secondTitle":"量化可疑交易","url":null,"detail":"在反洗钱监测过程中如何对可疑交易进行量化是个重要而复杂的问题，本系统利用可疑量化方法论建立了有效的可疑监测规则。"},
+          {"secondTitle":"数据安全性","url":null,"detail":"为满足保险公司业务的特殊保密性要求，系统设置了严格的权限控制。对使用该系统的人员的身份进行核对和检查，对用户数据访问范围的权限进行控制。"},
+          {"secondTitle":"支持分级管理","url":null,"detail":"上级可查询、汇总下级数据，下级和平级之间则不可访问。"},
+          {"secondTitle":"数据采集","url":null,"detail":"广亿资金管理系统专门针对集团结算中心、集团财务公司等国内集团性企业资金管理特点，是基于现今最流行的J2EE技术架构而开发的跨平台软件系统。"}
+        ]},
+        {"title":"系统功能",
+        "url":null,
+        "text":[
+          {"secondTitle":null,"url":"../../../static/images/securitiesInsurance/baoxianjianguan.png","detail":"广亿反洗钱报送监控系统主要包括三大功能：系统管理、系统设置、数据统管理。"}
+        ]}
+      ]}
+    ]
+  </script>
+</html>

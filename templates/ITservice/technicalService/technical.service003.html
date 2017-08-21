@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name=" Keywords" content="......">      <!--content中，网页关键字-->
+    <meta name=" description" content="......">   <!--content中，网页描述文字-->
+    <meta name="author" content="......">        <!--标注作者-->
+    <title>IT服务-业务流程外包(BPO)</title>
+    <link rel="stylesheet" href="../../../bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../static/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../../static/css/common/reset.css">
+    <link rel="stylesheet" href="../../../static/css/common/nav.css">
+    <link rel="stylesheet" href="../../../static/css/common/foot.css">
+    <link rel="stylesheet" href="../../../static/css/view/itservice.css">
+
+
+    <script src="https://cdn.bootcss.com/jquery/3.0.0/jquery.js"></script>
+    <script type="text/javascript" src="../../../bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../static/js/common/nav.js"></script>
+    <script type="text/javascript" src="../../../static/js/common/foot.js"></script>
+    <script type="text/javascript" src="../../../static/js/common/public.js"></script>
+    <script type="text/javascript" src="../../../static/js/views/ITservice/itservice.js"></script>
+
+    <style>
+      h3{
+        margin-top:100px;
+      }
+      p{
+        margin-bottom:15px;
+        text-indent: 2em;
+      }
+    </style>
+  </head>
+  <body>
+    <!--  导航 开始 -->
+    <div class="top"></div>
+    <!--  导航结束  -->
+
+    <!--  下拉导航  开始  -->
+    <nav class="nav_content" style="margin-top:130px;"></nav>
+    <!--  下拉导航  开始  -->
+
+    <!--  业务流程外包(BPO) banner  开始  -->
+    <div class="banner">
+      <img src="../../../static/images/itserverimg/itserverbanner1.png" alt="">
+      <div class="banner_details">
+        <h1>业务流程外包(BPO)</h1>
+        <span>凭借多年的IT咨询与服务实践、以及对BPO业务的积极探索，软通动力造就了一支专业的BPO业务咨询和服</span>
+        <span>务实施团队，并拥有独特的服务优势，助您提高外部资源的管理绩效。</span>
+      </div>
+    </div>
+    <!--  业务流程外包(BPO) banner  结束  -->
+
+    <!--  业务流程外包(BPO)  开始  -->
+    <div class="container content_body">
+      <div class="company_profile">
+        <div class="content_title" style="height:auto;"></div>
+      </div>
+
+        <!-- 我们的优势 -->
+        <div class="advantage"></div>
+
+        <!-- 创新研发能力 -->
+        <div class="ability"></div>
+
+        <!-- 丰富的行业经验 -->
+        <div class="experience"></div>
+
+        <!-- 专家型的服务团队 -->
+        <div class="team"></div>
+
+      </div>
+    </div>
+    <!--  业务流程外包(BPO)  结束  -->
+
+    <!--  底部内容 开始  -->
+    <footer class="footer_content"></footer>
+
+  </body>
+
+  <script type="text/javascript">
+    $(function(){
+
+      var dataFirst = datas[0].first     //页面标题
+      var dataSecond = datas[1].second   //我们的优势
+      var dataThird = datas[2].third     //创新研发能力
+      var dataFourth = datas[3].fourth   //丰富的行业经验
+      var dataFifth = datas[4].fifth     //专家型的服务团队
+
+      // 页面标题块内容
+      $(".content_title").html(
+        '<h2 class="fl">'+dataFirst.title+'</h2>'+
+        '<hr class="title_hr fr" style="width:76%;">'+
+        '<div style="clear:both;"></div>'+
+        '<div class="content_text" style="margin-top:50px;"></div>'+
+        '<img style="margin:60px 0;" src="'+dataFirst.url+'" />'
+      );
+      
+      $.each(dataFirst.text,function(i,v){
+        $(".content_text").append('<p class="jishuText">'+v.detail+'</p>');
+      });
+
+
+    // 我们的优势
+    $.each(dataSecond,function(i,v){
+      $(".advantage").append('<h3>'+this.title+'</h3>'+'<p>'+this.text+'</p>');    
+    });
+
+    // 创新研发能力
+    $.each(dataThird,function(i,v){
+      $(".ability").append('<h3>'+this.title+'</h3>'+'<p>'+this.text+'</p>');    
+    });
+
+    // 丰富的行业经验
+    $.each(dataFourth,function(i,v){
+      $(".experience").append('<h3>'+this.title+'</h3>'+'<p>'+this.text+'</p>');    
+    });
+
+    // 专家型的服务团队
+    $.each(dataFifth,function(i,v){
+      $(".team").append('<h3>'+this.title+'</h3>'+'<p>'+this.text+'</p>');    
+    });
+      
+  });
+
+    var datas = [
+      {"first":
+        {"title":"业务流程外包(BPO)",
+         "url":"../../../static/images/itserverimg/waibao.png",
+         "text":[
+          {"detail":"基于多年的专业实践经验，广亿深入洞察业务流程外包（BPO）产业模式，研究和借鉴全球发展历程，对流程外包业务进行持续改善，率先在中国开展BPO 2.0服务，并在全球500强企业中获得成功应用。"},
+          {"detail":"基于多年的专业实践经验，广亿深入洞察业务流程外包（BPO）产业模式，研究和借鉴全球发展历程，对流程外包业务进行持续改善，率先在中国开展BPO 2.0服务，并在全球500强企业中获得成功应用。"},
+          {"detail":"在执行业务流程外包业务过程中，广亿致力于开发适用于每个客户的项目管理和流程管理技术，协助企业提高外部生产资源的管理绩效，成为业务流程外包（BPO）服务的管理专家。持续创新的软通动力，已经成为全球范围内业务流程外包领域的佼佼者。"},
+          {"detail":"广亿在执行业务流程外包的服务过程中，就已经开始交付运营管理系统开发、众包等服务。"}
+        ]}
+      },
+      {"second":[
+        {"title":"我们的服务",
+         "url":null,
+         "text":"凭借多年的IT咨询与服务实践、以及对BPO业务的积极探索，广亿造就了一支专业的BPO业务咨询和服务实施团队，并拥有独特的服务优势，助您提高外部资源的管理绩效。",
+         }
+      ]},
+      {"third":[
+        {"title":"创新研发能力",
+         "url":null,
+         "text":"随着新一代信息技术的不断涌现，广亿也不断加大在技术研发上的投入，并在云计算、大数据、数字营销、商业智能等领域成为引领者。同时，我们基于分布在各大城市及关键行业的近万名研发工程师，以专业团队力量为客户提供高品质服务。",
+         }
+      ]},
+      {"fourth":[
+        {"title":"丰富的行业经验",
+         "url":null,
+         "text":"广亿在通信、高科技、银行、保险、企业金融、公共事业、健康医疗等行业拥有成功的经验和全球交付能力，有能力助您无缝衔接内外部流程，将外部资源纳入企业内部管理信息系统，从而降低成本、优化人员和提供高端服务。",
+         }
+      ]},
+      {"fifth":[
+        {"title":"专家型的服务团队",
+         "url":null,
+         "text":"广亿的专家团队参与并推动了服务外包产业在中国发展的整个过程，对该产业有着深刻的见解和洞察。因此，我们能结合自身在行业知识和IT研发能力方面的优势，将成功经验融入到与客户的合作中，帮助其应对各种业务挑战。",
+         }
+      ]},
+    ]
+  </script>
+</html>

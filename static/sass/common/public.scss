@@ -1,0 +1,109 @@
+@charset "utf-8";
+/*   banner 字体 一级标题  h1  */
+@mixin bannerText{
+  font-size: 48px;
+  letter-spacing: 10px;
+  color:white;
+}
+/*    二级标题  h2  */
+@mixin firthTitle{
+  color:#333333;
+  font-size: 28px;
+  font-weight: 600;
+}
+/*   三级标题 h3   */
+@mixin secondTitle{
+  color:#444444;
+  font-size: 24px;
+  font-weight: 600;
+  padding-bottom: 60px;
+}
+/*   四级标题 h4   */
+@mixin thirdTitle{
+  color:#444444;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 40px;
+}
+/*   二级页面 banner    */
+@mixin bannerStyle{
+  width: 100%;
+  height:280px;
+  overflow: hidden;
+  position: relative;
+}
+@mixin bannerImg{
+  width: 100%;
+  height:280px;
+}
+$textColor:#3ea6f7;
+$lineColor:#cfcfcf;
+$FIFTY:50px;  //一级导航title的 marginbottom
+$EIGHTY:80px; //一级导航title的 margintop
+$HUNDRED:100px; //一级导航距离下面内容的 marginbottom
+
+$SIXTY:60px;  //二级标题距离内容的 marginbottom
+
+// 二级页面banner样式
+.banner{
+  @include bannerStyle;
+  img{
+    @include bannerImg;
+  }
+  .banner_details{
+    width:100%;
+    height:auto;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    text-align: center;
+    h1{
+      @include bannerText;
+    }
+    span{
+      display: block;
+      font-size: 20px;
+      color:#fff;
+      padding-top: 15px;
+    }
+  }
+
+}
+
+.content_title{
+  height: 30px;
+  line-height: 30px;
+  width: 100%;
+  margin:$EIGHTY 0 $FIFTY 0;
+  h2{
+    @include firthTitle;
+    min-width:7%;
+  }
+  .title_hr{
+    height:2px;
+    background:$lineColor;
+    width: 93%;
+    margin: 0;
+    margin-top: 14px;
+  }
+}
+.content_text{
+  margin-bottom:$HUNDRED ;
+  p{
+    margin-bottom: 10px;
+    text-indent: 2em;
+  }
+}
+.content_body{
+  h3{
+    @include secondTitle;
+  }
+  h4{
+    @include thirdTitle;
+  }
+}
+
+.footer_content{
+  margin-top: 200px;
+}

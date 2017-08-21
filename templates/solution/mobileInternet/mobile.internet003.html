@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name=" Keywords" content="......">      <!--content中，网页关键字-->
+    <meta name=" description" content="......">   <!--content中，网页描述文字-->
+    <meta name="author" content="......">        <!--标注作者-->
+    <title>移动互联网-微商城解决方案</title>
+    <link rel="stylesheet" href="../../../bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../static/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../../static/css/common/reset.css">
+    <link rel="stylesheet" href="../../../static/css/common/nav.css">
+    <link rel="stylesheet" href="../../../static/css/common/foot.css">
+    <link rel="stylesheet" href="../../../static/css/view/solution/solution.css">
+
+    <script src="https://cdn.bootcss.com/jquery/3.0.0/jquery.js"></script>
+    <script type="text/javascript" src="../../../bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../static/js/common/nav.js"></script>
+    <script type="text/javascript" src="../../../static/js/common/foot.js"></script>
+    <script type="text/javascript" src="../../../static/js/common/public.js"></script>
+    <script type="text/javascript" src="../../../static/js/views/solution/solution.js"></script>
+  </head>
+  <body>
+    <!--  导航 开始 -->
+    <div class="top"></div>
+    <!--  导航结束  -->
+
+    <!--  下拉导航  开始  -->
+    <nav class="nav_content" style="margin-top:130px;"></nav>
+    <!--  下拉导航  开始  -->
+
+    <!--  微商城解决方案 banner  开始  -->
+    <div class="banner">
+      <img src="../../../static/images/itserverimg/itserverbanner1.png" alt="">
+      <div class="banner_details">
+        <h1>移动互联网</h1>
+        <span>广亿多媒体信息发布平台主要针对高端酒店、商场超市、医疗行业、连锁机构、会展场馆、企业楼宇、交通枢纽、金融</span>
+        <span>及电信营业厅等用户需求定制开发的内容丰富的信息显示平台和稳定成熟的多媒体数字信息发布系统</span>
+      </div>
+    </div>
+    <!--  微商城解决方案 banner  结束  -->
+
+    <!--  微商城解决方案  开始  -->
+    <div class="container content_body">
+      <div class="company_profile">
+        <div class="content_title"></div>
+      </div>
+      <div class="second_content"></div>
+    </div>
+    <!--  微商城解决方案  开始  -->
+
+    <!--  底部内容 开始  -->
+    <footer class="footer_content"></footer>
+
+  </body>
+
+  <script type="text/javascript">
+    $(function(){
+
+      var dataFirst = datas[0].first
+      var dataSecond = datas[1].second
+
+      $(".content_title").html(
+        '<h2 class="fl">'+dataFirst.title+'</h2>'+
+        '<hr class="title_hr fr" style="width:81%;">'
+      )
+
+      $.each(dataSecond,function(i,el){
+        
+        if(i<4){
+          $(".second_content").append(
+            '<div class="content_lists fl" style="margin-bottom:100px;width:50%;">'+
+              '<h3>'+this.title+'</h3>'+
+            '</div>'
+          );
+           $(".content_lists:even").css({"padding-right":"35px","clear":"left"});
+           $(".content_lists:odd").css("padding-left","35px");
+        }else{
+          $(".second_content").append(
+            '<div class="content_lists clearfix" style="margin-bottom:100px;">'+
+              '<h3>'+this.title+'</h3>'+
+            '</div>'
+          );
+        }
+
+        $.each(this.text,function(index,v){
+
+          $(".content_lists").eq(i).append(
+            '<p style="text-indent:2em;">'+v.detail+'</p>'
+          );
+
+          if(v.url != null){
+            $(".content_lists").eq(i).append(
+              '<img style="margin:70px auto;display:block;" src="'+v.url+'"/>'
+            );
+          };
+          
+        });
+
+      });
+
+     
+
+    });
+
+    var datas = [
+      {"first":
+        {"title":"微商城解决方案","text":null}
+      },
+      {"second":[
+        {"title":"微商城系统",
+         "url":null,
+         "text":[
+          {"secondTitle":null,"url":null,"detail":"微科无量从微信诞生之前就开始专注移动端微商城系统研发。7年潜心研发，精心打造移动端在线销售平台。以强大的功能和领先技术为商家搭建强大微商城系统。微信商城系统是商家4G时代淘金的利器。微科无量助力微商城，微店，微购物，微电商，微团购，为企业拓展无限商机！"}
+        ]},
+        {"title":"微商城分销系统",
+        "url":null,
+        "text":[
+          {"secondTitle":null,"url":null,"detail":"微科无量率先研发微商城分销系统，让商家的微商城运营实现商品的微店批零兼营、微店代理分销渠道的轻松拓展、连锁加盟微店的同步管理，代理分销渠道的佣金结算等等，从而帮商家实现微店分销更易，代理分销渠道更多，商品销售更快的目的。"}
+        ]},
+        {"title":"商家最便捷的微信内置微商城",
+         "url":null,
+         "text":[
+          {"secondTitle":null,"url":null,"detail":"微科无量帮助商家打造最便捷、易推广的微信内置微商城。微科无量微商城开发提供微信公众号自定义菜单管理功能，用户直接点击菜单即可进入微商城购物，自定义菜单还可以引导用户到促销页面，提高用户活跃度，还可以根据需要可定制个性化功能。"}
+        ]},
+        {"title":"统计微商城数据，监控运营效果",
+         "url":null,
+         "text":[
+          {"secondTitle":null,"url":null,"detail":"微商城统计功能实时统计微信公众号的关注情况和用户请求数。根据统计对相关推广营销活动效果提供数据支持，让商家对相关市场行为作出相应调整，从很大的程度上实现了对市场的监控与及时应对。为微商城的营销活动提供依据，商家可细分用户数据，真正做到微营销有的放矢。"}
+        ]},
+        {"title":"微商城定制，您提要求，我们来做",
+         "url":null,
+         "text":[
+          {"secondTitle":null,"url":null,"detail":"根据企业公众账号、微商城运营的需要，提供专业化、个性化、全方位的服务，内容包括：微信公众平台定制开发、模板设计、功能设计、企业微信极速定制、实现与企业CRM系统对接、微信运营指导、人员技术培训等。"}
+        ]},
+        {"title":"微信商城系统功能",
+         "url":null,
+         "text":[
+          {"secondTitle":null,"url":"../../../static/images/mobileInternet/weishang.png","detail":"广亿掌上医院系统 “以客户（患者/保健对象）为中心”，为客户提供完整的、连续的、个性化的、闭环的医疗健康信息服务，帮助医院优化就医流程，为客户创造便捷、高效、优质的医疗服务环境；加强医院宣传和信息公开水平，提高医患双方沟通水平，提升客户满意度。"}
+        ]}
+      ]}
+    ]
+  </script>
+</html>

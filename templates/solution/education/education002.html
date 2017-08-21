@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name=" Keywords" content="......">      <!--content中，网页关键字-->
+    <meta name=" description" content="......">   <!--content中，网页描述文字-->
+    <meta name="author" content="......">        <!--标注作者-->
+    <title>教育行业-智慧校园解决方案</title>
+    <link rel="stylesheet" href="../../../bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../static/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../../static/css/common/reset.css">
+    <link rel="stylesheet" href="../../../static/css/common/nav.css">
+    <link rel="stylesheet" href="../../../static/css/common/foot.css">
+    <link rel="stylesheet" href="../../../static/css/view/solution/solution.css">
+
+    <script src="https://cdn.bootcss.com/jquery/3.0.0/jquery.js"></script>
+    <script type="text/javascript" src="../../../bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../static/js/common/nav.js"></script>
+    <script type="text/javascript" src="../../../static/js/common/foot.js"></script>
+    <script type="text/javascript" src="../../../static/js/common/public.js"></script>
+    <script type="text/javascript" src="../../../static/js/views/solution/solution.js"></script>
+  </head>
+  <body>
+    <!--  导航 开始 -->
+    <div class="top"></div>
+    <!--  导航结束  -->
+
+    <!--  下拉导航  开始  -->
+    <nav class="nav_content" style="margin-top:130px;"></nav>
+    <!--  下拉导航  开始  -->
+
+    <!--  智慧校园解决方案 banner  开始  -->
+    <div class="banner">
+      <img src="../../../static/images/itserverimg/itserverbanner1.png" alt="">
+      <div class="banner_details">
+        <h1>教育行业</h1>
+        <span>广亿多媒体信息发布平台主要针对高端酒店、商场超市、医疗行业、连锁机构、会展场馆、企业楼宇、交通枢纽、金融</span>
+        <span>及电信营业厅等用户需求定制开发的内容丰富的信息显示平台和稳定成熟的多媒体数字信息发布系统</span>
+      </div>
+    </div>
+    <!--  智慧校园解决方案 banner  结束  -->
+
+    <!--  智慧校园解决方案  开始  -->
+    <div class="container content_body">
+      <div class="company_profile">
+        <div class="content_title"></div>
+      </div>
+      <div class="second_content"></div>
+    </div>
+    <!--  智慧校园解决方案  开始  -->
+
+    <!--  底部内容 开始  -->
+    <footer class="footer_content"></footer>
+
+  </body>
+
+  <script type="text/javascript">
+    $(function(){
+
+      var dataFirst = datas[0].first
+      var dataSecond = datas[1].second
+
+      $(".content_title").html(
+        '<h2 class="fl">'+dataFirst.title+'</h2>'+
+        '<hr class="title_hr fr" style="width:79%;">'
+      )
+
+      $.each(dataSecond,function(i,el){
+        // 循环添加二级标题内容
+        $(".second_content").append(
+          '<div class="content_lists" style="margin-bottom:100px;">'+
+            '<h3 style="padding-bottom:40px;">'+this.title+'</h3>'+
+            '<div class="detail_text">'+'</div>'+
+          '</div>'
+        );
+
+        $.each(this.text,function(ins,v){
+          
+          $.each(v.detail,function(k,vle){
+            
+            $(".detail_text").eq(i).append(
+              '<p style="margin-bottom:17px;">'+vle.detailtext+'</p>'
+            );
+          });
+
+          if(v.url != null){
+            $(".detail_text").eq(i).append(
+              '<img style="display:block;margin:50px auto;" src="'+v.url+'" />'
+            )
+          }
+
+        });
+
+      });
+
+      $(".detail_text").eq(0).find("p").css("textIndent","2em");
+
+    });
+
+    var datas = [
+      {"first":
+        {"title":"智慧校园解决方案","text":null}
+      },
+      {"second":[
+        {"title":"方案介绍",
+         "url":null,
+         "text":[
+          {"secondTitle":null,
+           "url":"http://via.placeholder.com/1000x800",
+           "detail":[
+             {"detailtext":"奥龙高校数字化校园解决方案以学校公共数据中心平台为基础，将分散在各部门的数据集中到一起，以教师、学生角色为主线，提供跨部门立体式的教学、学工、人事、科研、设备资产、财务经费等综合信息服务。支持面向主题的多维查询和个性化查询。同时通过全面的数据分析，为院系领导、校领导决策提供有效的数据支持。"}
+           ],
+           "content":null
+          }
+        ]},
+        {"title":"方案特点",
+        "url":null,
+        "text":[
+          {"secondTitle":null,
+           "url":null,
+           "detail":[
+             {"detailtext":"规范统一高校数据：在大幅降低各部门统计数据及计算的工作强度的同时，该解决方案可规范校内各类数据定义及分类的标准和规则，促使各部门在统一标准下协同工作，减    少数据误差和数据不统一带来的重复劳动。"},
+             {"detailtext":"强大的信息查询服务：对学生信息、教职工信息、专业信息、课程 信息、教室信息、实验室信息等各项校情数据的查询集成展现至校园门户上，可方便快捷的定位到目标信息。"},
+             {"detailtext":"全面的校情数据展示：提供能够有效整合学校各部门独立数据资源的工具，多角度、多层次的展示校情数据。专家和校领导可以全面便捷的了解高校各方面的情况，更可以层层深入浏览至每位教师情况、每件设备情况、每位学生情况等更详尽的信息。"},
+             {"detailtext":"提供决策支持依据：有效保存高校各阶段历史数据，进行一定的统计分析，深度挖掘内在信息，展示高校发展历程，不仅为学校的教学评估工作提供支持，且为高校领导提供决策支持的依据。"}
+           ],
+           "content":null
+          }
+        ]}
+      ]}
+    ]
+  </script>
+</html>

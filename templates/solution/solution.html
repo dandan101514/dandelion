@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name=" Keywords" content="......">      <!--content中，网页关键字-->
+    <meta name=" description" content="......">   <!--content中，网页描述文字-->
+    <meta name="author" content="......">        <!--标注作者-->
+    <title>解决方案-二级首页主页</title>
+    <link rel="stylesheet" href="../../bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../../static/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../static/css/common/reset.css">
+    <link rel="stylesheet" href="../../static/css/common/nav.css">
+    <link rel="stylesheet" href="../../static/css/common/foot.css">
+      <link rel="stylesheet" href="../../static/css/view/solution/solution.css">
+
+    <script src="https://cdn.bootcss.com/jquery/3.0.0/jquery.js"></script>
+    <script type="text/javascript" src="../../bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../static/js/common/nav.js"></script>
+    <script type="text/javascript" src="../../static/js/common/foot.js"></script>
+    <script type="text/javascript" src="../../static/js/common/public.js"></script>
+  </head>
+  <body>
+    <!--  导航 开始 -->
+    <div class="top"></div>
+    <!--  导航结束  -->
+
+    <!--  下拉导航  开始  -->
+    <nav class="nav_content" style="margin-top:130px;"></nav>
+    <!--  下拉导航  开始  -->
+
+    <!--  解决方案 banner  开始  -->
+    <div class="banner">
+      <img src="../../static/images/itserverimg/itserverbanner1.png" alt="">
+      <div class="banner_details">
+        <h1>解决方案</h1>
+        <span>以银行、证券为代表的金融行业一直是技术创新和应用创新的高地。</span>
+      </div>
+    </div>
+    <!--  解决方案 banner  结束  -->
+
+    <!--  解决方案  开始  -->
+    <div class="container content_body">
+      <div class="company_profile">
+        <div class="content_title"></div>
+      </div>
+      <div class="second_content"></div>
+    </div>
+    <!--  解决方案  开始  -->
+
+    <!--  底部内容 开始  -->
+    <footer class="footer_content"></footer>
+
+  </body>
+
+  <script type="text/javascript">
+    $(function(){
+
+      var dataFirst = datas[0].first
+      var dataSecond = datas[1].second
+
+      $(".content_title").html(
+        '<h2 class="fl">'+dataFirst.title+'</h2>'+
+        '<hr class="title_hr fr">'
+      )
+
+      $.each(dataSecond,function(i,el){
+          var texts = this.text[0].detail
+          var subtext = texts.substr(0,150);
+
+        $(".second_content").append(
+            '<div class="row" style="margin-bottom:120px;">'+
+                '<div class="col-sm-6 imgBlock">'+
+                    '<img style="width:520px;height:250px;" src="'+this.url+'" />'+
+                '</div>'+
+                '<div class="content_lists col-sm-6">'+
+                    '<h3 style="padding-top:40px;">'+this.title+'</h3>'+
+                    '<p style="width:600px;text-indent:2em;">'+subtext+
+                    '<a href="'+this.id+'.html" style="color:#399bff;padding-left:30px;">详细描述 ></a>'+'</p>'+  
+                '</div>'+
+            '</div>'
+        );
+      });
+
+      $(".second_content .imgBlock:odd").css({"float":"right","textAlign":"right"});
+
+    })
+
+    var datas = [
+      {"first":
+        {"title":"解决方案","text":null}
+      },
+      {"second":[
+        {"title":"金融银行",
+        "id":"financeBank/finance.bank",
+        "url":"http://via.placeholder.com/520x250",
+        "text":[
+          {"secondTitle":"","detail":"公司资产的信贷端产品经过多年的研发实施，针对不同的客户群体及管理层次，形成以对公信贷、零售信贷为核心的信贷系统产品群，包括对公信贷、零售贷款、小额信贷、消费信贷四大信贷管理系统及额度、押品、内评、核算、资产保全、催收等细分系统，能为各大金融机构提供完整的信贷业务管理解决方案。"}
+        ]},
+        {"title":"证券保险",
+        "id":"securitiesInsurance/securities.insurance001",
+        "url":"http://via.placeholder.com/520x250",
+        "text":[
+          {"secondTitle":"","detail":"公司资产的信贷端产品经过多年的研发实施，针对不同的客户群体及管理层次，形成以对公信贷、零售信贷为核心的信贷系统产品群，包括对公信贷、零售贷款、小额信贷、消费信贷四大信贷管理系统及额度、押品、内评、核算、资产保全、催收等细分系统，能为各大金融机构提供完整的信贷业务管理解决方案。"}
+        ]},
+        {"title":"移动互联网",
+        "id":"mobileInternet/mobile.internet001",
+        "url":"http://via.placeholder.com/520x250",
+        "text":[
+          {"secondTitle":"","detail":"OneSumX 反洗钱解决方案是一款完全集成的反洗钱解决方案，保护金融机构避免违规、制裁和处罚。该解决方案涵盖反洗钱和恐怖主义融资风险的所有关键领域，自动生成现金交易报表和可疑交易报表，报送至监管机构。这使金融机构在满足单个国家监管要求的同时满足金融行动。"}
+        ]},
+        {"title":"教育行业",
+        "id":"education/education",
+        "url":"http://via.placeholder.com/520x250",
+        "text":[
+          {"secondTitle":"","detail":"微信银行是典型的互联网金融产品，是银行与互联网竞合的并行关系促进银行业务的创新的产物。"}
+        ]},
+        {"title":"企事/制造业",
+        "id":"manufacturing.enterprises/manufacturing.enterprises001",
+        "url":"http://via.placeholder.com/520x250",
+        "text":[
+          {"secondTitle":"","detail":"广亿GS资产管理融合了先进的SAM战略资产管理理念，以智能决策为向导，内容围绕资产全生命周期，覆盖资产的配置、使用、处置、评估和收益等管理环节，科学管理单位内部资产，有利于维护和保障资产的安全和。"}
+        ]},
+        {"title":"云计算",
+        "id":"cloud.computing/cloud.computing001",
+        "url":"http://via.placeholder.com/520x250",
+        "text":[
+          {"secondTitle":"","detail":"广亿GS资产管理融合了先进的SAM战略资产管理理念，以智能决策为向导，内容围绕资产全生命周期，覆盖资产的配置、使用、处置、评估和收益等管理环节，科学管理单位内部资产，有利于维护和保障资产的安全和。"}
+        ]},
+        {"title":"大数据",
+        "id":"big.data/big.data001",
+        "url":"http://via.placeholder.com/520x250",
+        "text":[
+          {"secondTitle":"","detail":"广亿GS资产管理融合了先进的SAM战略资产管理理念，以智能决策为向导，内容围绕资产全生命周期，覆盖资产的配置、使用、处置、评估和收益等管理环节，科学管理单位内部资产，有利于维护和保障资产的安全和。"}
+        ]},
+        {"title":"商业智能",
+        "id":"business.intelligence/business.intelligence001",
+        "url":"http://via.placeholder.com/520x250",
+        "text":[
+          {"secondTitle":"","detail":"广亿GS资产管理融合了先进的SAM战略资产管理理念，以智能决策为向导，内容围绕资产全生命周期，覆盖资产的配置、使用、处置、评估和收益等管理环节，科学管理单位内部资产，有利于维护和保障资产的安全和。"}
+        ]},
+        {"title":"数据迁移",
+        "id":"data.migration/data.migration001",
+        "url":"http://via.placeholder.com/520x250",
+        "text":[
+          {"secondTitle":"","detail":"广亿GS资产管理融合了先进的SAM战略资产管理理念，以智能决策为向导，内容围绕资产全生命周期，覆盖资产的配置、使用、处置、评估和收益等管理环节，科学管理单位内部资产，有利于维护和保障资产的安全和。"}
+        ]},
+        {"title":"测试服务",
+        "id":"testing.service/testing.service001",
+        "url":"http://via.placeholder.com/520x250",
+        "text":[
+          {"secondTitle":"","detail":"广亿GS资产管理融合了先进的SAM战略资产管理理念，以智能决策为向导，内容围绕资产全生命周期，覆盖资产的配置、使用、处置、评估和收益等管理环节，科学管理单位内部资产，有利于维护和保障资产的安全和。"}
+        ]}
+      ]}
+    ]
+  </script>
+</html>

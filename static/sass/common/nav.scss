@@ -1,11 +1,10 @@
+@charset "utf-8";
 // 导航样式  Start
-
+.firthNav{
+  color: #399bff !important;
+  border-bottom: 2px solid #399bff;
+}
 .top {
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  z-index: 999;
   height: 130px;
   background: #fff;
   .menu {
@@ -36,19 +35,15 @@
       li {
         display: inline-block;
         min-width: 105px;
-        padding: 0 20px;
+        padding: 0 32px;
         a {
           display: inline-block;
-          height: 35px;
+          height: 40px;
           line-height: 35px;
           font-size: 16px;
           font-weight: 700;
           padding: 0 20px !important;
           background: none !important;
-          &:hover {
-            color: #399bff;
-            border-bottom: 2px solid #399bff;
-          }
         }
       }
     }
@@ -69,4 +64,116 @@
     }
   }
 }
+.navlis:hover a{
+  color: #399bff !important;
+  border-bottom: 2px solid #399bff;
+}
+div{
+  color:red;
+}
 // 导航样式  Over
+
+
+// 导航下拉框内样式  开始
+.hover_second_nav{
+  background:#0478c9 !important;
+  a,i{
+    color:#fff !important;
+  }
+}
+.click_third_nav{
+  &:nth-child(1) a{
+    color:#399bff !important;
+  }
+  a{
+    color:#333333;
+  }
+  &:hover{
+    cursor: pointer;
+    a{
+      color:#399bff !important;
+    }
+
+  }
+
+}
+nav{
+  display: none;
+  position: absolute;
+  top:0;
+  left: 0;
+  z-index: 999;
+  min-height: 400px;
+  width: 100%;
+  overflow: hidden;
+  background:#fff;
+  border-top:1px solid #f4f4f4;
+  box-shadow: 5px 5px 8px #ccc;
+  .nav_left{
+    min-height: 400px;
+    width:31.25%;
+    background:#f4f4f4;
+    .second_nav{
+      width:215px;
+      margin-top: 18px;
+      li{
+        height:36px;
+        line-height: 36px;
+        margin: 18px 0;
+        a{
+          display: inline-block;
+          width: 85%;
+          font-size: 18px;
+          font-weight: 600;
+          color:#333333;
+          padding-left: 34px;
+        }
+        i{
+          font-size: 18px;
+        }
+      }
+    }
+  }
+  .nav_center{
+    min-height: 400px;
+    width:29.68%;
+    .nav_third{
+      float: left;
+      width: 30%;
+      .nav_third_lists{
+        width: 100%;
+        height: 400px;
+        text-align: center;
+        padding-top: 40px;
+        li{
+          line-height: 36px;
+          a{
+            font-size: 16px;
+            font-weight: 600;
+            color:#333333;
+          }
+        }
+      }
+    }
+    .nav_details{
+      float: right;
+      width: 70%;
+      height: inherit;
+      overflow:hidden;
+      padding:65px 20px 0 40px;
+
+      h3{
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 30px;
+        padding-bottom: 30px;
+      }
+    }
+  }
+  .nav_right{
+    min-height: 320px;
+    width:auto;
+    padding-top: 40px;
+  }
+}
+// 导航下拉框内样式  结束

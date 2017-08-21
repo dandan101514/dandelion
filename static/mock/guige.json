@@ -1,0 +1,41 @@
+{
+    "code": "1000",
+    "message": "SUCCESS",
+    "obj": [{
+        "uId": "aef53570c6b74c598ef03253a590aa8b",
+        "deleteFlag": 0,
+        "createAgent": null,
+        "createDate": 1488803164000,
+        "updateAgent": "10001",
+        "updateDate": 1488803164000,
+        "specName": "specName",
+        "specValue": "specValue"
+    }, {
+        "uId": "c9b914f829e5458b8783564a5ace3703",
+        "deleteFlag": 0,
+        "createAgent": null,
+        "createDate": null,
+        "updateAgent": null,
+        "updateDate": null,
+        "specName": "specName1",
+        "specValue": ["a","b","b","b","b","b","b","b","b","b","b","b"]
+    }, {
+        "uId": "fa9f85cad4274636b4353002c4be9f00",
+        "deleteFlag": 0,
+        "createAgent": null,
+        "createDate": 1488785184000,
+        "updateAgent": "10001",
+        "updateDate": 1488785184000,
+        "specName": "specName",
+        "specValue": ["specValue","specValue","specValue","specValue"]
+    }, {
+        "uId": "fb34ebc9696c4b96a6f98e51cade1578",
+        "deleteFlag": 0,
+        "createAgent": null,
+        "createDate": 1488456955000,
+        "updateAgent": "10001",
+        "updateDate": 1488456955000,
+        "specName": "specName",
+        "specValue": "specValue"
+    }]
+}

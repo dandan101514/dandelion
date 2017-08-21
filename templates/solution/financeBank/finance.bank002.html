@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name=" Keywords" content="......">      <!--content中，网页关键字-->
+    <meta name=" description" content="......">   <!--content中，网页描述文字-->
+    <meta name="author" content="......">        <!--标注作者-->
+    <title>金融银行-监管报表解决方案</title>
+    <link rel="stylesheet" href="../../../bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../static/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../../static/css/common/reset.css">
+    <link rel="stylesheet" href="../../../static/css/common/nav.css">
+    <link rel="stylesheet" href="../../../static/css/common/foot.css">
+    <link rel="stylesheet" href="../../../static/css/view/solution/solution.css">
+
+    <script src="https://cdn.bootcss.com/jquery/3.0.0/jquery.js"></script>
+    <script type="text/javascript" src="../../../bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../static/js/common/nav.js"></script>
+    <script type="text/javascript" src="../../../static/js/common/foot.js"></script>
+    <script type="text/javascript" src="../../../static/js/common/public.js"></script>
+    <script type="text/javascript" src="../../../static/js/views/solution/solution.js"></script>
+  </head>
+  <body>
+    <!--  导航 开始 -->
+    <div class="top"></div>
+    <!--  导航结束  -->
+
+    <!--  下拉导航  开始  -->
+    <nav class="nav_content" style="margin-top:130px;"></nav>
+    <!--  下拉导航  开始  -->
+
+    <!--  监管报表解决方案 banner  开始  -->
+    <div class="banner">
+      <img src="../../../static/images/itserverimg/itserverbanner1.png" alt="">
+      <div class="banner_details">
+        <h1>金融/银行</h1>
+      </div>
+    </div>
+    <!--  监管报表解决方案 banner  结束  -->
+
+    <!--  监管报表解决方案  开始  -->
+    <div class="container content_body">
+      <div class="company_profile">
+        <div class="content_title"></div>
+        <div class="content_text" style="margin-bottom:0;"></div>
+      </div>
+      <div class="second_content"></div>
+    </div>
+    <!--  监管报表解决方案  开始  -->
+
+    <!--  底部内容 开始  -->
+    <footer class="footer_content"></footer>
+
+  </body>
+
+    <script type="text/javascript">
+    $(function(){
+
+      var dataFirst = datas[0].first
+      var dataSecond = datas[1].second
+
+      $(".content_title").html(
+        '<h2 class="fl">'+dataFirst.title+'</h2>'+
+        '<hr class="title_hr fr"  style="width:74.5%;">'
+      )
+
+      $.each(dataSecond,function(i,el){
+
+        $(".second_content").append(
+          '<div class="content_lists" style="margin-bottom:100px;">'+
+            '<h3>'+this.title+'</h3>'+
+        '</div>'
+        );
+        $.each(this.text,function(index,v){
+          $(".content_lists").eq(i).append(
+            '<p style="text-indent:2em;padding-bottom:20px;">'+v.detail+'</p>'
+          );
+          if(v.url != null){
+            $(".content_lists").eq(1).append(
+              '<div style="width:100%;text-align:center;margin:60px 0;">'+
+                '<img src="'+v.url+'" alt="" />'+
+              '</div>'
+            );
+          };
+          
+        });
+      });
+
+    });
+
+    var datas = [
+      {"first":
+        {"title":"监管报表解决方案","text":null}
+      },
+      {"second":[
+        {"title":"简介",
+        "text":[
+          {"secondTitle":null,"url":null,"detail":"OneSumX 监管报表解决方案从金融机构的核心银行业务和其他业务系统中直接获取数据，执行监管计算，利用监管数据创建屏幕表格，执行数据验证检查，并根据中国人民银行、中国银行业监督管理委员会和国家外汇管理局要求的格式创建电子提交文件。"},
+          {"secondTitle":null,"url":null,"detail":"向监管机构及时提报送精确的监管报表正变得比以往任何时候都更加重要。OneSumX监管报表解决方案从金融机构的核心银行业务和其他业务系统中直接获取数据，执行监管计算，利用监管数据创建屏幕表格，执行数据验证检查，并根据中国人民银行、中国银行业监督管理委员会和国家外汇管理局要求的格式创建电子提交文件。该解决方案在每一个步骤均提供高级的安全和审计跟踪， 确保准确、省心。 "}
+        ]},
+        {"title":"解决方案",
+        "text":[
+          {"secondTitle":null,"url":null,"detail":"1. 使用数据提取、转换和加载工具，通过相关数据库或任何类型的 ASCII下载，从核心银行业务和其他业务系统中获得原始数据，将金融机构的内部IT成本降至最低。"},
+          {"secondTitle":null,"url":"../../../static/images/solution/jianguanbaobiao.png","detail":"2. 内置三大银行业监管机构的一整套监管要求，并可实现数据与报表的透明映射，在映射过程中执行任何必要的数据增强和监管计算， 从而将金融机构为此投入的精力降至最低。"},
+          {"secondTitle":null,"url":null,"detail":"3. 快速追溯功能帮助金融机构了解业务交易对每项报表内容的贡献，使他们在调查问题的同时能轻易对源数据进行校正。"},
+          {"secondTitle":null,"url":null,"detail":"4. 完整的安全设定和可定义的管理员访问权利确保数据只有在已授权的状态下才能被操作。"},
+          {"secondTitle":null,"url":null,"detail":"5. 拥有一套完整的监管机构定义的验证和交叉验证规则，在您提交报表时验证您的数据，确保您所提交数据的准确性。"},
+          {"secondTitle":null,"url":null,"detail":"6. 完全支持巴塞尔协议 III、流动性和所有高级比率，不仅满足监管要求，同时帮助您管理业务。"},
+          {"secondTitle":null,"url":null,"detail":"7. 使用信号灯和仪表盘实现即时视觉监测报送状态和业务关键绩效指标，使 OneSumX从一个报送工具转变为业务管理助手。"},
+          {"secondTitle":null,"url":null,"detail":"8. 按照各监管机构要求的格式自动生成报文。"},
+          {"secondTitle":null,"url":null,"detail":"9. 基于开源Java技术，提供完整的网络启动和平台以及独立的数据库，适用于任何业务环境。"}
+        ]}
+      ]}
+    ]
+  </script>
+</html>

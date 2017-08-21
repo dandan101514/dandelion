@@ -1,0 +1,193 @@
+@charset "UTF-8";
+/*   banner 字体 一级标题  h1  */
+/*    二级标题  h2  */
+/*   三级标题 h3   */
+/*   四级标题 h4   */
+/*   二级页面 banner    */
+.banner {
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+  position: relative; }
+  .banner img {
+    width: 100%;
+    height: 280px; }
+  .banner .banner_details {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    text-align: center; }
+    .banner .banner_details h1 {
+      font-size: 48px;
+      letter-spacing: 10px;
+      color: white; }
+    .banner .banner_details span {
+      display: block;
+      font-size: 20px;
+      color: #fff;
+      padding-top: 15px; }
+
+.content_title {
+  height: 30px;
+  line-height: 30px;
+  width: 100%;
+  margin: 80px 0 50px 0; }
+  .content_title h2 {
+    color: #333333;
+    font-size: 28px;
+    font-weight: 600;
+    min-width: 7%; }
+  .content_title .title_hr {
+    height: 2px;
+    background: #cfcfcf;
+    width: 93%;
+    margin: 0;
+    margin-top: 14px; }
+
+.content_text {
+  margin-bottom: 100px; }
+  .content_text p {
+    margin-bottom: 10px;
+    text-indent: 2em; }
+
+.content_body h3 {
+  color: #444444;
+  font-size: 24px;
+  font-weight: 600;
+  padding-bottom: 60px; }
+.content_body h4 {
+  color: #444444;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 40px; }
+
+.footer_content {
+  margin-top: 200px; }
+
+/*    技术咨询内容样式  开始    */
+.jishuContent {
+  height: auto;
+  overflow: hidden; }
+
+.second_content {
+  height: 230px;
+  overflow: hidden; }
+  .second_content .fuwufanwei_left {
+    padding-right: 75px; }
+  .second_content P {
+    padding-right: 10px; }
+
+.zhongdianhangye .pull-right {
+  padding-left: 40px; }
+
+.fuwuliuchen {
+  height: auto; }
+  .fuwuliuchen .fuwuliuchenUl {
+    height: 190px;
+    overflow: hidden; }
+    .fuwuliuchen .fuwuliuchenUl li.imgLi {
+      text-align: center;
+      width: 21.25%;
+      float: left; }
+      .fuwuliuchen .fuwuliuchenUl li.imgLi img {
+        width: 100px;
+        height: 100px;
+        background-size: cover; }
+      .fuwuliuchen .fuwuliuchenUl li.imgLi p {
+        margin-top: 35px;
+        padding: 0 45px;
+        text-align: left; }
+    .fuwuliuchen .fuwuliuchenUl li.iconLi {
+      display: inline-block;
+      height: inherit;
+      width: 5%;
+      float: left;
+      text-align: center; }
+      .fuwuliuchen .fuwuliuchenUl li.iconLi i {
+        display: inline-block;
+        padding-top: 61.5px; }
+
+/*    技术咨询内容样式  结束   */
+/*  技术服务样式  开始  */
+.design_develop {
+  margin-bottom: 100px; }
+  .design_develop p {
+    text-indent: 2em;
+    margin-bottom: 10px; }
+
+.our_service li p {
+  line-height: 30px;
+  margin-bottom: 30px; }
+
+/*  技术服务样式  结束  */
+/*  软件开发样式  开始  */
+.business li, .custom_made li {
+  font-size: 20px;
+  line-height: 55px; }
+  .business li h3, .custom_made li h3 {
+    color: #444444;
+    font-size: 24px;
+    font-weight: 600;
+    padding-bottom: 60px;
+    padding-bottom: 40px; }
+
+.business {
+  margin-bottom: 70px; }
+
+/*  软件开发样式  开始  */
+/*    服务特点样式  开始   */
+.lists_information .each_list {
+  margin-bottom: 120px;
+  height: 150px;
+  overflow: hidden; }
+  .lists_information .each_list img {
+    width: 400px;
+    height: 150px; }
+  .lists_information .each_list .text_details {
+    padding-left: 50px;
+    height: inherit;
+    overflow: hidden; }
+    .lists_information .each_list .text_details h3 {
+      height: 50px;
+      overflow: hidden;
+      font-size: 24px;
+      font-weight: 600;
+      color: #f26223;
+      padding-left: 40px;
+      border-bottom: 1px dashed #cfcfcf; }
+    .lists_information .each_list .text_details p {
+      padding-top: 30px; }
+
+/*    服务特点样式  结束   */
+.care_ability_lists {
+  margin-top: 100px; }
+  .care_ability_lists li.care_ability_lists_li {
+    height: 280px;
+    overflow: hidden;
+    margin-bottom: 120px; }
+    .care_ability_lists li.care_ability_lists_li:nth-child(1) ul {
+      padding-top: 30px !important; }
+    .care_ability_lists li.care_ability_lists_li:nth-child(2) ul {
+      width: 170px; }
+    .care_ability_lists li.care_ability_lists_li:nth-child(3) ul {
+      width: 180px; }
+    .care_ability_lists li.care_ability_lists_li img {
+      width: 320px;
+      height: 280px;
+      overflow: hidden; }
+    .care_ability_lists li.care_ability_lists_li .text_right {
+      width: 250px;
+      padding-left: 35px; }
+      .care_ability_lists li.care_ability_lists_li .text_right h4 {
+        font-size: 18px;
+        font-weight: 600;
+        color: #f26223;
+        padding-top: 20px;
+        padding-bottom: 45px; }
+    .care_ability_lists li.care_ability_lists_li ul.list_details li {
+      margin-bottom: 15px; }
+
+/*# sourceMappingURL=itservice.css.map */
