@@ -56,5 +56,54 @@
     <!--  底部内容 开始  -->
     <footer class="footer_content"></footer>
 
+    <script type="text/javascript">  
+      $(function(){
+
+        var dataFirst = datas[0].first
+        var dataSecond = datas[1].second
+
+        $(".content_title").html(
+          '<h2 class="fl">'+dataFirst.title+'</h2>'+
+          '<hr class="title_hr fr" style="width:88%;">'
+        )
+
+        $.each(dataSecond,function(i, v) {
+          $(".second_content").append(
+            '<div>'+
+              '<h3 style="padding-top:60px;">'+v.title+'</h3>'+
+            '</div>'
+          )
+          $.each(v.text,function() {
+            $(".second_content div").eq(i).append(
+              '<p style="text-indent:2em;padding-bottom:15px;">'+this.detail+'</p>'
+            )
+          });
+        });
+
+        // 列表图标
+
+
+      })
+
+
+      var datas = [
+        {"first":
+          {"title":"负责声明","text":""}
+        },
+        {"second":[
+          {"title":"注意：","text":[
+            {"detail":"在使用上海广亿信息技术有限公司（以下简称广“亿信息技术”）网站（“以下简称”）前，请您详细阅读以下条款。您使用本网站则表明您已知悉并接受以下条款。如果不接受以下条款，则请勿使用本网站。"},
+            {"detail":"同时，广亿信息技术将不予以事先通知的、随时修改以下条款。由于与您密切相关，请您经常浏览本页面以获悉当前最新条款。"}]
+          },
+          {"title":"网站使用","text":[{"detail":"本网站内容，并不作为商业用途，仅供您个人使用。对于本网站内容中包含的各种版权及所有权声明，您应予以尊重，在其副本中应予以保留。如果有本网站内容无权利声明的情况，并不代表本网站对其不享有权利或不主张权利，请您依照诚信原则尊重此类内容之合法权益，予以合法使用。本网站不允许任何用于公开商业目的的修改、复制、公布或分发此类内容的行为；禁止未经授权的把此类内容用于其他网站、平面媒体、网络环境的行为。本网站内容及编辑、形式均受相关版权法律保护，任何未经授权的使用行为都可能构成对版权、商标和其他法律权利的侵犯。如果您不愿接受以上约定甚至违反，您使用本网站的授权自动终止，同时您必须立即销毁任何已下载或打印的本网站内容。"}]
+          },
+          {"title":"信息发布","text":[{"detail":"本网站对所提供信息不附加任何形式的保证，包括适销性、适合于特别用途或不侵犯知识产权的保证。此外广亿信息技术亦不保证本网站提供信息的绝对准确性和绝对完整性。本网站的内容及这些内容中涉及的产品、价格和配置等，有随时变更之可能，恕不另行通知。本网站内容也可能已经过期，广亿信息技术不承诺更新它们。"}]
+          }
+        ]
+      }]
+
+    </script>
+
   </body>
+
 </html>
