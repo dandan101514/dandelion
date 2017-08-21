@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name=" Keywords" content="......">      <!--content中，网页关键字-->
+    <meta name=" description" content="......">   <!--content中，网页描述文字-->
+    <meta name="author" content="......">        <!--标注作者-->
+    <title>企事业/制造业-企业生产管理（MES)</title>
+    <link rel="stylesheet" href="../../../bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../static/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../../static/css/common/reset.css">
+    <link rel="stylesheet" href="../../../static/css/common/nav.css">
+    <link rel="stylesheet" href="../../../static/css/common/foot.css">
+    <link rel="stylesheet" href="../../../static/css/view/solution/solution.css">
+
+    <script src="https://cdn.bootcss.com/jquery/3.0.0/jquery.js"></script>
+    <script type="text/javascript" src="../../../bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../static/js/common/nav.js"></script>
+    <script type="text/javascript" src="../../../static/js/common/foot.js"></script>
+    <script type="text/javascript" src="../../../static/js/common/public.js"></script>
+    <script type="text/javascript" src="../../../static/js/views/solution/solution.js"></script>
+    <style>
+      .listsol{
+        margin-bottom:30px;
+      }
+      .listsol span:first-child{
+        display:inline-block;
+        height:inherit;
+        width:2%;
+        vertical-align: top;
+      }
+      .listsol span:nth-child(2){
+        display:inline-block;
+        height:inherit;
+        width:890px;
+      }
+      .listsol strong{
+        font-size:16px;display:inline-block;
+      }
+      
+      .content_lists:first-child p{
+        text-indent: 2em;
+      }
+
+      .text_con h4{
+        margin:70px 0 30px;
+        font-weight: 700;
+      }
+
+      .imgconts{
+        margin-bottom:80px !important;
+      }
+
+      .imgconts .imgs{
+        text-align: right;
+      }
+
+      .imgconts .imgs{
+        width: 520px;
+        height: 285px;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <!--  导航 开始 -->
+    <div class="top"></div>
+    <!--  导航结束  -->
+
+    <!--  下拉导航  开始  -->
+    <nav class="nav_content" style="margin-top:130px;"></nav>
+    <!--  下拉导航  开始  -->
+
+    <!--  企业生产管理（MES) banner  开始  -->
+    <div class="banner">
+      <img src="../../../static/images/itserverimg/itserverbanner1.png" alt="">
+      <div class="banner_details">
+        <h1>企事业/制造业</h1>
+        <span>广亿多媒体信息发布平台主要针对高端酒店、商场超市、医疗行业、连锁机构、会展场馆、企业楼宇、交通枢纽、金融</span>
+        <span>及电信营业厅等用户需求定制开发的内容丰富的信息显示平台和稳定成熟的多媒体数字信息发布系统</span>
+      </div>
+    </div>
+    <!--  企业生产管理（MES) banner  结束  -->
+
+    <!--  企业生产管理（MES)  开始  -->
+    <div class="container content_body">
+      <div class="company_profile">
+        <div class="content_title"></div>
+      </div>
+      <div class="second_content"></div>
+    </div>
+    <!--  企业生产管理（MES)  开始  -->
+
+    <!--  底部内容 开始  -->
+    <footer class="footer_content"></footer>
+
+  </body>
+
+  <script type="text/javascript">
+    $(function(){
+
+      var dataFirst = datas[0].first
+      var dataSecond = datas[1].second
+
+      $(".content_title").html(
+        '<h2 class="fl">'+dataFirst.title+'</h2>'+
+        '<hr class="title_hr fr" style="width:73.5%;">'
+      )
+
+      $.each(dataSecond,function(i,el){
+        var type = this.type
+        // 循环二级标题
+        $(".second_content").append(
+          '<div class="content_lists" style="margin-bottom:100px;">'+
+            '<h3>'+this.title+'</h3>'+
+          '</div>'
+        );
+        
+        $.each(this.text,function(index,v){
+          if(type == 1){
+            $(".content_lists").eq(i).append(
+              '<p>'+v.detail+'</p>'
+            )
+          }
+          if(type == 2){
+            $(".content_lists").eq(i).append(
+              '<div class="row imgconts">'+
+                '<div class="text_con col-sm-6">'+
+                  '<h4>'+v.secondTitle+'</h4>'+
+                  '<p>'+v.detail+'</p>'+
+                '</div>'+
+                '<diiv class="col-sm-6 imgs">'+
+                  '<img src="'+v.url+'" />'+
+                '</diiv>'+
+              '</div>'
+            )
+          }
+
+          if(type == 3){
+            $.each(v.detail,function(k,vle){  
+              if(vle.detailweight != null){
+                $(".content_lists").eq(i).append(
+                  '<ol>'+
+                    '<li class="listsol">'+
+                      '<span style="display:in;">'+(k+1) +". "+'</span>'+
+                      '<span>'+'<strong>'+vle.detailweight+'</strong>'+vle.detailtext+'</span>'+
+                    '</li>'+
+                  '</ol>'
+                );
+              }else{
+                $(".content_lists").eq(i).append(
+                  '<ol>'+
+                    '<li class="listsol">'+
+                      '<span style="display:in;">'+(k+1) +". "+'</span>'+
+                      '<span>'+ vle.detailtext+'</span>'+
+                    '</li>'+
+                  '</ol>'
+                );
+              }
+            });
+          };
+
+        });
+
+      });
+
+      $(".content_lists").eq(1).find(".text_con").eq(1).css("float","right")
+
+    });
+
+    var datas = [
+      {"first":
+        {"title":"企业生产管理（MES）","text":null}
+      },
+      {"second":[
+        {"title":"介绍",
+         "type":"1",
+         "url":null,
+         "text":[
+          {"secondTitle":null,
+           "url":null,
+           "detail":"传统的生产管理系统的各个环节大多数是采用手工操作的方式，数据信息大多存放在纸张上，这样必定存在存放信息少、占据空间大、信息分散、不易存放、不易更新、容易丢失、难以备份等一系列重大的缺陷。生产管理系统遵循先进的管理经验和方法，融入现代化知识管理技术，支持用户调整和扩展新的业务功能，为企业提供一个以提高“效率”和“效益”为目标的现代化生产管理工作平台。同时，生产管理的数据信息也是构成企业信息资源的重要组成部分。MES主要适用于生产制造企业的生产管理、企业物流管理等。"
+          }
+        ]},
+        {"title":"特点",
+        "type":"2",
+        "url":null,
+        "text":[
+          {"secondTitle":"【敏捷生产计划管理体系】",
+           "url":"http://via.placeholder.com/520x285",
+           "detail":"帮助企业根据销售订单与销售预测而制定比较精确的生产计划，据此产生的生产计划可以帮助企业制定精确的原料需求计划，与供应商实现有效的协同，满 足企业实现及时生产和避免库存积压的生产要求。"
+          },
+          {"secondTitle":"【灵活的生产流程管理技术】",
+           "url":"http://via.placeholder.com/520x285",
+           "detail":"MES系统将企业内的工序、工位、作业计划单进行综合管理和过程控制，从而实现生产流程清晰可控，使人员与设备达到最佳配置，提高企业的生产效率。 一旦产品属性、交货期限、数量、质量、工艺路径以及投入的物料得到确认，生产计划单就转化成为生产任务单，并开始生产。"
+          }
+        ]},
+        {"title":"优势",
+        "type":"3",
+        "url":null,
+        "text":[
+          {"secondTitle":null,
+          "url":null,
+          "detail":
+            [
+              {"detailweight":null,"detailtext":"我们有专业的软件研发团队，有规范的我们有专业的软件研发团队，有规范的我们有专业的软件研发团队，有规范的我们有专业的软件研发团队，有规范的过程控制和项目管理，您可以将项目承包给我们，由专业的开发队伍来完成，从而降低项目风险，节省开发成本。"},
+              {"detailweight":null,"detailtext":"改变传统的管理模式,为企业提供一个以提高效率和效益为目标的现代化生产管理平台。"},
+              {"detailweight":null,"detailtext":"支持用户调整和扩展新的功能。"},
+              {"detailweight":null,"detailtext":"无线实时采集管理和RFID射频识别管理。"},
+              {"detailweight":null,"detailtext":"利用先进的计算机技术，结合现代化的管理思想为用户提供了一个全面的、系统的、最优的生产管理的解决方案 。"}
+            ]
+          }
+        ]},
+        {"title":"主要功能",
+        "type":"3",
+        "url":null,
+        "text":[
+          {"secondTitle":null,
+          "url":null,
+          "detail":
+            [
+            {"detailweight":"【系统设置】","detailtext":"包含基础信息的新增,删除,更改等操作,同时可进行销售合同,文档等相关的管理配置以及工作流程的管理操作。"},
+            {"detailweight":"【销售管理】","detailtext":"包含客户档案,销售活动,费用合同等相关记录,及客户资料的查询和统计管理。"},
+            {"detailweight":"【质量管理】","detailtext":"包含合格供方相关资料,评审记录,检验报告以及内部审核记录的管理。"},
+            {"detailweight":"【设计管理】","detailtext":"包含标书,合同及相关验收报告的设计和修改。"},
+            {"detailweight":"【合同管理】","detailtext":"包含合同登记,执行,评审及查询统计等管理。"},
+            {"detailweight":"【办公管理】","detailtext":"包含培训记录,计划操作,公司员工档案,考勤操作,及办公用品的采购和领用等管理。"},
+            {"detailweight":"【个人事物】","detailtext":"包含文档管理和个人邮件相关操作,包括收发邮件以及地址的新增变更删除等功能。"}
+            ]
+          }
+        ]}
+      ]}
+    ]
+  </script>
+</html>

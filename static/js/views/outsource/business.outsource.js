@@ -1,0 +1,73 @@
+$(function(){
+
+  var dataFirst = datas[0].first
+  var dataSecond = datas[1].second
+
+  $(".content_title").html(
+    '<h2 class="fl">'+dataFirst.title+'</h2>'+
+    '<hr class="title_hr fr">'
+  )
+
+  $.each(dataSecond,function(i, el) {
+    if(this.url != null){
+      $(".second_content").append(
+        '<img style="display:inline-block;width:425px;margin-right:120px;margin-bottom:100px;" src="'+this.url+'"/>'+
+        '<div class="content_lists" style="padding-top:30px;width:655px;display:inline-block;">'+
+          '<h3>'+this.title+'</h3>'+
+        '</div>'
+      );
+    }else{
+      $(".second_content").append(
+        '<div class="content_lists">'+
+          '<h3>'+this.title+'</h3>'+
+        '</div>'
+      );
+    };
+
+    $.each(this.text,function(index, v) {
+      if(i === 0){
+        $(".content_lists").eq(0).append(
+          '<p style="padding-bottom:25px;text-indent:2em;">'+v.detail+'</p>'
+        );
+      }else{
+        $(".content_lists").eq(i).append(
+          '<p style="padding-bottom:30px;">'+(index+1)+"."+"&nbsp;&nbsp;&nbsp;&nbsp;"+v.detail+'</p>'
+        );
+      };
+
+    });
+
+  });
+
+});
+
+
+var datas = [
+  {"first":
+    {"title":"业务外包","text":null}
+  },
+  {"second":[
+    {"title":"什么是业务外包？",
+     "url":null,
+     "text":[
+      {"detail":"业务外包（Outsourcing），也称资源外包、资源外置，它是指企业整合用其外部最优秀的专业化资源，从而达到降低成本、提高效率、充分发挥自身核心竞争力和增强企业对环境的迅速应变能力的一种管理模式。企业为了获得比单纯利用内部资源更多的竞争优势，将其非核心业务交由合作企业完成。"},
+      {"detail":"1990年，美国学者普拉哈拉德（C．K．Prahalad）和哈默尔（Gary Hamel）在其《企业核心能力》一文中正式提出业务外包概念。根据他们的观点，所谓业务外包，指企业基于契约，将一些非核心的、辅助性的功能或业务外包给外部的专业化厂商，利用他们的专长和优势来提高企业的整体效率和竞争力。通过实施业务外包，企业不仅可以降低经营成本，集中资源发挥自己的核心优势，更好地满足客户需求，增强市场竞争力，而且可以充分利用外部资源，弥补自身能力的不足，同时，业务外包还能使企业保持管理与业务的灵活性和多样性。"}
+    ]},
+    {"title":"业务外包的优势",
+    "url":"http://via.placeholder.com/425x490",
+     "text":[
+       {"detail":"公司服务部门配备有各方面的技术专家。企业为了保证自己的系统安全，稳定和先进性，要配齐这么多具备各种能力的工程师成本太大。但这些对于一家专业的 IT 服务提供商，我们都具备。"},
+       {"detail":"企业在 IT系统工作中，经常会出现一些设备故障，硬件维修，送修，杀毒，软件安装等琐碎而麻烦的事。我们认为在现在激烈的市场竞争中，企业应保证自己在主要业务上的  竞争力，而不是过多的将精力放在这些辅助性工作。2. 企业在 IT系统工作中，经常会出现一些设备故障，硬件维修，送修，杀毒，软件安装等琐碎而麻烦的事。我们认为在现在激烈的市场竞争中，企业应保证自己在主要业务上的竞争力，而不是过多的将精力放在这些辅助性工作。"},
+       {"detail":"我们的工程师都是经过专业培训，并有多年工作实践经验的。他们能通过对企业的接触，发现系统的一些隐性问题和漏洞，并能对症下药提供相应的解决方案，帮助企业预防故障隐患。"}
+     ]
+    },
+    {"title":"业务外包的特点",
+    "url":null,
+     "text":[
+       {"detail":"是外包偏向于后台业务。新经济时代，市场瞬息万变，企业生存的基本准则就是能及时获取终端信息，随市而变。为了把握终端市场，把准市场脉搏，许多企业对前台业务，都是亲力而为，强化服务，而将后台业务，离市场较远的业务外包出去。"},
+       {"detail":"二是外包偏向于机械性业务。信息社会，产品的生命周期缩短、品种增加、批量减小，顾客对产品的交货周期、价格和质量的要求也越来越高。在这种背景下，满足个性化需求，已成为企业重中之重。为此，企业要将机械性、重复性的业务，通过数字化、软件化外包出去。"},
+       {"detail":"是外包业务偏向于非现场业务。企业的重要业务需要现场作业，必须由企业自身完成，对于那些非现场的或者以网络为平台的业务，可实施外包。企业可以通过因特网，与合作伙伴之间应用信息技术实现彼此的资料互换、信息共享。"}
+     ]
+    }
+  ]}
+]

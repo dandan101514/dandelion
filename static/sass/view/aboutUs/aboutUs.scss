@@ -1,0 +1,97 @@
+@charset "utf-8";
+@import "common/public.scss";
+
+.content_lists{
+  ul{
+    width:100%;
+    li{
+      width: 20%;
+      text-align: center;
+      height: 130px;
+      margin-top: 40px;
+      p{
+        font-size: 24px;
+        color:$textColor;
+      }
+    }
+  }
+}
+
+// 员工风采
+.content_lists{
+  height:auto;
+  margin:50px 0 200px 0;
+}
+.content_texts p{
+  width:475px;
+  overflow: hidden;
+}
+.content_img{
+  overflow: hidden;
+}
+
+
+.content_lists:nth-child(odd){
+  .content_img{
+    float: left;
+  }
+  .content_texts{
+    margin-left: 130px;
+  }
+}
+.content_lists:nth-child(even){
+  .content_img{
+    float: right;
+    max-width:670px;
+  }
+  .content_texts{
+    margin-right: 50px;
+  }
+}
+.content_lists:nth-child(1){
+  .content_img{
+    width:540px;
+    height:358px;
+  }
+}
+.content_lists:nth-child(2){
+  .content_texts{
+    padding-top: 20px;
+  }
+  .content_img{
+    img:nth-child(1){
+      width:375px;
+      height:235px;
+      overflow: hidden;
+    }
+    img:nth-child(2){
+      width:270px;
+      height:215px;
+      overflow: hidden;
+      margin-top: 20px;
+      margin-left: 20px;
+    }
+    img:nth-child(3){
+      width:340px;
+      height:215px;
+      margin-left: 120px;
+      margin-top: 20px;
+      overflow: hidden;
+    }
+  }
+}
+.content_lists:nth-child(3){
+  .content_texts{
+    h3{
+      padding-top: 30px !important;
+    }
+  }
+}
+.content_lists:nth-child(4){
+  .content_img{
+    text-align: right;
+  }
+  .content_texts{
+    margin-left:170px;
+  }
+}

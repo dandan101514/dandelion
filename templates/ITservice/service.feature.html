@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name=" Keywords" content="......">      <!--content中，网页关键字-->
+    <meta name=" description" content="......">   <!--content中，网页描述文字-->
+    <meta name="author" content="......">        <!--标注作者-->
+    <title>IT服务 服务特点</title>
+    <link rel="stylesheet" href="../../bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../../static/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../static/css/common/reset.css">
+    <link rel="stylesheet" href="../../static/css/common/nav.css">
+    <link rel="stylesheet" href="../../static/css/common/foot.css">
+    <link rel="stylesheet" href="../../static/css/view/itservice.css">
+
+
+    <script src="https://cdn.bootcss.com/jquery/3.0.0/jquery.js"></script>
+    <script type="text/javascript" src="../../bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../static/js/common/nav.js"></script>
+    <script type="text/javascript" src="../../static/js/common/foot.js"></script>
+    <script type="text/javascript" src="../../static/js/common/public.js"></script>
+    <script type="text/javascript" src="../../static/js/views/ITservice/itservice.js"></script>
+  </head>
+  <body>
+    <!--  导航 开始 -->
+    <div class="top"></div>
+    <!--  导航结束  -->
+
+    <!--  下拉导航  开始  -->
+    <nav class="nav_content" style="margin-top:130px;"></nav>
+    <!--  下拉导航  开始  -->
+
+    <!--  服务特点banner  开始  -->
+    <div class="banner">
+      <img src="../../static/images/itserverimg/itserverbanner1.png" alt="">
+      <div class="banner_details">
+        <h1>服务特点</h1>
+      </div>
+    </div>
+    <!--  服务特点banner  结束  -->
+
+    <!-- 服务特点内容 开始 -->
+    <div class="container content_body">
+      <div class="service_feature">
+        <div class="content_title">
+          <h2 class="fl">服务特点</h2>
+          <hr class="title_hr fr" style="width:88%;">
+        </div>
+        <div>
+          <ul class="lists_information"></ul>
+        </div>
+      </div>
+    </div>
+    <!-- 服务特点内容 结束 -->
+
+
+    <!--  底部内容 开始  -->
+    <footer class="footer_content"></footer>
+    
+    <script type="text/javascript">
+
+      $(function(){
+
+        var dataFirst = datas[0].first     //页面标题
+        var dataSecond = datas[1].second   //服务特点内容
+   
+      // 服务特点  开始
+      $.each(dataSecond,function(i,v){
+        $.each(v.contents,function(j,vle){
+          $(".lists_information").append(
+            '<li class="each_list">'+
+              '<div class="row">'+
+                '<div class="col-sm-4">'+
+                  '<img src="'+vle.contentsUrl+'" />'+
+                '</div>'+
+                '<div class="col-sm-8">'+
+                  '<div class="text_details">'+
+                    '<h3>'+vle.contentsTitle+'</h3>'+
+                    '<p>'+vle.contentsText+'</p>'+
+                  '</div>'+
+                '</div>'+
+              '</div>'+
+            '</li>'
+          );
+        $(".each_list h3").eq(j).css({'background':'url'+'('+'../../static/images/itserverimg/'+j+'.png'+')','backgroundRepeat':'no-repeat','backgroundPosition':'0 5px'})
+      });
+    });
+
+      // 服务特点  结束
+  });
+
+      var datas = [
+        {"first":
+          {"title":"服务特点",
+          "text":null
+          }
+        },
+        {"second":[
+          {"title":null,
+           "url":null,
+           "contents":[
+              {"contentsUrl":"../../static/images/itserverimg/characteristic_01.png","contentsTitle":"模式","contentsText":"十年中国之路，广亿咨询为各行业的数十家大型企业提供了优质的管理咨询服务。凭借丰富的咨询经验和对行业特点的洞悉，通用咨询总结提炼出适用于中国企业的整套组织管理模式，充分体现国际标准的管理咨询服务的本土化。"},
+              {"contentsUrl":"../../static/images/itserverimg/characteristic_02.png","contentsTitle":"协同效应","contentsText":"广亿咨询与客户共同分析管理瓶颈、制定并实施系统方案。在此过程中，我们将进行阶段性总结、阶段性汇报、阶段性培训和阶段性实施，确保客户准确了解项目进度。"},
+              {"contentsUrl":"../../static/images/itserverimg/characteristic_03.png","contentsTitle":"客户定制","contentsText":"广亿咨询提供给客户的不是千篇一律的管理模式，而是根据前期的企业调研、结合企业现状与行业特点发展出的定制化系统解决方案。"},
+              {"contentsUrl":"../../static/images/itserverimg/characteristic_04.png","contentsTitle":"标本兼职","contentsText":"在提供定制化方案的同时，广亿咨询还对客户的各级管理者进行专业培训，使其掌握先进的管理改进方法。当企业在未来发展中遇到问题时，他们能像咨询顾问一样分析和解决问题。"},
+              {"contentsUrl":"../../static/images/itserverimg/characteristic_05.png","contentsTitle":"风险担保","contentsText":"广亿咨询的客户均在项目实施当年就几倍甚至十几倍地收回咨询费用。显著的直接经济效益是我们对客户的承诺。为与客户共担风险，广亿咨询的部分项目费用是根据客户效益提升幅度按比例收取。"},
+              {"contentsUrl":"../../static/images/itserverimg/characteristic_06.png","contentsTitle":"系统方案","contentsText":"片面的咨询方案无法满足企业绩效提升的需求。广亿咨询为客户提供的是涵盖企业运营、绩效考核和业绩提升的综合性整体解决方案，从而实现客户资源的最优化配置和效益的最大化提升。"}
+           ]}
+          ]}
+        ]
+    </script>
+  </body>
+</html>

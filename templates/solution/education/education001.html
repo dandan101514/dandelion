@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name=" Keywords" content="......">      <!--content中，网页关键字-->
+    <meta name=" description" content="......">   <!--content中，网页描述文字-->
+    <meta name="author" content="......">        <!--标注作者-->
+    <title>教育行业-终身教育学分银行解决方案</title>
+    <link rel="stylesheet" href="../../../bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../static/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../../static/css/common/reset.css">
+    <link rel="stylesheet" href="../../../static/css/common/nav.css">
+    <link rel="stylesheet" href="../../../static/css/common/foot.css">
+    <link rel="stylesheet" href="../../../static/css/view/solution/solution.css">
+
+    <script src="https://cdn.bootcss.com/jquery/3.0.0/jquery.js"></script>
+    <script type="text/javascript" src="../../../bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../static/js/common/nav.js"></script>
+    <script type="text/javascript" src="../../../static/js/common/foot.js"></script>
+    <script type="text/javascript" src="../../../static/js/common/public.js"></script>
+    <script type="text/javascript" src="../../../static/js/views/solution/solution.js"></script>
+  </head>
+  <body>
+    <!--  导航 开始 -->
+    <div class="top"></div>
+    <!--  导航结束  -->
+
+    <!--  下拉导航  开始  -->
+    <nav class="nav_content" style="margin-top:130px;"></nav>
+    <!--  下拉导航  开始  -->
+
+    <!--  终身教育学分银行解决方案 banner  开始  -->
+    <div class="banner">
+      <img src="../../../static/images/itserverimg/itserverbanner1.png" alt="">
+      <div class="banner_details">
+        <h1>教育行业</h1>
+        <span>广亿多媒体信息发布平台主要针对高端酒店、商场超市、医疗行业、连锁机构、会展场馆、企业楼宇、交通枢纽、金融</span>
+        <span>及电信营业厅等用户需求定制开发的内容丰富的信息显示平台和稳定成熟的多媒体数字信息发布系统</span>
+      </div>
+    </div>
+    <!--  终身教育学分银行解决方案 banner  结束  -->
+
+    <!--  终身教育学分银行解决方案  开始  -->
+    <div class="container content_body">
+      <div class="company_profile">
+        <div class="content_title"></div>
+      </div>
+      <div class="second_content"></div>
+    </div>
+    <!--  终身教育学分银行解决方案  开始  -->
+
+    <!--  底部内容 开始  -->
+    <footer class="footer_content"></footer>
+
+  </body>
+
+  <script type="text/javascript">
+    $(function(){
+
+      var dataFirst = datas[0].first
+      var dataSecond = datas[1].second
+
+      $(".content_title").html(
+        '<h2 class="fl">'+dataFirst.title+'</h2>'+
+        '<hr class="title_hr fr" style="width:70%;">'
+      )
+
+      $.each(dataSecond,function(i,el){
+        // 循环添加二级标题内容
+        $(".second_content").append(
+          '<div class="content_lists" style="margin-bottom:100px;">'+
+            '<h3 style="padding-bottom:0;">'+this.title+'</h3>'+
+            '<div class="detail_text">'+'</div>'+
+          '</div>'
+        );
+
+        $.each(this.text,function(k,v){
+          // 循环添加三级标题内容
+          if(v.secondTitle != null){
+            $(".detail_text").eq(i).append(
+              '<h4 style="margin:40px 0 5px 0;font-weight:700;">'+v.secondTitle+'</h4>'
+            )
+          }
+          if(v.detail != null){
+            $(".detail_text").eq(i).append(
+              '<div class="detail_text_more"></div>'
+            )
+          }
+          
+
+          $.each(v.detail,function(j,vue){
+
+            $(".detail_text").eq(i).append(
+              '<p style="margin-bottom:15px;">'+vue.detailtext+'</p>'
+            )
+          })
+          $.each(v.content,function(q,vues){
+            // 循环添加小标题内容
+            if(v.content != null){
+              $(".detail_text").eq(i).append(
+                '<h5 style="font-size:16px;margin:15px 0 10px;font-weight:700;">'+vues.contitle+'</h5>'
+              )
+            } 
+
+            $.each(vues.context,function(w,contvue){
+              $(".detail_text").eq(i).append(
+                '<p>'+contvue.contentdetail+'</p>'
+              )
+            })
+          })
+
+          if(v.url != null){
+            $(".detail_text").eq(i).append(
+                '<img style="display:block;margin:50px auto;" src="'+v.url+'"/>'
+
+            )
+          }
+
+        });
+
+
+
+      });
+
+
+    });
+
+    var datas = [
+      {"first":
+        {"title":"终身教育学分银行解决方案","text":null}
+      },
+      {"second":[
+        {"title":"什么是学分银行？",
+         "url":null,
+         "text":[
+          {"secondTitle":"上海市为什么要构建终身教育学分银行？",
+           "url":null,
+           "detail":[
+             {"detailtext":"构建学分银行是上海市终身教育体系建设的有效措施之一。国家和上海市中长期教育改革和发展规划纲要都要求建立“学分银行”制度，搭建终身学习“立交桥”，建设终身教育体系和学习型社会。因此，构建学分银行是上海市建设终身教育体系和学习型社会的需要，是适应上海经济社会发展、满足市民多元化学习和发展的需要。"}
+           ],
+           "content":null
+          },
+          {"secondTitle":"什么是学分银行？",
+           "url":null,
+           "detail":[
+             {"detailtext":"上海市终身教育学分银行（简称“学分银行”）是面向上海市民，以终身教育学分认定、累积和转换为主要功能的学习成果认证管理中心和学习成果转换服务平台，建立适应终身教育发展的学习成果管理与服务系统，构建纵向衔接、横向沟通的市民终身学习的“立交桥”，促进学历教育之间、学历教育与非学历教育等各类教育之间的沟通衔接。"}
+           ],
+           "content":null
+          },
+          {"secondTitle":"学分银行有哪些功能？",
+           "url":null,
+           "detail":null,
+           "content":[
+             {"contitle":"一是终身教育学习成果的认证管理中心：",
+              "conurl":null,
+              "context":[
+                {"contentdetail":"认证功能：认证学习者获得的终身教育各类学习成果；"},
+                {"contentdetail":"积累功能：建立面向全市市民的个人学习档案库，积累学习者的终身学习成果；"},
+                {"contentdetail":"查询功能：提供个人学习档案的在线查询等服务；"},
+                {"contentdetail":"证明功能：提供学习者个人成绩证明等服务。"},
+              ]
+             },
+             {"contitle":"二是终身教育学习成果转换服务平台：",
+              "conurl":null,
+              "context":[
+                {"contentdetail":"标准指导服务：建设学习成果认定转换规则和标准，提供学分认定转换指导服务；"},
+                {"contentdetail":"信息公告服务：各高校等教育机构在学分银行网上平台公告学分认定转换规则、认定的证书与课程等信息，方便学习者申请学分转换，提供学分认定转换信息服务；"},
+                {"contentdetail":"成绩信息服务：学分银行个人学习档案成绩证明可作为高校等教育机构学分认定依据，提供学分转换成绩证明信息服务；"},
+                {"contentdetail":"转换平台服务：提供学分认定转换申请、审核和成绩存入等平台服务。"},
+              ]
+             }
+           ]
+          },
+          {"secondTitle":"学分银行的学分有几类？",
+           "url":null,
+           "detail":[
+             {"detailtext":"学分银行的学分分为学历教育、职业培训和文化休闲教育（社区教育、老年教育等）三类。其中，部分职业培训证书可转换为学历教育学分，文化休闲教育学分不能转换为学历教育学分。"}
+           ],
+           "content":null
+          },
+          {"secondTitle":"什么是个人学习档案?",
+           "url":null,
+           "detail":[
+             {"detailtext":"凡上海市学习者都可申请拥有学分银行账户和个人学习档案。个人学习档案包括学历教育、职业培训和文化休闲教育等学习成果。市民可通过学分银行网站查询个人学习档案。"}
+           ],
+           "content":null
+          }
+        ]},
+        {"title":"学习者如何在学分银行开户？",
+        "url":null,
+        "text":[
+          {"secondTitle":null,
+           "url":"http://via.placeholder.com/850x250",
+           "detail":[
+             {"detailtext":"学习者可在学分银行网站上申请开户，持本人身份证到就近的学分银行分部办理开户手续，成为学分银行用户。"}
+           ],
+           "content":null
+          }
+        ]},
+        {"title":"学习者的学习成果如何存入学分银行？",
+        "url":null,
+        "text":[
+          {"secondTitle":"1. 个别存入",
+           "url":"http://via.placeholder.com/1100x330",
+           "detail":[
+             {"detailtext":"学历教育成绩存入：学习者可在学分银行网站上申请，持学历教育成绩证明原件到学分银行分部办理存入手续，经学分银行认证后的成绩存入学分银行"},
+             {"detailtext":"职业培训证书存入：职业培训证书经学分银行认证进入学分银行职业培训证书目录。学习者获得该目录中的证书，可在学分银行网站上申请，持证书原件到学分银行分部办理存入手续，经学分银行认证后存入学分银行。"}
+           ],
+           "content":null
+          },
+          {"secondTitle":"2. 集中存入",
+           "url":"http://via.placeholder.com/1100x330",
+           "detail":[
+             {"detailtext":"学历教育和职业培训学习成果的集中存入：学分银行网点将本校学习者的学习成果集中存入学分银行，集中存入的成绩信息须在学习者开户后才能使用。"},
+             {"detailtext":"文化休闲教育学习成果的存入：区县社区学院、老年大学申报的文化休闲教育学习项目（课程、学习活动），经学分银行认证进入学分银行文化休闲教育学习项目目录。学习者学习该目录中的项目，所获得的学分由所在区县社区学院、老年大学统一存入学分银行。"}
+           ],
+           "content":null
+          }
+        ]},
+        {"title":"学习者如何使用存入学分银行的学分？",
+        "url":null,
+        "text":[
+          {"secondTitle":"1. 学历教育学分和职业培训等证书",
+           "url":"http://via.placeholder.com/1100x330",
+           "detail":[
+             {"detailtext":"学习者可选择继续学习的高校（机构），用积累在学分银行的学习成果到高校网点申请学分转换；高校网点按规定办理学分转换；学习者在该高校继续学习，获得其学历证书。"}
+           ],
+           "content":null
+          },
+          {"secondTitle":"2. 文化休闲教育学分",
+           "url":null,
+           "detail":[
+             {"detailtext":"学习者积累在学分银行的文化休闲教育学分及其他学习成果，可作为激励市民终身学习的依据。"}
+           ],
+           "content":null
+          }
+        ]}
+      ]}
+    ]
+  </script>
+</html>

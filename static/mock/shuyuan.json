@@ -1,0 +1,16 @@
+{
+    "code": "1000",
+    "message": "SUCCESS",
+    "obj": [{
+        "uId": "1",
+        "deleteFlag": 0,
+        "createAgent": "3",
+        "createDate": 1488862959000,
+        "updateAgent": "3",
+        "updateDate": 1488862959000,
+        "traceName": "保质期",
+        "dataType": "chineseRemark_type",
+        "dataValue": "请输入保质期",
+        "status": 1
+    }]
+}

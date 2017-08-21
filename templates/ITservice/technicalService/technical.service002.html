@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name=" Keywords" content="......">      <!--content中，网页关键字-->
+    <meta name=" description" content="......">   <!--content中，网页描述文字-->
+    <meta name="author" content="......">        <!--标注作者-->
+    <title>IT服务-测试</title>
+    <link rel="stylesheet" href="../../../bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../static/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../../static/css/common/reset.css">
+    <link rel="stylesheet" href="../../../static/css/common/nav.css">
+    <link rel="stylesheet" href="../../../static/css/common/foot.css">
+    <link rel="stylesheet" href="../../../static/css/view/itservice.css">
+
+
+    <script src="https://cdn.bootcss.com/jquery/3.0.0/jquery.js"></script>
+    <script type="text/javascript" src="../../../bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../static/js/common/nav.js"></script>
+    <script type="text/javascript" src="../../../static/js/common/foot.js"></script>
+    <script type="text/javascript" src="../../../static/js/common/public.js"></script>
+    <script type="text/javascript" src="../../../static/js/views/ITservice/itservice.js"></script>
+
+    <style>
+      h4{
+        font-weight: 700 !important;
+      }
+      p{
+        margin-bottom:15px;
+      }
+      .introduction{
+        margin-top:90px;
+      }
+      .server h4{
+        margin-bottom:15px;
+      }
+      .server h4:nth-child(2){
+        margin-top:20px;
+      }
+      .strongsize{
+        font-size: 16px;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <!--  导航 开始 -->
+    <div class="top"></div>
+    <!--  导航结束  -->
+
+    <!--  下拉导航  开始  -->
+    <nav class="nav_content" style="margin-top:130px;"></nav>
+    <!--  下拉导航  开始  -->
+
+    <!--  测试 banner  开始  -->
+    <div class="banner">
+      <img src="../../../static/images/itserverimg/itserverbanner1.png" alt="">
+      <div class="banner_details">
+        <h1>测试</h1>
+        <span>广亿多媒体信息发布平台主要针对高端酒店、商场超市、医疗行业、连锁机构、会展场馆、企业楼宇、交通枢纽、金融</span>
+        <span>及电信营业厅等用户需求定制开发的内容丰富的信息显示平台和稳定成熟的多媒体数字信息发布系统</span>
+      </div>
+    </div>
+    <!--  测试 banner  结束  -->
+
+    <!--  测试  开始  -->
+    <div class="container content_body">
+      <div class="company_profile">
+        <div class="content_title" style="height:auto;"></div>
+      </div>
+
+        <!-- 服务范围 -->
+        <div class="server"></div>
+
+        <!-- 功能介绍 -->
+        <div class="introduction"></div>
+
+      </div>
+    </div>
+    <!--  测试  结束  -->
+
+    <!--  底部内容 开始  -->
+    <footer class="footer_content"></footer>
+
+  </body>
+
+  <script type="text/javascript">
+    $(function(){
+
+      var dataFirst = datas[0].first     //页面标题
+      var dataSecond = datas[1].second   //服务范围
+      var dataThird = datas[2].third   //功能介绍
+
+      // 页面标题块内容
+      $(".content_title").html(
+        '<h2 class="fl">'+dataFirst.title+'</h2>'+
+        '<hr class="title_hr fr" style="width:93%;">'+
+        '<div style="clear:both;"></div>'+
+        '<div class="content_text" style="margin-top:50px;"></div>'
+      );
+      
+      $.each(dataFirst.text,function(i,v){
+        $(".content_text").append('<p class="jishuText">'+v.detail+'</p>');
+      });
+
+
+    // 服务范围
+    $.each(dataSecond,function(i,v){
+      $(".server").append('<h3>'+this.title+'</h3>');
+
+      $.each(v.contents,function(j,vle){
+        $(".server").append('<div class="server_content">'+'<h4>'+vle.contentsTitle+'</h4>'+'</di>');
+
+        $.each(vle.contentsText,function(k,vles){
+          if(vles.textDeatilA != null){
+            $(".server_content").eq(j).append('<p>'+'<strong class="strongsize">'+vles.textDeatilA+'</strong>'+vles.textDeatil+'</p>')
+          }else{
+            $(".server_content").eq(j).append('<p>'+vles.textDeatil+'</p>')
+          }
+        
+        });
+
+      });
+
+      
+      
+    });
+
+    // 功能介绍
+    $.each(dataThird,function(i,v){
+      $(".introduction").append(
+        '<h3>'+this.title+'</h3>'
+      );
+
+      $.each(v.contents,function(j,vle){
+        $(".introduction").append('<p>'+vle.contentsText+'</p>')
+      });
+    });
+      
+  });
+
+    var datas = [
+      {"first":
+        {"title":"测试",
+        "text":[
+          {"detail":"广亿十余年来一直致力于测试服务的模式创新，专注于提高自身的测试服务质量，并采用自主研发的软硬件测试系统，为客户提供综合的一站式专业级测试服务。尤其在企业金融、高科技行业，软通动力通过国际先进水平的专业测试技能，以及高效的测试服务，助推客户产品迅速走向市场，在激烈的市场角逐中获得先机，实现卓越业绩。"},
+          {"detail":"广亿通过与众多国内外知名客户的长期合作，凭借雄厚的技术实力和广泛的项目经验，为客户提供专业化的测试咨询、测试解决方案、测试体系建设、测试外包、测试项目实施、测试工具使用及采购、测试培训等服务和测试平台。测试服务平台包括：测试管理平台、自动化测试平台、性能测试平台、测试知识库平台。"}
+        ],
+        "contents":null
+      }
+      },
+      {"second":[
+        {"title":"服务范围",
+         "url":null,
+         "text":null,
+         "contents":[
+           {"contentsTitle":"金融测试服务",
+            "contentsText":[
+              {"textDeatilA":null,"textDeatil":"测试技术和管理咨询服务"},
+              {"textDeatilA":null,"textDeatil":"开发测试服务"},
+              {"textDeatilA":null,"textDeatil":"用户验收测试服务"},
+              {"textDeatilA":null,"textDeatil":"系统测试服务"},
+              {"textDeatilA":null,"textDeatil":"测试环境和测试数据管理服务"}
+           ]},
+           {"contentsTitle":"高科技电子产品测试服务",
+            "contentsText":[
+              {"textDeatilA":"硬件层面：","textDeatil":"为各类高科技电子产品测试提供所需的实验室环境和专业测量设备等，并进行标准化测试和运营服务商相关测试。"},
+              {"textDeatilA":"软件层面：","textDeatil":"通过软通动力自主研发的测试软件和自动化工具，对产品进行应用级测试及端到端测试服务。"},
+              {"textDeatilA":"客户层面：","textDeatil":"根据产品面向的用户群的应用需求，从多角度对产品进行多语言、多国别的用户级专业体验测试。"}
+           ]}
+        ]}
+      ]},
+      {"third":[
+        {"title":"功能介绍",
+         "url":null,
+         "text":null,
+         "contents":[
+          {"contentsText":"广亿拥有先进及专业的测试实验室，及经验丰富的测试团队，帮助金融、高科技等行业客户进行多语种、跨平台的研发与测试，提供高品质的专业服务"},
+          {"contentsText":"广亿为客户提供完整的、可定制的端到端测试策略、方案、流程，帮助建立完整的测试体系"},
+          {"contentsText":"依托现有的、具有国际先进水平的云服务平台，广亿创新性的提出云测试理念，能为客户提供更加成熟、高效、便捷的云测试服务"}
+        ]}
+      ]}
+    ]
+  </script>
+</html>

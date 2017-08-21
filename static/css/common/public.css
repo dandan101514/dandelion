@@ -1,58 +1,70 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-  color: #5e5e5e;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-* {box-sizing: border-box;}
-body {background: #fff;font-size: 14px;color:#5e5e5e;font-family: "Microsoft YaHei";}
-img {border: 0 none;vertical-align: top;}
-table {border-collapse: collapse;}
-button {cursor: pointer;}
-ul,li {list-style: none;}
-a{color: #5e5e5e;}
-a:link{color:#5e5e5e;}
-a:hover,a:link,a:active,a:focus{text-decoration:none;}
-p{line-height: 2;}
-input,textarea {outline: none;box-shadow: none;}
-input::-ms-clear {display:none;}
-textarea {resize: none;overflow: auto;}
-.container{padding:0;width: 85.7143em;}
-.clearfix {zoom: 1;}
-/*清除元素后面的浮动*/
-.clearfix::before {content: ".";width: 0;height: 0;visibility: hidden;display: block;clear: both;}
-/*新建一个元素清除浮动*/
-.clear {diplay: block!important;float: none!important;clear: both;overflow: hidden;width: auto!important;height: 0!important;margin: 0 auto!important;padding: 0!important;font-size: 0;line-height: 0;}
-.cl{ clear: both;}
-.relative {position: relative;top: 0;left: 0;}
-.fl {float: left}
-.fr {float: right}
-.tl {text-align: left;}
-.tc {text-align: center}
-.tr {text-align: right;}
-.ellipse {overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
-.textIndent{text-indent: 2em;}
-.main-color{color:#399bff;}
-.main-bg{background:#399bff;}
-.mrg-20{ margin-top: 1.43em;}
-.mrg-35{ margin-top: 2.5em;}
-.mrg-50{ margin-top: 3.57em;}
-.mrg-100{ margin-top: 7.143em;}
-.mrg-120{ margin-top: 8.57em;}
-.mrg-155{ margin-top: 11.07em;}
-.mrg-220{ margin-top: 15.72em;}
+@charset "UTF-8";
+/*   banner 字体 一级标题  h1  */
+/*    二级标题  h2  */
+/*   三级标题 h3   */
+/*   四级标题 h4   */
+/*   二级页面 banner    */
+.banner {
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+  position: relative; }
+  .banner img {
+    width: 100%;
+    height: 280px; }
+  .banner .banner_details {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    text-align: center; }
+    .banner .banner_details h1 {
+      font-size: 48px;
+      letter-spacing: 10px;
+      color: white; }
+    .banner .banner_details span {
+      display: block;
+      font-size: 20px;
+      color: #fff;
+      padding-top: 15px; }
+
+.content_title {
+  height: 30px;
+  line-height: 30px;
+  width: 100%;
+  margin: 80px 0 50px 0; }
+  .content_title h2 {
+    color: #333333;
+    font-size: 28px;
+    font-weight: 600;
+    min-width: 7%; }
+  .content_title .title_hr {
+    height: 2px;
+    background: #cfcfcf;
+    width: 93%;
+    margin: 0;
+    margin-top: 14px; }
+
+.content_text {
+  margin-bottom: 100px; }
+  .content_text p {
+    margin-bottom: 10px;
+    text-indent: 2em; }
+
+.content_body h3 {
+  color: #444444;
+  font-size: 24px;
+  font-weight: 600;
+  padding-bottom: 60px; }
+.content_body h4 {
+  color: #444444;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 40px; }
+
+.footer_content {
+  margin-top: 200px; }
+
+/*# sourceMappingURL=public.css.map */

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name=" Keywords" content="......">      <!--content中，网页关键字-->
+    <meta name=" description" content="......">   <!--content中，网页描述文字-->
+    <meta name="author" content="......">        <!--标注作者-->
+    <title>企事业/制造业-客户关系管理</title>
+    <link rel="stylesheet" href="../../../bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../static/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../../static/css/common/reset.css">
+    <link rel="stylesheet" href="../../../static/css/common/nav.css">
+    <link rel="stylesheet" href="../../../static/css/common/foot.css">
+    <link rel="stylesheet" href="../../../static/css/view/solution/solution.css">
+
+    <script src="https://cdn.bootcss.com/jquery/3.0.0/jquery.js"></script>
+    <script type="text/javascript" src="../../../bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../static/js/common/nav.js"></script>
+    <script type="text/javascript" src="../../../static/js/common/foot.js"></script>
+    <script type="text/javascript" src="../../../static/js/common/public.js"></script>
+    <script type="text/javascript" src="../../../static/js/views/solution/solution.js"></script>
+  </head>
+  <body>
+    <!--  导航 开始 -->
+    <div class="top"></div>
+    <!--  导航结束  -->
+
+    <!--  下拉导航  开始  -->
+    <nav class="nav_content" style="margin-top:130px;"></nav>
+    <!--  下拉导航  开始  -->
+
+    <!--  客户关系管理 banner  开始  -->
+    <div class="banner">
+      <img src="../../../static/images/itserverimg/itserverbanner1.png" alt="">
+      <div class="banner_details">
+        <h1>企事业/制造业</h1>
+        <span>广亿多媒体信息发布平台主要针对高端酒店、商场超市、医疗行业、连锁机构、会展场馆、企业楼宇、交通枢纽、金融</span>
+        <span>及电信营业厅等用户需求定制开发的内容丰富的信息显示平台和稳定成熟的多媒体数字信息发布系统</span>
+      </div>
+    </div>
+    <!--  客户关系管理 banner  结束  -->
+
+    <!--  客户关系管理  开始  -->
+    <div class="container content_body">
+      <div class="company_profile">
+        <div class="content_title"></div>
+      </div>
+      <div class="second_content"></div>
+    </div>
+    <!--  客户关系管理  开始  -->
+
+    <!--  底部内容 开始  -->
+    <footer class="footer_content"></footer>
+
+  </body>
+
+  <script type="text/javascript">
+    $(function(){
+
+      var dataFirst = datas[0].first
+      var dataSecond = datas[1].second
+
+      $(".content_title").html(
+        '<h2 class="fl">'+dataFirst.title+'</h2>'+
+        '<hr class="title_hr fr" style="width:73.5%;">'
+      )
+
+      $.each(dataSecond,function(i,el){
+        // 循环二级标题
+        $(".second_content").append(
+            '<div class="content_lists" style="margin-bottom:100px;">'+
+              '<h3>'+this.title+'</h3>'+
+            '</div>'
+        );
+        
+        $.each(this.text,function(index,v){
+
+          if(v.secondTitle != null){
+            $(".content_lists").eq(i).append(
+              '<h4 style="font-weight:700;">'+v.secondTitle+'</h4>'
+            );
+          };
+
+          $.each(v.detail,function(k,vle){
+              $(".content_lists").eq(i).append('<p style="margin-bottom:15px;">'+vle.detailtext+'</p>')
+          });
+
+          if(v.url != null){
+            $(".content_lists").eq(i).append('<img style="margin:100px auto 60px;display:block;" src="'+v.url+'"/>');
+          };
+          
+        });
+
+      });
+
+      $(".content_lists").eq(0).css("textIndent","2em")
+
+
+    });
+
+    var datas = [
+      {"first":
+        {"title":"客户关系管理（CRM)","text":null}
+      },
+      {"second":[
+        {"title":"介绍",
+         "url":null,
+         "text":[
+          {"secondTitle":null,
+           "url":"http://via.placeholder.com/900x800",
+           "detail":[
+               {"detailtext":"广亿CRM，采用最流行的开发语言-JAVA开发语言，基于广亿快速开发平台（Spirng MVC+Spring+Hibernate/Spring JDBC）开发的新一代B/S架构客户关系管理系统。 广亿CRM是根据国内中小型企业特点开发出的企业客户关系管理解决方案, 系统主要面向国内中小型企业，通用性强，适用于各个行业，容易与其它系统进行无缝集成。"},
+               {"detailtext":"系统成熟稳定、简单易用、功能强大、通过对客户数据的有效分析，以多种报表、图表格式的展示，系统支持多种操作系统和数据库、支持多国语言，异地办公等,为您的企业降低销售成本，增加收入，从而全面提升企业的竞争力和赢利能力。"}
+           ]
+          }
+        ]},
+        {"title":"优势",
+        "url":null,
+        "text":[
+          {"secondTitle":"技术优势",
+           "url":null,
+           "detail":[
+               {"detailtext":"整个系统基于JAVA实现，架构采用Spirng MVC+Spring+Hibernate/Spring JDBC，模块化开发，灵活的模块配置方式，实现客户自定义模块功能。"}
+           ]
+          },
+          {"secondTitle":"方位了解客户信息",
+           "url":null,
+           "detail":[
+               {"detailtext":"真正做到一点接触了解多项内容：客户信息包括客户联系人、与客户沟通往来记、销售机会、开发该客户所产品的费用、向客户的产品报价情况、签订的合同、客户提起的服务请求、客户购买需要服务的产品、对客户的回访等等。"}
+           ]
+          },
+          {"secondTitle":"找到最佳营销途径",
+           "url":null,
+           "detail":[
+               {"detailtext":"通过统计不同市场活动类型所带来的客户量，来确定最适合企业宣传的途径，达到快速有效节约资源的目的。"}
+           ]
+          },
+          {"secondTitle":"服务请求责任到人",
+           "url":null,
+           "detail":[
+               {"detailtext":"服务请求问责制，让客户服务请求在内部迅速得到传递并反馈给客户。"}
+           ]
+          }
+        ]},
+        {"title":"功能介绍",
+        "url":null,
+        "text":[
+          {"secondTitle":null,
+          "url":null,
+          "detail":[
+              {"detailtext":"1. 【系统设置】主要公司信息设置、 部门管理 、职位管理、用户管理、角色设置 、数据字典、系统日志公用模块。"}
+          ]
+          },
+          {"secondTitle":null,
+          "url":null,
+          "detail":[
+              {"detailtext":"2. 【信息管理】包括公告管理、知识库类别、 知识库管理 、回复管理等内部信息交流。"}
+          ]
+          },
+          {"secondTitle":null,
+          "url":null,
+          "detail":[
+              {"detailtext":"3. 【员工管理】主要包括班次定义、 上下班签到、 个人考勤、日程安排、工作日志、周报管理、月报管理。"}
+          ]
+          },
+          {"secondTitle":null,
+          "url":null,
+          "detail":[
+              {"detailtext":"4. 【客户管理】包括客户类别、客户管理、联系人管理、 客户关怀、 联系记录、客户反馈等功能。"}
+          ]
+          }
+        ]}
+      ]}
+    ]
+  </script>
+</html>

@@ -1,0 +1,23 @@
+{
+    "code": "1000",
+    "message": "SUCCESS",
+    "obj": [{
+        "uId": "1",
+        "deleteFlag": 0,
+        "createAgent": null,
+        "createDate": null,
+        "updateAgent": null,
+        "updateDate": null,
+        "unitName": "公斤",
+        "status": 0
+    }, {
+        "uId": "d9c24d9cc14b4b198b5adac51313495d",
+        "deleteFlag": 0,
+        "createAgent": "2",
+        "createDate": 1488873129000,
+        "updateAgent": "2",
+        "updateDate": 1488873129000,
+        "unitName": "g/100g",
+        "status": 1
+    }]
+}

@@ -10,13 +10,16 @@
     <title>首页</title>
     <link rel="stylesheet" href="./bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="./static/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./static/css/common/public.css">
+    <link rel="stylesheet" href="./static/css/common/reset.css">
     <link rel="stylesheet" href="./static/css/common/nav.css">
+    <link rel="stylesheet" href="./static/css/common/foot.css">
     <link rel="stylesheet" href="./static/css/index.css">
     <link rel="stylesheet" href="./static/js/plugs/fullPage/jquery.fullPage.min.css">
 
     <script src="https://cdn.bootcss.com/jquery/3.0.0/jquery.js"></script>
     <script type="text/javascript" src="bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./static/js/common/nav.js"></script>
+    <script type="text/javascript" src="./static/js/common/foot.js"></script>
     <script type="text/javascript" src="./static/js/plugs/fullPage/jquery.fullPage.min.js"></script>
 
     <script>
@@ -32,44 +35,37 @@
     </script>
   </head>
   <body>
-    <div class="top">
-      <div class="menu">
-        <h1 class="logo cl"><a href="http://www.dowebok.com/"></a> 上海广亿信息技术有限公司</h1>
-        <ul class="nav">
-          <li><a href="javascript:">首页</a></li>
-          <li><a href="javascript:">IT服务</a></li>
-          <li><a href="javascript:">软件外包</a></li>
-          <li><a href="javascript:">解决方案</a></li>
-          <li><a href="javascript:">人才招聘</a></li>
-          <li><a href="javascript:">关于我们</a></li>
-        </ul>
-        <span class="change_language">English</span>
-      </div>
-    </div>
+    <!--  导航 开始 -->
+    <div class="top" style="position:fixed;left: 0;right: 0;top: 0;z-index:999;"></div>
+    <!--  导航结束  -->
+
+    <!--  下拉导航  开始  -->
+    <nav class="nav_content" style="margin-top:130px;"></nav>
+    <!--  下拉导航  开始  -->
+
     <div id="fullpage">
       <div class="section" id="section0">
-        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-          <ol class="carousel-indicators" style="bottom:20%;">
-            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="3"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" style="margin-top:130px;">
+          <ol class="carousel-indicators" style="top:80%;z-index:999;">
+            <li class="icon_li" data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li class="icon_li" data-target="#carousel-example-generic" data-slide-to="1"></li>
+            <li class="icon_li" data-target="#carousel-example-generic" data-slide-to="2"></li>
+            <li class="icon_li" data-target="#carousel-example-generic" data-slide-to="3"></li>
           </ol>
           <!-- Wrapper for slides -->
-          <div class="carousel-inner" role="listbox">
-            <div class="item active"><img src="static/images/image.index/1bg.jpg" alt="..."></div>
-            <div class="item"><img src="static/images/image.index/2bg.jpg" alt="..."></div>
-            <div class="item"><img src="static/images/image.index/3bg.jpg" alt="..."></div>
-            <div class="item"><img src="static/images/image.index/4bg.jpg" alt="..."></div>
+          <div class="carousel-inner" role="listbox" style="text-align:center;position:relative;overflow:hidden;">
+            <div class="item active"><img style="height:1000px;" src="static/images/image.index/banner01.png" alt="..."></div>
+            <div class="item"><img style="height:1000px;width:100%;" src="static/images/image.index/2bg.jpg" alt="..."></div>
+            <div class="item"><img style="height:1000;width:100%;" src="static/images/image.index/3bg.jpg" alt="..."></div>
+            <div class="item"><img style="height:1000;width:100%;" src="static/images/image.index/4bg.jpg" alt="..."></div>
           </div>
 
           <!-- Controls -->
-          <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-            <span class="fa fa-angle-left fa-4x glyphicon-chevron-left" aria-hidden="true"></span>
+          <a style="background:none;" class="left fp-prev carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+            <img class="fa pre_left" src="static/images/image.index/pre_left.png" alt="">
           </a>
-          <a class="right carousel-control"  href="#carousel-example-generic" role="button" data-slide="next">
-            <span class="fa fa-angle-right fa-4x glyphicon-chevron-right" aria-hidden="true"></span>
+          <a style="background:none;" class="right fp-next carousel-control"  href="#carousel-example-generic" role="button" data-slide="next">
+            <img class="fa pre_right" src="static/images/image.index/pre_right.png" alt="">
           </a>
         </div>
       </div>
@@ -307,39 +303,9 @@
               </li>
             </ul>
           </div>
-          <footer class="footer_content">
-            <div class="contact_us">
-              <div class="title_core">
-                <div class="title_core_block">
-                  <i class="border_top"></i>
-                  <h3 style="color: #fff;padding-top:1.43em;">联系我们</h3>
-                  <hr class="hr_width" style="border-top:0;">
-                  <p style="width: 28.57em;position:relative;left:-8em;color:#fff;">ABOUTTHEWIDEMOLLION</p>
-                  <i class="border_bottom"></i>
-                </div>
-              </div>
-              <div class="container">
-                <ul class="row ad_massage">
-                  <li class="col-sm-4">
-                    <i></i>
-                    <p>P.C:200235</p>
-                  </li>
-                  <li class="col-sm-4">
-                    <i style="background: #399bff;"></i>
-                    <p>上海市徐汇区中山西路2020号华宜大厦1902室</p>
-                  </li>
-                  <li class="col-sm-4">
-                    <i></i>
-                    <p>TEL:021-64812228</p>
-                  </li>
-                </ul>
-              </div>
-              <div class="company_name">
-                <p>上海广亿信息技术有限公司</p>
-                <p>Shanghai Guangyi Information technology Co.,Ltd</p>
-              </div>
-            </div>
-          </footer>
+          <!--  底部内容 开始  -->
+          <footer class="footer_content"></footer>
+          <!--  底部内容 结束  -->
         </div>
 
       </div>
@@ -347,17 +313,6 @@
 
     <script type="text/javascript">
       $(function(){
-
-        $(".fp-prev").html('<i class="fa fa-angle-left" aria-hidden="true"></i>');
-        $(".fp-next").html('<i class="fa fa-angle-right" aria-hidden="true"></i>');
-
-        $(".fp-prev,.fp-next").hover(function(){
-          $(this).css('background','rgba(225,225,225,0.3)');
-          $(this).find('.fa-angle-left,.fa-angle-right').css('color','rgba(225,225,225,1)');
-        },function(){
-          $(this).css('background','rgba(225,225,225,0.1)');
-          $(this).find('.fa-angle-left,.fa-angle-right').css('color','rgba(225,225,225,0.3)');
-        })
 
         for(var i = 0; i< $(".icons_text p").length; i++){
           $(".icons_text p").eq(i).text($(".icons_text p").eq(i).text().substring(0,30)+'......')
