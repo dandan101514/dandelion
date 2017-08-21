@@ -142,7 +142,7 @@ var menus = [{
     }
   },
   {
-    "id":"templates/ITservice/itserivce1",
+    "id":"templates/ITservice/technical.consultation",
     "menuNav":{
     "firstMenu":"IT服务",
     "secondNav":[
@@ -187,8 +187,7 @@ var menus = [{
     "secondNav":[
       {"id":"1","secondtext":"技术人才外包","detailurl":"http://via.placeholder.com/380x245"},
       {"id":"2","secondtext":"业务外包","detailurl":"http://via.placeholder.com/380x245"},
-      {"id":"3","secondtext":"项目开发服务","detailurl":"http://via.placeholder.com/380x245"},
-      {"id":"4","secondtext":"技术外包流程","detailurl":"http://via.placeholder.com/380x245"}
+      {"id":"3","secondtext":"项目开发服务","detailurl":"http://via.placeholder.com/380x245"}
     ],
     "thirdNav":[
       {"thirdtext":[
@@ -199,9 +198,6 @@ var menus = [{
       ]},
       {"thirdtext":[
         {"Id":"templates/outsource/development","detailstexts":"项目开发服务"}
-      ]},
-      {"thirdtext":[
-        {"Id":"11","detailstexts":"技术外包流程"}
       ]}
     ],
     "rightDetail":[
@@ -326,7 +322,7 @@ var menus = [{
         {"Id":"templates/aboutUs/statement","detailstexts":"负责说明"}
       ]},
       {"thirdtext":[
-        {"Id":"","detailstexts":"合作伙伴"}
+        {"Id":"templates/aboutUs/cooperative.partner","detailstexts":"合作伙伴"}
       ]}
     ],
     "rightDetail":[
