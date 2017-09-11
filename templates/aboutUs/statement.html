@@ -21,7 +21,6 @@
     <script type="text/javascript" src="../../static/js/common/nav.js"></script>
     <script type="text/javascript" src="../../static/js/common/foot.js"></script>
     <script type="text/javascript" src="../../static/js/common/public.js"></script>
-    <script type="text/javascript" src="../../static/js/views/aboutUs/statement.js"></script>
     <script type="text/javascript" src="../../static/js/views/aboutUs/aboutUs.js"></script>
   </head>
   <body>
@@ -37,18 +36,22 @@
     <div class="banner">
       <img src="../../static/images/itserverimg/itserverbanner1.png" alt="">
       <div class="banner_details">
-        <h1>负责声明</h1>
+        <h1>关于我们</h1>
         <span>上海广亿信息技术有限公司，是一家信息技术服务提供商及软件研发的高科技公司</span>
       </div>
     </div>
     <!--  负责声明banner  结束  -->
 
     <!--  负责声明 content 开始  -->
-    <div class="container content_body">
-      <div class="statement">
-        <div class="content_title" style="margin-bottom:0;"></div>
+    <div class="container">
+      <!-- 左侧导航 -->
+      <div class="about_nav_left fl"></div>
+      <div class="content_body fl">
+        <div class="statement">
+          <div class="content_title" style="margin-bottom:0;"></div>
+        </div>
+        <div class="second_content"></div>
       </div>
-      <div class="second_content"></div>
     </div>
     <!--  负责声明 content 结束  -->
 
@@ -64,7 +67,7 @@
 
         $(".content_title").html(
           '<h2 class="fl">'+dataFirst.title+'</h2>'+
-          '<hr class="title_hr fr" style="width:88%;">'
+          '<hr class="title_hr fr" style="width:85%;">'
         )
 
         $.each(dataSecond,function(i, v) {

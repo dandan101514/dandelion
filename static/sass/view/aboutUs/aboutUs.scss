@@ -1,6 +1,33 @@
 @charset "utf-8";
 @import "common/public.scss";
 
+.about_nav_left{
+  width:230px;
+  margin-top:80px;
+  margin-right:30px;
+  ul{
+    width:inherit;
+    height: auto;
+    .lists_li{
+      margin-bottom:20px;
+      a{
+        display: block;
+        width:inherit;
+        height:70px;
+        line-height: 70px;
+        font-size: 24px;
+        text-align: center;
+      }
+    }
+    .lists_active{
+      color:#fff !important;
+      background:#399bff;
+    }
+  }
+}
+.content_body{
+  width:940px;
+}
 .content_lists{
   ul{
     width:100%;
@@ -20,11 +47,14 @@
 // 员工风采
 .content_lists{
   height:auto;
-  margin:50px 0 200px 0;
+  margin:50px 0 100px 0;
 }
 .content_texts p{
-  width:475px;
+  width:340px;
   overflow: hidden;
+}
+.content_lists:nth-child(3) .content_texts p{
+  width:480px;
 }
 .content_img{
   overflow: hidden;
@@ -36,16 +66,16 @@
     float: left;
   }
   .content_texts{
-    margin-left: 130px;
+    margin-left: 60px;
   }
 }
 .content_lists:nth-child(even){
   .content_img{
     float: right;
-    max-width:670px;
+    max-width:570px;
   }
   .content_texts{
-    margin-right: 50px;
+    margin-right: 30px;
   }
 }
 .content_lists:nth-child(1){
@@ -60,20 +90,20 @@
   }
   .content_img{
     img:nth-child(1){
-      width:375px;
-      height:235px;
+      width:320px;
+      height:205px;
       overflow: hidden;
     }
     img:nth-child(2){
-      width:270px;
-      height:215px;
+      width:230px;
+      height:185px;
       overflow: hidden;
       margin-top: 20px;
       margin-left: 20px;
     }
     img:nth-child(3){
-      width:340px;
-      height:215px;
+      width:285px;
+      height:180px;
       margin-left: 120px;
       margin-top: 20px;
       overflow: hidden;
@@ -90,8 +120,5 @@
 .content_lists:nth-child(4){
   .content_img{
     text-align: right;
-  }
-  .content_texts{
-    margin-left:170px;
   }
 }

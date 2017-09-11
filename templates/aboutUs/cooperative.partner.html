@@ -20,7 +20,6 @@
   <script type="text/javascript" src="../../static/js/common/nav.js"></script>
   <script type="text/javascript" src="../../static/js/common/foot.js"></script>
   <script type="text/javascript" src="../../static/js/common/public.js"></script>
-  <script type="text/javascript" src="../../static/js/views/aboutUs/competitive.edge.js"></script>
   <script type="text/javascript" src="../../static/js/views/aboutUs/aboutUs.js"></script>
 
   <style>
@@ -28,18 +27,19 @@
       margin-bottom:100px;
     }
     .content_imgs img{
-      width:282px;
+      width:300px;
       height: 144px;
       border: 1px solid #f1f1f1;
-      margin-left:24px;
+      margin-left:20px;
       margin-bottom:24px;
       box-shadow:3px 3px 8px #f1f1f1;
     }
     .content_imgs img:nth-child(1),
-    .content_imgs img:nth-child(5),
-    .content_imgs img:nth-child(9),
+    .content_imgs img:nth-child(4),
+    .content_imgs img:nth-child(7),
+    .content_imgs img:nth-child(10),
     .content_imgs img:nth-child(13),
-    .content_imgs img:nth-child(17){
+    .content_imgs img:nth-child(16){
       margin-left:0;
     }
   </style>
@@ -57,16 +57,20 @@
   <div class="banner">
     <img src="../../static/images/itserverimg/itserverbanner1.png" alt="">
     <div class="banner_details">
-      <h1>合作伙伴</h1>
+      <h1>关于我们</h1>
       <span>上海广亿信息技术有限公司，是一家信息技术服务提供商及软件研发的高科技公司</span>
     </div>
   </div>
   <!--  合作伙伴 banner  结束  -->
 
   <!--  竞争优势 content 开始  -->
-  <div class="container content_body">
-    <div class="statement">
-      <div class="content_title" style="margin-bottom:0;height:auto;"></div>
+  <div class="container">
+    <!-- 左侧导航 -->
+    <div class="about_nav_left fl"></div>
+    <div class="content_body fl">
+      <div class="statement">
+        <div class="content_title" style="margin-bottom:0;height:auto;"></div>
+      </div>
     </div>
   </div>
   <!--  竞争优势 content 结束  -->
@@ -85,7 +89,7 @@
       // 页面标题块内容
       $(".content_title").html(
         '<h2 class="fl">'+dataFirst.title+'</h2>'+
-        '<hr class="title_hr fr" style="width:88%;">'+
+        '<hr class="title_hr fr" style="width:85%;">'+
         '<div style="clear:both;"></div>'+
         '<div class="content_imgs" style="margin-top:50px;"></div>'
       );
