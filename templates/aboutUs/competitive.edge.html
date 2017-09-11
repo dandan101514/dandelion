@@ -35,18 +35,22 @@
   <div class="banner">
     <img src="../../static/images/itserverimg/itserverbanner1.png" alt="">
     <div class="banner_details">
-      <h1>竞争优势</h1>
+      <h1>关于我们</h1>
       <span>上海广亿信息技术有限公司，是一家信息技术服务提供商及软件研发的高科技公司</span>
     </div>
   </div>
   <!--  竞争优势banner  结束  -->
 
   <!--  竞争优势 content 开始  -->
-  <div class="container content_body">
-    <div class="statement">
-      <div class="content_title" style="margin-bottom:0;"></div>
+  <div class="container">
+      <!-- 左侧导航 -->
+      <div class="about_nav_left fl"></div>
+    <div class="content_body fl">
+      <div class="statement">
+        <div class="content_title" style="margin-bottom:0;"></div>
+      </div>
+      <div class="second_content"></div>
     </div>
-    <div class="second_content"></div>
   </div>
   <!--  竞争优势 content 结束  -->
 
@@ -64,7 +68,7 @@
 
       $(".content_title").html(
         '<h2 class="fl">'+dataFirst.title+'</h2>'+
-        '<hr class="title_hr fr" style="width:88%;">'
+        '<hr class="title_hr fr" style="width:85%;">'
       )
       $.each(dataSecond,function(i, v) {
         $(".second_content").append(

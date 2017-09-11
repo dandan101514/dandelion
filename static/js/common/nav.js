@@ -23,6 +23,7 @@ $(function(){
   var data = menus
   // console.log(menus[1].menuNav)
   var path = "/guangyi/guangyi.com/"
+  var imgpath = "/guangyi/guangyi.com/static/images/nav/"
 
     $.each(menus,function(i,v){ 
 
@@ -40,7 +41,7 @@ $(function(){
           $(".second_nav").eq(i).append('<li>'+'<a href="javascript:;">'+vle.secondtext+'</a>'+'<i class="fa" aria-hidden="true">'+'</i>'+'</li>');
           $(".sanjiliebiao").append('<ul class="nav_third_lists" style="display:none;">'+'</ul>');
           
-          $(".imgcontent").eq(i).append('<img class="imgblock" src="'+vle.detailurl+'" style="width:380px;display:none;" alt="">')
+          $(".imgcontent").eq(i).append('<img class="imgblock" src="'+imgpath+vle.detailurl+'" style="width:380px;display:none;" alt="">')
         });
 
         //  下拉导航右侧内容
@@ -86,8 +87,8 @@ $(function(){
   // 一级导航的hover事件
   $(".navlis").hover(function(k){
     k = $(this).index()
-    if(k == 0 || k == 4){
-      $(".nav_content").hide();
+    if(k == 0 || k == 4 || k == 5){
+      $(".nav_content").stop().stop().hide();
     }else{
       $(".nav_content").fadeIn(300);
       $(".details_texts").eq(k).show().siblings().hide();
@@ -101,7 +102,7 @@ $(function(){
     }
     
   },function(){
-    $(".nav_content").fadeOut(500).stop().stop();
+    $(".nav_content").stop().stop().hide();
     $(".second_nav li").removeClass('hover_second_nav');
     $(".second_nav li i").removeClass('fa-long-arrow-right');
     $(".second_nav li:first-child").addClass('hover_second_nav').find("i").addClass('fa-long-arrow-right');
@@ -131,7 +132,7 @@ $(function(){
 
 
 var menus = [{
-    "id":"index",
+    "id":"templates/index/index",
     "indexs":"0",
     "menuNav":{
       "firstMenu":"首页",
@@ -146,11 +147,11 @@ var menus = [{
     "menuNav":{
     "firstMenu":"IT服务",
     "secondNav":[
-      {"id":"1","secondtext":"技术咨询","detailurl":"http://via.placeholder.com/380x245"},
-      {"id":"2","secondtext":"技术服务","detailurl":"http://via.placeholder.com/380x235"},
-      {"id":"3","secondtext":"软件开发","detailurl":"http://via.placeholder.com/380x245"},
-      {"id":"4","secondtext":"服务特点","detailurl":"http://via.placeholder.com/380x225"},
-      {"id":"5","secondtext":"核心特点","detailurl":"http://via.placeholder.com/380x245"}
+      {"id":"1","secondtext":"技术咨询","detailurl":"jishuziuxn.jpg"},
+      {"id":"2","secondtext":"技术服务","detailurl":"jishufuwu.jpg"},
+      {"id":"3","secondtext":"软件开发","detailurl":"ruanjiankaifa.jpg"},
+      {"id":"4","secondtext":"服务特点","detailurl":"fuwutedian.jpg"},
+      {"id":"5","secondtext":"核心特点","detailurl":"hexintedian.jpg"}
     ],
     "thirdNav":[
       {"thirdtext":[
@@ -173,10 +174,10 @@ var menus = [{
     ],
     "rightDetail":[
       {"title":"技术咨询","text":"企业信息化，是利用IT技术来实施企业的管理，优化内部流程，提高企业的生产力和运行效率，从而提升企业的核心竞争力。"},
-      {"title":"技术服务","text":"企业信息化，是利用IT技术来实施企业的管理，优化内部流程，提高企业的生产力和运行效率，从而提升企业的核心竞争力。"},
-      {"title":"软件开发","text":"企业信息化，是利用IT技术来实施企业的管理，优化内部流程，提高企业的生产力和运行效率，从而提升企业的核心竞争力。"},
-      {"title":"服务特点","text":"企业信息化，是利用IT技术来实施企业的管理，优化内部流程，提高企业的生产力和运行效率，从而提升企业的核心竞争力。"},
-      {"title":"核心特点","text":"企业信息化，是利用IT技术来实施企业的管理，优化内部流程，提高企业的生产力和运行效率，从而提升企业的核心竞争力。"},
+      {"title":"技术服务","text":"企业应用系统运维的难度和压力也在随之增加。广亿提供客户化应用系统设计、开发服务，并在预算范围内按时按质交付项目。我们能够帮助客户确定对应用系统或产品的具体需求，并管理和维护其整个生命周期。"},
+      {"title":"软件开发","text":"1. 金融银行业决策分析管理系统 2. 保险业数据挖掘分析系统 3. 电信业增值业务管理软件"},
+      {"title":"服务特点","text":"广亿咨询为客户提供的是涵盖企业运营、绩效考核和业绩提升的综合性整体解决方案，从而实现客户资源的最优化配置和效益的最大化提升。"},
+      {"title":"核心特点","text":"一个可执行的外包策略的关键因素之一是确保和客户业务发展目标保持一致，另一个关键因素是需要强有力的治理机制来确保策略的成功执行。一旦确定策略，广亿将与您携手构建为您量身定制的治理和沟通模式。"}
     ]}
 },
   {
@@ -185,9 +186,9 @@ var menus = [{
     "menuNav":{
     "firstMenu":"软件外包",
     "secondNav":[
-      {"id":"1","secondtext":"技术人才外包","detailurl":"http://via.placeholder.com/380x245"},
-      {"id":"2","secondtext":"业务外包","detailurl":"http://via.placeholder.com/380x245"},
-      {"id":"3","secondtext":"项目开发服务","detailurl":"http://via.placeholder.com/380x245"}
+      {"id":"1","secondtext":"技术人才外包","detailurl":"jishurencaiwaibao.jpg"},
+      {"id":"2","secondtext":"业务外包","detailurl":"yewuwaibao.jpg"},
+      {"id":"3","secondtext":"项目开发服务","detailurl":"xiangmukaifa.jpg"}
     ],
     "thirdNav":[
       {"thirdtext":[
@@ -201,11 +202,9 @@ var menus = [{
       ]}
     ],
     "rightDetail":[
-      {"title":"什么是技术人才外包？","text":"'外包'一词英文名'outsourcing'，直译意思为'外部寻源'，是指在组织外部寻找资源来完成组织内部工作。"},
-      {"title":"什么是业务外包？","text":"'外包'一词英文名'outsourcing'，直译意思为'外部寻源'，是指在组织外部寻找资源来完成组织内部工作。"},
-      {"title":"什么是项目开发服务？","text":"'外包'一词英文名'outsourcing'，直译意思为'外部寻源'，是指在组织外部寻找资源来完成组织内部工作。"},
-      {"title":"什么是技术人才外包？","text":"'外包'一词英文名'outsourcing'，直译意思为'外部寻源'，是指在组织外部寻找资源来完成组织内部工作。"},
-      {"title":"什么是技术外包流程？","text":"'外包'一词英文名'outsourcing'，直译意思为'外部寻源'，是指在组织外部寻找资源来完成组织内部工作。"},
+      {"title":"什么是技术人才外包？","text":"人力资源外包就是企业根据需要将某一项或几项人力资源管理工作或职能外包出去，交由其他企业或组织进行管理，以降低人力成本，实现效率最大化。"},
+      {"title":"什么是业务外包？","text":"业务外包（Outsourcing），也称资源外包、资源外置，它是指企业整合用其外部最优秀的专业化资源，从而达到降低成本、提高效率、充分发挥自身核心竞争力和增强企业对环境的迅速应变能力的一种管理模式。"},
+      {"title":"什么是项目开发服务？","text":"需求分析    总体设计  详细设计  开发编程  系统测试  部署实施"}
     ]}
 },
   {
@@ -214,16 +213,16 @@ var menus = [{
     "menuNav":{
     "firstMenu":"解决方案",
     "secondNav":[
-      {"id":"1","secondtext":"金融银行","detailurl":"http://via.placeholder.com/380x245"},
-      {"id":"2","secondtext":"证券保险","detailurl":"http://via.placeholder.com/380x245"},
-      {"id":"3","secondtext":"移动互联网","detailurl":"http://via.placeholder.com/380x245"},
-      {"id":"4","secondtext":"教育行业","detailurl":"http://via.placeholder.com/380x235"},
-      {"id":"5","secondtext":"企事/制造业","detailurl":"http://via.placeholder.com/380x225"},
-      {"id":"6","secondtext":"云计算","detailurl":"http://via.placeholder.com/380x245"},
-      {"id":"7","secondtext":"大数据","detailurl":"http://via.placeholder.com/380x235"},
-      {"id":"8","secondtext":"商业智能","detailurl":"http://via.placeholder.com/380x245"},
-      {"id":"9","secondtext":"数据迁移","detailurl":"http://via.placeholder.com/380x235"},
-      {"id":"10","secondtext":"测试服务","detailurl":"http://via.placeholder.com/380x245"}
+      {"id":"1","secondtext":"金融银行","detailurl":"jinrongyinghang.jpg"},
+      {"id":"2","secondtext":"证券保险","detailurl":"zhengquanbaoxian.jpg"},
+      {"id":"3","secondtext":"移动互联网","detailurl":"yidonghulianwang.jpg"},
+      {"id":"4","secondtext":"教育行业","detailurl":"jiaoyu.jpg"},
+      {"id":"5","secondtext":"企事/制造业","detailurl":"qishizizao.jpg"},
+      {"id":"6","secondtext":"云计算","detailurl":"yunjisuan.jpg"},
+      {"id":"7","secondtext":"大数据","detailurl":"bigdata.jpg"},
+      {"id":"8","secondtext":"商业智能","detailurl":"shangyezhineng.jpg"},
+      {"id":"9","secondtext":"数据迁移","detailurl":"shujuqianyi.jpg"},
+      {"id":"10","secondtext":"测试服务","detailurl":"test.jpg"}
     ],
     "thirdNav":[
       {"thirdtext":[
@@ -259,7 +258,7 @@ var menus = [{
       ]},
       {"thirdtext":[
         {"Id":"templates/solution/big.data/big.data001","detailstexts":"大数据解决方案"},
-        {"Id":"templates/solution/big.data/big.data002  ","detailstexts":"大数据集成开发平台"}
+        {"Id":"templates/solution/big.data/big.data002","detailstexts":"大数据集成开发平台"}
       ]},
       {"thirdtext":[
         {"Id":"templates/solution/business.intelligence/business.intelligence001","detailstexts":"数据仓库（EDW)"},
@@ -273,16 +272,16 @@ var menus = [{
       ]}
     ],
     "rightDetail":[
-      {"title":"广亿风险解决方案能够协助银行建立整套的量化分析模型以及精细化的风险规避策略，包括：","text":"健全和完善内部信用评级体系。建立健全信用风险管理的组织体系和管理机制，加强对信用风险的全程动态监控。改建信用风险分析方法和技术，建立信用风险评估体系和定价模型。"},
-      {"title":"广亿风险解决方案能够协助银行建立整套的量化分析模型以及精细化的风险规避策略，包括：","text":"健全和完善内部信用评级体系。建立健全信用风险管理的组织体系和管理机制，加强对信用风险的全程动态监控。改建信用风险分析方法和技术，建立信用风险评估体系和定价模型。"},
-      {"title":"广亿风险解决方案能够协助银行建立整套的量化分析模型以及精细化的风险规避策略，包括：","text":"健全和完善内部信用评级体系。建立健全信用风险管理的组织体系和管理机制，加强对信用风险的全程动态监控。改建信用风险分析方法和技术，建立信用风险评估体系和定价模型。"},
-      {"title":"广亿风险解决方案能够协助银行建立整套的量化分析模型以及精细化的风险规避策略，包括：","text":"健全和完善内部信用评级体系。建立健全信用风险管理的组织体系和管理机制，加强对信用风险的全程动态监控。改建信用风险分析方法和技术，建立信用风险评估体系和定价模型。"},
-      {"title":"广亿风险解决方案能够协助银行建立整套的量化分析模型以及精细化的风险规避策略，包括：","text":"健全和完善内部信用评级体系。建立健全信用风险管理的组织体系和管理机制，加强对信用风险的全程动态监控。改建信用风险分析方法和技术，建立信用风险评估体系和定价模型。"},
-      {"title":"广亿风险解决方案能够协助银行建立整套的量化分析模型以及精细化的风险规避策略，包括：","text":"健全和完善内部信用评级体系。建立健全信用风险管理的组织体系和管理机制，加强对信用风险的全程动态监控。改建信用风险分析方法和技术，建立信用风险评估体系和定价模型。"},
-      {"title":"广亿风险解决方案能够协助银行建立整套的量化分析模型以及精细化的风险规避策略，包括：","text":"健全和完善内部信用评级体系。建立健全信用风险管理的组织体系和管理机制，加强对信用风险的全程动态监控。改建信用风险分析方法和技术，建立信用风险评估体系和定价模型。"},
-      {"title":"广亿风险解决方案能够协助银行建立整套的量化分析模型以及精细化的风险规避策略，包括：","text":"健全和完善内部信用评级体系。建立健全信用风险管理的组织体系和管理机制，加强对信用风险的全程动态监控。改建信用风险分析方法和技术，建立信用风险评估体系和定价模型。"},
-      {"title":"广亿风险解决方案能够协助银行建立整套的量化分析模型以及精细化的风险规避策略，包括：","text":"健全和完善内部信用评级体系。建立健全信用风险管理的组织体系和管理机制，加强对信用风险的全程动态监控。改建信用风险分析方法和技术，建立信用风险评估体系和定价模型。"},
-      {"title":"广亿风险解决方案能够协助银行建立整套的量化分析模型以及精细化的风险规避策略，包括：","text":"健全和完善内部信用评级体系。建立健全信用风险管理的组织体系和管理机制，加强对信用风险的全程动态监控。改建信用风险分析方法和技术，建立信用风险评估体系和定价模型。"},
+      {"title":"金融银行","text":"以银行、证券为代表的金融行业一直是技术创新和应用创新的高地。在“互联网+”的背景下，围绕客户服务、业务创新、产业升级而展开的新一轮信息技术革命推动着整个金融服务的转型升级。"},
+      {"title":"证券保险","text":"广亿财险业务系统基于客户中心理念设计，能够实现业务处理全过程管理，支持多级管理体系架构，支持集中控制、分散展业的业务处理模式，是一套支持财产保险公司业务处理的完美系统。"},
+      {"title":"移动互联网","text":"广泛应用于户外大屏显示、楼宇电视广告、银行利率汇率及信息发布、商场广告媒体、酒店多媒体信息发布、社区文化建设、医院排队叫号及播放系统、政务多媒体信息发布、企业电视台、电信或移动营业厅多媒体信息发布等信息传播领域。"},
+      {"title":"教育行业","text":"提供决策支持依据：有效保存高校各阶段历史数据，进行一定的统计分析，深度挖掘内在信息，展示高校发展历程，不仅为学校的教学评估工作提供支持，且为高校领导提供决策支持的依据。"},
+      {"title":"企事/制造业","text":"OA是办公自动化,又称办公信息系统,是以计算机科学,信息科学,地理空间科学,行为科学和网络通信技术等现代科学技术为支撑,以提高专项和综合业务管理和辅助决策的水平效果为目的的综合性人机信息系统。"},
+      {"title":"云计算","text":"广亿有云解决方案可为用户提供业界领先的IaaS层平台服务，秉承开放、模块化、标准化的设计理念，支持多种异构虚拟化平台，实现云数据中心各类异构资源的集中管理、统一监控，实现基础设施的服务化，简化了云数据中心的运维，提高云数据中心的服务水平，浪潮可为用户提供搭建私有云、行业云整体解决方案。"},
+      {"title":"大数据","text":"该产品是基于Hadoop为开发者提供应用开发服务的大数据产品。它提供Hadoop组件的数据和操作接口封装，并提供集成第三方组件的接口，以API、SDK、CLT和IDE的方式为开发者提供二次开发服务，通过WEB界面操作提供ETL及数据应用开发服务。"},
+      {"title":"商业智能","text":"数据仓库提供用户用于决策支持的当前和历史数据，这些数据在传统的操作型数据库中很难或不能得到。数据仓库技术是为了有效的把操作形数据集成到统一的环境中以提供决策型数据访问，的各种技术和模块的总称。所做的一切都是为了让用户更快更方便查询所需要的信息，提供决策支持。"},
+      {"title":"数据迁移","text":"如何让数据更高效帮助业务的发展，快速响应业务需求，在大量数据中及时提供决策分析，提升企业管理者对IT的管理效率，在当前的经济环境下让IT为企业带来更大经济效益，让IT帮助企业未来5-10年的业务发展——所有这些都对企业的数据库系统提出了更高的要求。"},
+      {"title":"测试服务","text":"全面的测试，以评估合规性，使开发人员无需跨大量不断变化的平台和终端进行测试。立即获得可快速扩充的项目团队，使产品开发人员能够以更快的速度提供先进的产品，节省宝贵的内部资源。"}
     ]}
 },
   {
@@ -290,10 +289,10 @@ var menus = [{
     "indexs":"3",
     "menuNav":{
     "firstMenu":"人才招聘",
-    "secondNav":"",
-    "thirdNav":"",
-    "title":"",
-    "text":""
+    "secondNav":null,
+    "thirdNav":null,
+    "title":null,
+    "text":null
   }
 },
   {
@@ -301,35 +300,8 @@ var menus = [{
     "indexs":"4",
     "menuNav":{
     "firstMenu":"关于我们",
-    "secondNav":[
-      {"id":"1","secondtext":"公司简介","detailurl":"http://via.placeholder.com/380x245"},
-      {"id":"2","secondtext":"员工风采","detailurl":"http://via.placeholder.com/380x245"},
-      {"id":"3","secondtext":"竞争优势","detailurl":"http://via.placeholder.com/380x235"},
-      {"id":"4","secondtext":"负责说明","detailurl":"http://via.placeholder.com/380x225"},
-      {"id":"5","secondtext":"合作伙伴","detailurl":"http://via.placeholder.com/380x245"},
-    ],
-    "thirdNav":[
-      {"thirdtext":[
-        {"Id":"templates/aboutUs/company.profile","detailstexts":"公司简介"}
-      ]},
-      {"thirdtext":[
-        {"Id":"templates/aboutUs/staff.style","detailstexts":"员工风采"}
-      ]},
-      {"thirdtext":[
-        {"Id":"templates/aboutUs/competitive.edge","detailstexts":"竞争优势"}
-      ]},
-      {"thirdtext":[
-        {"Id":"templates/aboutUs/statement","detailstexts":"负责说明"}
-      ]},
-      {"thirdtext":[
-        {"Id":"templates/aboutUs/cooperative.partner","detailstexts":"合作伙伴"}
-      ]}
-    ],
-    "rightDetail":[
-      {"title":"公司简介","text":"上海广亿信息技术有限公司，是一家信息技术服务提供商及软件研发的高科技公司。"},
-      {"title":"员工风采","text":"上海广亿信息技术有限公司，是一家信息技术服务提供商及软件研发的高科技公司。"},
-      {"title":"竞争优势","text":"上海广亿信息技术有限公司，是一家信息技术服务提供商及软件研发的高科技公司。"},
-      {"title":"负责说明","text":"上海广亿信息技术有限公司，是一家信息技术服务提供商及软件研发的高科技公司。"},
-      {"title":"合作伙伴","text":"上海广亿信息技术有限公司，是一家信息技术服务提供商及软件研发的高科技公司。"},
-    ]}
+    "secondNav":null,
+    "thirdNav":null,
+    "rightDetail":null
+  }
 }]

@@ -22,14 +22,6 @@
     <script type="text/javascript" src="../../static/js/common/foot.js"></script>
     <script type="text/javascript" src="../../static/js/common/public.js"></script>
 
-    <style>
-      h4{
-        font-weight: 700 !important;
-      }
-      p{
-        margin-bottom:15px;
-      }
-    </style>
   </head>
   <body>
     <!--  导航 开始 -->
@@ -51,13 +43,192 @@
 
     <!--  人才招聘  开始  -->
     <div class="container content_body">
-      <div class="company_profile">
-        <div class="content_title" style="height:auto;"></div>
-      </div>
+      <!-- Nav tabs -->
+      <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">社会招聘</a></li>
+        <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">应届生招聘</a></li>
+      </ul>
+    
+      <!-- Tab panes -->
+      <div style="margin-top:40px;" class="tab-content">
+        <!-- 社会招聘 -->
+        <div role="tabpanel" class="tab-pane active" id="home">
+          
+          <div class="listsjob">
+            <!-- 招聘信息列表 -->
+            <div class="job_show">
+              <div class="row">
+                <div class="col-sm-10">
+                  <h3>Java开发工程师 <span style="color:#f26223;display:inline-block;padding-left:50px;">【11K-13K】</span></h3>
+                  <p><span>上海</span><span>2-3年</span><span>本科</span></p>
+                </div>
+  
+                <div class="col-sm-2">
+                  <div style="text-align:right;margin-top:18px;">
+                    <a href=""><img src="../../static/images/rencaizhaopin/zhaopin01.png" alt=""></a>
+                    <a href=""><img style="margin-left:25px;" src="../../static/images/rencaizhaopin/zhaopin02.png" alt=""></a>
+                  </div>
+                </div>
+              </div>
+              <div style="text-align:center;"><i class="fa fa-3x fa-angle-down show_more" aria-hidden="true"></i></div>
+            </div>
+  
+            <!-- 隐藏的招聘信息 -->
+            <div class="job_hide">
+              <ul class="job_hide_lists">
+                <li><h4>职位详情</h4></li>
+                <li>1. 熟悉spring、springMVC、Mybatis框架，数据Java多线程及并发技术，熟悉RESTFull api、activeMQ的开发；</li>
+                <li>2. 熟练使用Eclipse等开发平台，熟悉ant、maven等编译工具，熟悉tomcat等工具，了解redis；</li>
+                <li>3. 熟悉mysql，能对sql性能进行调优；</li>
+                <li>4. 熟悉HTML5、CSS3、Jquery、bootstrap、dataTable等前台技术，能独立参与页面功能的开发；</li>
+                <li>5. 有良好的需求理解能力及问题分析能力，工作态度积极热情，能承受较大工作压力。</li>
+                <li><h4>HR邮箱：haifengchen@gysoftown.com</h4></li>
+              </ul>
+              <div style="text-align:center;"><i class="fa fa-3x fa-angle-up hide_more" aria-hidden="true"></i></div>
+            </div>
+          </div>
 
-        <!-- 我们的服务 -->
-        <div class="ourserver"></div>
+          <div class="listsjob">
+              <!-- 招聘信息列表 -->
+              <div class="job_show">
+                <div class="row">
+                  <div class="col-sm-10 job_show_left">
+                    <h3>Java开发工程师 <span style="color:#f26223;display:inline-block;padding-left:50px;">【11K-13K】</span></h3>
+                    <p><span>上海</span><span>2-3年</span><span>本科</span></p>
+                  </div>
+    
+                  <div class="col-sm-2 job_show_right">
+                    <div style="text-align:right;margin-top:18px;">
+                      <a href=""><img src="../../static/images/rencaizhaopin/zhaopin01.png" alt=""></a>
+                      <a href=""><img style="margin-left:25px;" src="../../static/images/rencaizhaopin/zhaopin02.png" alt=""></a>
+                    </div>
+                  </div>
+                </div>
+                <div style="text-align:center;"><i class="fa fa-3x fa-angle-down show_more" aria-hidden="true"></i></div>
+              </div>
+    
+              <!-- 隐藏的招聘信息 -->
+              <div class="job_hide">
+                <ul class="job_hide_lists">
+                  <li><h4>职位详情</h4></li>
+                  <li>1. 熟悉spring、springMVC、Mybatis框架，数据Java多线程及并发技术，熟悉RESTFull api、activeMQ的开发；</li>
+                  <li>2. 熟练使用Eclipse等开发平台，熟悉ant、maven等编译工具，熟悉tomcat等工具，了解redis；</li>
+                  <li>3. 熟悉mysql，能对sql性能进行调优；</li>
+                  <li>4. 熟悉HTML5、CSS3、Jquery、bootstrap、dataTable等前台技术，能独立参与页面功能的开发；</li>
+                  <li>5. 有良好的需求理解能力及问题分析能力，工作态度积极热情，能承受较大工作压力。</li>
+                  <li><h4>HR邮箱：haifengchen@gysoftown.com</h4></li>
+                </ul>
+                <div style="text-align:center;"><i class="fa fa-3x fa-angle-up hide_more" aria-hidden="true"></i></div>
+              </div>
+            </div>
 
+        </div>
+
+        <!-- 应届生招聘 -->
+        <div role="tabpanel" class="tab-pane" id="profile">
+          <div class="listsjob">
+            <!-- 招聘信息列表 -->
+            <div class="job_show">
+              <div class="row">
+                <div class="col-sm-10">
+                  <h3>Java开发工程师 <span style="color:#f26223;display:inline-block;padding-left:50px;">【8K-13K】</span></h3>
+                  <p><span>上海</span><span>应届生</span><span>本科</span></p>
+                </div>
+  
+                <div class="col-sm-2">
+                  <div style="text-align:right;margin-top:18px;">
+                    <a href=""><img src="../../static/images/rencaizhaopin/zhaopin01.png" alt=""></a>
+                    <a href=""><img style="margin-left:25px;" src="../../static/images/rencaizhaopin/zhaopin02.png" alt=""></a>
+                  </div>
+                </div>
+              </div>
+              <div style="text-align:center;"><i class="fa fa-3x fa-angle-down show_more" aria-hidden="true"></i></div>
+            </div>
+  
+            <!-- 隐藏的招聘信息 -->
+            <div class="job_hide">
+              <ul class="job_hide_lists">
+                <li><h4>职位详情</h4></li>
+                <li>1. 熟悉spring、springMVC、Mybatis框架，数据Java多线程及并发技术，熟悉RESTFull api、activeMQ的开发；</li>
+                <li>2. 熟练使用Eclipse等开发平台，熟悉ant、maven等编译工具，熟悉tomcat等工具，了解redis；</li>
+                <li>3. 熟悉mysql，能对sql性能进行调优；</li>
+                <li>4. 熟悉HTML5、CSS3、Jquery、bootstrap、dataTable等前台技术，能独立参与页面功能的开发；</li>
+                <li>5. 有良好的需求理解能力及问题分析能力，工作态度积极热情，能承受较大工作压力。</li>
+                <li><h4>HR邮箱：haifengchen@gysoftown.com</h4></li>
+              </ul>
+              <div style="text-align:center;"><i class="fa fa-3x fa-angle-up hide_more" aria-hidden="true"></i></div>
+            </div>
+          </div>
+
+          <div class="listsjob">
+            <!-- 招聘信息列表 -->
+            <div class="job_show">
+              <div class="row">
+                <div class="col-sm-10">
+                  <h3>Java开发工程师 <span style="color:#f26223;display:inline-block;padding-left:50px;">【8K-13K】</span></h3>
+                  <p><span>上海</span><span>应届生</span><span>本科</span></p>
+                </div>
+  
+                <div class="col-sm-2">
+                  <div style="text-align:right;margin-top:18px;">
+                    <a href=""><img src="../../static/images/rencaizhaopin/zhaopin01.png" alt=""></a>
+                    <a href=""><img style="margin-left:25px;" src="../../static/images/rencaizhaopin/zhaopin02.png" alt=""></a>
+                  </div>
+                </div>
+              </div>
+              <div style="text-align:center;"><i class="fa fa-3x fa-angle-down show_more" aria-hidden="true"></i></div>
+            </div>
+  
+            <!-- 隐藏的招聘信息 -->
+            <div class="job_hide">
+              <ul class="job_hide_lists">
+                <li><h4>职位详情</h4></li>
+                <li>1. 熟悉spring、springMVC、Mybatis框架，数据Java多线程及并发技术，熟悉RESTFull api、activeMQ的开发；</li>
+                <li>2. 熟练使用Eclipse等开发平台，熟悉ant、maven等编译工具，熟悉tomcat等工具，了解redis；</li>
+                <li>3. 熟悉mysql，能对sql性能进行调优；</li>
+                <li>4. 熟悉HTML5、CSS3、Jquery、bootstrap、dataTable等前台技术，能独立参与页面功能的开发；</li>
+                <li>5. 有良好的需求理解能力及问题分析能力，工作态度积极热情，能承受较大工作压力。</li>
+                <li><h4>HR邮箱：haifengchen@gysoftown.com</h4></li>
+              </ul>
+              <div style="text-align:center;"><i class="fa fa-3x fa-angle-up hide_more" aria-hidden="true"></i></div>
+            </div>
+          </div>
+
+          <div class="listsjob">
+            <!-- 招聘信息列表 -->
+            <div class="job_show">
+              <div class="row">
+                <div class="col-sm-10">
+                  <h3>Java开发工程师 <span style="color:#f26223;display:inline-block;padding-left:50px;">【8K-13K】</span></h3>
+                  <p><span>上海</span><span>应届生</span><span>本科</span></p>
+                </div>
+  
+                <div class="col-sm-2">
+                  <div style="text-align:right;margin-top:18px;">
+                    <a href=""><img src="../../static/images/rencaizhaopin/zhaopin01.png" alt=""></a>
+                    <a href=""><img style="margin-left:25px;" src="../../static/images/rencaizhaopin/zhaopin02.png" alt=""></a>
+                  </div>
+                </div>
+              </div>
+              <div style="text-align:center;"><i class="fa fa-3x fa-angle-down show_more" aria-hidden="true"></i></div>
+            </div>
+  
+            <!-- 隐藏的招聘信息 -->
+            <div class="job_hide">
+              <ul class="job_hide_lists">
+                <li><h4>职位详情</h4></li>
+                <li>1. 熟悉spring、springMVC、Mybatis框架，数据Java多线程及并发技术，熟悉RESTFull api、activeMQ的开发；</li>
+                <li>2. 熟练使用Eclipse等开发平台，熟悉ant、maven等编译工具，熟悉tomcat等工具，了解redis；</li>
+                <li>3. 熟悉mysql，能对sql性能进行调优；</li>
+                <li>4. 熟悉HTML5、CSS3、Jquery、bootstrap、dataTable等前台技术，能独立参与页面功能的开发；</li>
+                <li>5. 有良好的需求理解能力及问题分析能力，工作态度积极热情，能承受较大工作压力。</li>
+                <li><h4>HR邮箱：haifengchen@gysoftown.com</h4></li>
+              </ul>
+              <div style="text-align:center;"><i class="fa fa-3x fa-angle-up hide_more" aria-hidden="true"></i></div>
+            </div>
+          </div>
+
+        </div>
       </div>
     </div>
     <!--  人才招聘  结束  -->
@@ -73,28 +244,28 @@
       var dataFirst = datas[0].first     //页面标题
       var dataSecond = datas[1].second   //我们的服务
 
-      // 页面标题块内容
-      $(".content_title").html(
-        '<h2 class="fl">'+dataFirst.title+'</h2>'+
-        '<hr class="title_hr fr" style="width:88%;">'+
-        '<div style="clear:both;"></div>'+
-        '<div class="content_text" style="margin-top:50px;"></div>'
-      );
-      
-      $.each(dataFirst.text,function(i,v){
-        $(".content_text").append('<p class="jishuText">'+v.detail+'</p>');
+      $(".listsjob").hover(function(){
+        $(this).find(".job_show").addClass("content_bg");
+      },function(){
+        $(this).find(".job_show").removeClass("content_bg");
+      })
+
+      $(".show_more").on("click",function(i){
+        i = $(this).index(".show_more")
+        $(this).hide();
+        $(".job_hide").eq(i).show();
+        $(".job_show").eq(i).addClass("content_bg");
+      });
+
+      $(".hide_more").on("click",function(j){
+        j = $(this).index(".hide_more");
+        $(".show_more").eq(j).show();
+        $(".job_hide").eq(j).hide();
+        $(".job_show").eq(j).removeClass("content_bg");
       });
 
 
-    // 我们的服务
-    $.each(dataSecond,function(i,v){
-      $(".ourserver").append('<h3>'+this.title+'</h3>');
-
-      $.each(v.contents,function(j,vle){
-        $(".ourserver").append('<h4>'+vle.contentsTitle+'</h4>'+'<p>'+vle.contentsText+'</p>');
-      });
       
-    });
       
   });
 
