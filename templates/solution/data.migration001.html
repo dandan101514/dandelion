@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name=" Keywords" content="......">      <!--content中，网页关键字-->
+    <meta name=" description" content="......">   <!--content中，网页描述文字-->
+    <meta name="author" content="......">        <!--标注作者-->
+    <title>数据迁移</title>
+    <link rel="stylesheet" href="../../bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../../static/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../static/css/common/reset.css">
+    <link rel="stylesheet" href="../../static/css/common/nav.css">
+    <link rel="stylesheet" href="../../static/css/common/foot.css">
+    <link rel="stylesheet" href="../../static/css/view/solution/solution.css">
+
+    <script src="https://cdn.bootcss.com/jquery/3.0.0/jquery.js"></script>
+    <script type="text/javascript" src="../../bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../static/js/common/nav.js"></script>
+    <script type="text/javascript" src="../../static/js/common/foot.js"></script>
+    <script type="text/javascript" src="../../static/js/common/public.js"></script>
+    <script type="text/javascript" src="../../static/js/views/solution/solution.js"></script>
+
+    <style>
+      h4{
+        font-weight: 700 !important;
+      }
+      p{
+        margin-bottom:15px;
+      }
+      .content_body h3{
+        margin-top:70px;
+      }
+    </style>
+  </head>
+  <body>
+    <!--  导航 开始 -->
+    <div class="top"></div>
+    <!--  导航结束  -->
+
+    <!--  下拉导航  开始  -->
+    <nav class="nav_content"></nav>
+    <!--  下拉导航  开始  -->
+
+    <!--  数据迁移 banner  开始  -->
+    <div class="banner">
+      <img src="../../static/images/itserverimg/itserverbanner1.png" alt="">
+      <div class="banner_details">
+        <h1>数据迁移</h1>
+        <span>广亿多媒体信息发布平台主要针对高端酒店、商场超市、医疗行业、连锁机构、会展场馆、企业楼宇、交通枢纽、金融</span>
+        <span>及电信营业厅等用户需求定制开发的内容丰富的信息显示平台和稳定成熟的多媒体数字信息发布系统</span>
+      </div>
+    </div>
+    <!--  数据迁移 banner  结束  -->
+
+    <!--  数据迁移  开始  -->
+    <div class="container content_body">
+      <div class="company_profile">
+        <div class="content_title"></div>
+      </div>
+      <div class="second_content">
+        <!-- 介绍 -->
+        <div class="jieshao"></div>
+
+        <!-- 广亿支持以下几种数据库之间的数据迁移 -->
+        <div class="data_qianyi_img"></div>
+
+        <!-- 广亿支持以下几种数据库之间的数据迁移 -->
+        <div class="data_qianyi_text"></div>
+
+        <!-- 常用迁移方法 -->
+        <div class="data_fangfa"></div>
+
+      </div>
+    </div>
+    <!--  数据迁移  开始  -->
+
+    <!--  底部内容 开始  -->
+    <footer class="footer_content"></footer>
+
+  </body>
+
+  <script type="text/javascript">
+    $(function(){
+
+      var dataFirst = datas[0].first     //页面标题
+      var dataSecond = datas[1].second   //介绍
+      var dataThird = datas[2].third     //广亿支持以下几种数据库之间的数据迁移
+      var dataFourth = datas[3].fourth   //广亿支持以下几种数据库之间的数据迁移
+      var dataFifth = datas[4].fifth     //常用迁移方法
+
+      // 页面标题块内容
+      $(".content_title").html(
+        '<h2 class="fl">'+dataFirst.title+'</h2>'+
+        '<hr class="title_hr fr" style="width:88%;">'
+      );
+
+      // 介绍
+      $.each(dataSecond,function(i,v){
+        $(".jieshao").append('<h3>'+this.title+'</h3>');
+
+        $.each(v.text,function(j,vle){
+          $(".jieshao").append('<p style="margin-bottom:15px;text-indent:2em;">'+vle.detail+'</p>');
+        })
+      });
+      // 介绍  结束
+
+
+      //广亿支持以下几种数据库之间的数据迁移
+      $.each(dataThird,function(i,v){
+        $(".data_qianyi_img").append('<h3>'+this.title+'</h3>'+'<img src="'+this.url+'" />');
+      });
+      //广亿支持以下几种数据库之间的数据迁移  结束
+
+
+      //广亿支持以下几种数据库之间的数据迁移
+      $.each(dataFourth,function(i,v){
+        $(".data_qianyi_text").append('<h3>'+this.title+'</h3>'+'<div class="data_qianyi_text_detail"></div>');
+
+        $.each(v.contents,function(j,vle){
+          $(".data_qianyi_text_detail").append(
+            '<h4>'+vle.contentsTitle+'</h4>'+'<p>'+vle.contentsText+'</p>'
+          );
+        });
+
+      });
+      //广亿支持以下几种数据库之间的数据迁移  结束
+
+
+      //常用迁移方法
+      $.each(dataFifth,function(i,v){
+        $(".data_fangfa").append('<h3>'+this.title+'</h3>'+'<div class="data_fangfa_detail"></div>');
+
+        $.each(v.contents,function(j,vle){
+          $(".data_fangfa_detail").append(
+            '<h4>'+vle.contentsTitle+'</h4>'+'<p>'+vle.contentsText+'</p>'
+          );
+        });
+
+      });
+      //常用迁移方法  结束
+      
+
+    });
+
+    var datas = [
+      {"first":
+        {"title":"数据迁移","text":null}
+      },
+      {"second":[
+        {"title":"介绍",
+         "url":null,
+         "text":[
+          {"detail":"随着世界联系越来越紧密，越来越智能，许多企业都希望其IT的使用也变得更加智慧。企业的数据量正在以前所未有的速度增长，业务对数据的依赖强度越来越高。如何让数据更高效帮助业务的发展，快速响应业务需求，在大量数据中及时提供决策分析，提升企业管理者对IT的管理效率，在当前的经济环境下让IT为企业带来更大经济效益，让IT帮助企业未来5-10年的业务发展——所有这些都对企业的数据库系统提出了更高的要求。"},
+          {"detail":"广亿凭借成本更低、分析性能更高、交易性能更高等优点，广亿数据迁移方案正被越来越多的客户所选择，他们从迁移中获取价值，从而提升性能、降低成本和管理发展的。"}
+         ]
+        }
+      ]},
+      {"third":[
+        {"title":"广亿支持以下几种数据库之间的数据迁移",
+         "url":"../../static/images/solution/data.migration/shujuqianyi.png",
+         "text":null
+        }
+      ]},
+      {"fourth":[
+        {"title":"广亿支持以下几种数据库之间的数据迁移",
+         "url":null,
+         "text":null,
+         "contents":[
+          {"contentsTitle":"设计数据迁移方案",
+           "contentsText":"设计数据迁移方案主要包括以下几个方面工作：研究与数据迁移相关的资料，或在网站上查询相关内容、评估和选择数据迁移的软硬件平台、选择数据迁移方法、选择数据备份和恢复策略、设计数据迁移和测试方案等。",
+          },
+          {"contentsTitle":"进行数据模拟迁移",
+           "contentsText":"根据设计的数据迁移方案，建立一个模拟的数据迁移环境，它既能仿真实际环境又不影响实际数据，然后在数据模拟迁移环境中测试数据迁移的效果。数据模拟迁移前也应按备份策略备份模拟数据，以便数据迁移后能按恢复策略进行恢复测试。",
+          },
+          {"contentsTitle":"测试数据模拟迁移",
+           "contentsText":"根据设计的数据迁移测试方案测试数据模拟迁移，也就是检查数据模拟迁移后数据和应用软件是否正常，主要包括：数据一致性测试、应用软件执行功能测试、性能测试、数据备份和恢复测试等。",
+          },
+          {"contentsTitle":"准备实施数据迁移",
+           "contentsText":"数据模拟迁移测试成功后，在正式实施数据迁移前还需要做好以下几个方面工作：进行完全数据备份、确定数据迁移方案、安装和配置软硬件等。",
+          },
+          {"contentsTitle":"正式实施数据迁移",
+           "contentsText":"按照确定的数据迁移方案，正式实施数据迁移。",
+          },
+          {"contentsTitle":"测试数据迁移效果",
+           "contentsText":"按照数据迁移测试方案测试数据迁移效果，并对数据迁移后的数据库参数和性能进行调整，使之满足数据迁移后实际应用系统的需要。",
+          },
+          {"contentsTitle":"移植系统应用软件",
+           "contentsText":"将实际应用系统的应用软件移植到数据迁移后的数据库系统上，并使之正常运行。",
+          }
+        ]}
+      ]},
+      {"fifth":[
+        {"title":"常用迁移方法",
+         "url":null,
+         "text":null,
+         "contents":[
+          {"contentsTitle":"通过专业的迁移工具",
+           "contentsText":"广亿专业DBA人员通过专业的数据迁移工具，进行数据库之间的迁移。",
+          },
+          {"contentsTitle":"通过脚本迁移数据",
+           "contentsText":"广亿DBA人员通过SQL脚本、宏脚本或者程序来实现数据的完美迁移。",
+          }
+        ]}
+      ]}
+    ]
+  </script>
+</html>

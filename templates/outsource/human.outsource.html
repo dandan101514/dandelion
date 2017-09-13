@@ -20,7 +20,6 @@
     <script type="text/javascript" src="../../static/js/common/nav.js"></script>
     <script type="text/javascript" src="../../static/js/common/foot.js"></script>
     <script type="text/javascript" src="../../static/js/common/public.js"></script>
-    <script type="text/javascript" src="../../static/js/views/outsource/human.outsource.js"></script>
     <script type="text/javascript" src="../../static/js/views/outsource/outsource.js"></script>
   </head>
   <body>
@@ -29,7 +28,7 @@
     <!--  导航结束  -->
 
     <!--  下拉导航  开始  -->
-    <nav class="nav_content" style="margin-top:130px;"></nav>
+    <nav class="nav_content"></nav>
     <!--  下拉导航  开始  -->
 
     <!--  技术人才外包 banner  开始  -->
@@ -71,14 +70,14 @@
         if(this.url != null){
          if(i === 0){
           $(".second_content").append(
-            '<div class="content_lists" style="margin-bottom:100px;width:600px;display:inline-block;">'+
+            '<div class="content_lists" style="margin-bottom:100px;margin-right:20px;width:570px;display:inline-block;">'+
               '<h3>'+this.title+'</h3>'+
             '</div>'+
             '<img id="imgs'+i+'" src="'+this.url+'" />'
           )
          }else if(i === 1){
           $(".second_content").append(
-            '<img style="width:430px;height:295px" src="'+this.url+'" />'+
+            '<img style="width:420px;height:295px" src="'+this.url+'" />'+
             '<div class="content_lists" style="margin-bottom:100px;width:715px;display:inline-block;margin-left:55px;">'+
               '<h3>'+this.title+'</h3>'+
             '</div>'

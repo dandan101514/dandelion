@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name=" Keywords" content="......">      <!--content中，网页关键字-->
+    <meta name=" description" content="......">   <!--content中，网页描述文字-->
+    <meta name="author" content="......">        <!--标注作者-->
+    <title>测试服务</title>
+    <link rel="stylesheet" href="../../bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../../static/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../static/css/common/reset.css">
+    <link rel="stylesheet" href="../../static/css/common/nav.css">
+    <link rel="stylesheet" href="../../static/css/common/foot.css">
+    <link rel="stylesheet" href="../../static/css/view/solution/solution.css">
+
+    <script src="https://cdn.bootcss.com/jquery/3.0.0/jquery.js"></script>
+    <script type="text/javascript" src="../../bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../static/js/common/nav.js"></script>
+    <script type="text/javascript" src="../../static/js/common/foot.js"></script>
+    <script type="text/javascript" src="../../static/js/common/public.js"></script>
+    <script type="text/javascript" src="../../static/js/views/solution/solution.js"></script>
+
+    <style>
+      h4{
+        font-weight: 700 !important;
+      }
+      p{
+        margin-bottom:15px;
+      }
+      .content_body h3{
+        margin-top:70px;
+      }
+      .youshi img{
+        display: block;
+        margin:60px auto;
+      }
+    </style>
+  </head>
+  <body>
+    <!--  导航 开始 -->
+    <div class="top"></div>
+    <!--  导航结束  -->
+
+    <!--  下拉导航  开始  -->
+    <nav class="nav_content"></nav>
+    <!--  下拉导航  开始  -->
+
+    <!--  测试服务 banner  开始  -->
+    <div class="banner">
+      <img src="../../static/images/itserverimg/itserverbanner1.png" alt="">
+      <div class="banner_details">
+        <h1>商业智能</h1>
+        <span>广亿多媒体信息发布平台主要针对高端酒店、商场超市、医疗行业、连锁机构、会展场馆、企业楼宇、交通枢纽、金融</span>
+        <span>及电信营业厅等用户需求定制开发的内容丰富的信息显示平台和稳定成熟的多媒体数字信息发布系统</span>
+      </div>
+    </div>
+    <!--  测试服务 banner  结束  -->
+
+    <!--  测试服务  开始  -->
+    <div class="container content_body">
+      <div class="company_profile">
+        <div class="content_title"></div>
+      </div>
+      <div class="second_content">
+        <!-- 专业领域 -->
+        <div class="lingyu"></div>
+
+        <!-- 服务优势 -->
+        <div class="youshi"></div>
+
+        <!-- 我们的测试服务 -->
+        <div class="test_server"></div>
+
+        <!-- 常用性能测试技术 -->
+        <div class="test_jishu"></div>
+
+      </div>
+    </div>
+    <!--  测试服务  结束  -->
+
+    <!--  底部内容 开始  -->
+    <footer class="footer_content"></footer>
+
+  </body>
+
+  <script type="text/javascript">
+    $(function(){
+
+      var dataFirst = datas[0].first     //页面标题
+      var dataSecond = datas[1].second   //专业领域
+      var dataThird = datas[2].third     //服务优势
+      var dataFourth = datas[3].fourth   //我们的测试服务
+      var dataFifth = datas[4].fifth     //常用性能测试技术
+
+      // 页面标题块内容
+      $(".content_title").html(
+        '<h2 class="fl">'+dataFirst.title+'</h2>'+
+        '<hr class="title_hr fr" style="width:88%;">'
+      );
+
+      // 专业领域
+      $.each(dataSecond,function(i,v){
+        $(".lingyu").append('<h3>'+this.title+'</h3>');
+
+        $.each(v.text,function(j,vle){
+          $(".lingyu").append('<p>'+vle.detail+'</p>');
+        })
+      });
+      // 专业领域  结束
+
+
+      //服务优势
+      $.each(dataThird,function(i,v){
+        $(".youshi").append('<h3>'+this.title+'</h3>');
+
+        $.each(v.text,function(j,vle){
+          $(".youshi").append('<p>'+vle.detail+'</p>');
+        })
+      });
+      //服务优势  结束
+
+
+      //我们的测试服务
+      $.each(dataFourth,function(i,v){
+        $(".test_server").append('<h3>'+this.title+'</h3>');
+
+        $.each(v.contents,function(j,vle){
+          $(".test_server").append('<h4>'+vle.contentsTitle+'</h4>'+'<p>'+vle.contentsText+'</p>');
+        })
+      });
+      //我们的测试服务  结束
+
+
+      //常用性能测试技术
+      $.each(dataFifth,function(i,v){
+        $(".test_jishu").append('<h3>'+this.title+'</h3>');
+
+        $.each(v.text,function(j,vle){
+          $(".test_jishu").append('<p>'+vle.detail+'</p>');
+        })
+      });
+      //常用性能测试技术  结束
+      
+
+    });
+
+    var datas = [
+      {"first":
+        {"title":"测试服务","text":null}
+      },
+      {"second":[
+        {"title":"专业领域",
+         "url":null,
+         "text":[
+          {"detail":"端到端应用和软件产品的测试服务、策略和实施"},
+          {"detail":"开发和设计工具和自动化测试脚本"},
+          {"detail":"项目范围、目标和需求定义"},
+          {"detail":"监控开发和测试流程的策略"},
+          {"detail":"基于国际行业惯例和标准的质量和安全控制，包括：CMMI、测试MMI与CNAS以及ITIL"},
+         ]}
+      ]},
+      {"third":[
+        {"title":"服务优势",
+         "url":null,
+         "text":[
+          {"detail":"全面的测试，以评估合规性，使开发人员无需跨大量不断变化的平台和终端进行测试"},
+          {"detail":"立即获得可快速扩充的项目团队，使产品开发人员能够以更快的速度提供先进的产品，节省宝贵的内部资源"},
+          {"detail":"广泛的跨文化项目管理经验，提供高效的开发流程，缩短上市时间，显著降低成本"},
+         ]}
+      ]},
+      {"fourth":[
+        {"title":"我们的测试服务",
+        "url":null,
+        "text":null,
+        "contents":[
+          {"contentsTitle":"用户验收测试",
+           "contentsText":"广亿提供产品开发各个阶段的全方位用户验收测试服务，从最终用户的角度模拟应用和软件产品功能。",
+          },
+          {"contentsTitle":"自动化测试服务",
+           "contentsText":"我们的自动化测试保证无差错重复测试，能够极大地提高开发效率，缩短周期时间，检测质量回归问题。",
+          },
+          {"contentsTitle":"业务测试服务",
+           "contentsText":"商业测试服务包括软件系统行为检查，以确保其功能符合客户的业务运作。",
+          },
+          {"contentsTitle":"安全测试",
+           "contentsText":"广亿的安全测试验证重要系统数据的私密性、完整性、鉴权、可用性、授权以及不可抵赖性。",
+          },
+          {"contentsTitle":"需求管理服务",
+           "contentsText":"广亿能够帮助开发人员避免通信软件和应用开发流程中出现低效率的问题。通过项目输出需求的记录、分析和优先级确定，提供清晰的说明，从而为开发人员提供控制开发活动的宝贵手段。",
+          }
+        ]}
+      ]},
+      {"fifth":[
+        {"title":"常用性能测试技术",
+         "url":null,
+         "text":[
+            {"detail":"OpenSTA"},
+            {"detail":"Loadrunner"},
+            {"detail":"Rational Performance Tester"},
+            {"detail":"Web Capacity Analysis Tool (WCAT)"}
+         ]}
+      ]}
+    ]
+  </script>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name=" Keywords" content="......">      <!--content中，网页关键字-->
+    <meta name=" description" content="......">   <!--content中，网页描述文字-->
+    <meta name="author" content="......">        <!--标注作者-->
+    <title>大数据-大数据解决方案</title>
+    <link rel="stylesheet" href="../../bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../../static/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../static/css/common/reset.css">
+    <link rel="stylesheet" href="../../static/css/common/nav.css">
+    <link rel="stylesheet" href="../../static/css/common/foot.css">
+    <link rel="stylesheet" href="../../static/css/view/solution/solution.css">
+
+    <script src="https://cdn.bootcss.com/jquery/3.0.0/jquery.js"></script>
+    <script type="text/javascript" src="../../bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../static/js/common/nav.js"></script>
+    <script type="text/javascript" src="../../static/js/common/foot.js"></script>
+    <script type="text/javascript" src="../../static/js/common/public.js"></script>
+    <script type="text/javascript" src="../../static/js/views/solution/solution.js"></script>
+
+    <style>
+      .iconbg{
+        display:inline-block;width:3px;height:17px;background:#399bff;margin-right:16px;vertical-align: middle;
+      }
+      .p_texts:nth-child(1),.p_texts:nth-child(2){
+        text-indent: 2em;
+      }
+    </style>
+  </head>
+  <body>
+    <!--  导航 开始 -->
+    <div class="top"></div>
+    <!--  导航结束  -->
+
+    <!--  下拉导航  开始  -->
+    <nav class="nav_content"></nav>
+    <!--  下拉导航  开始  -->
+
+    <!--  大数据解决方案 banner  开始  -->
+    <div class="banner">
+      <img src="../../static/images/itserverimg/itserverbanner1.png" alt="">
+      <div class="banner_details">
+        <h1>大数据</h1>
+        <span>广亿多媒体信息发布平台主要针对高端酒店、商场超市、医疗行业、连锁机构、会展场馆、企业楼宇、交通枢纽、金融</span>
+        <span>及电信营业厅等用户需求定制开发的内容丰富的信息显示平台和稳定成熟的多媒体数字信息发布系统</span>
+      </div>
+    </div>
+    <!--  大数据解决方案 banner  结束  -->
+
+    <!--  大数据解决方案  开始  -->
+    <div class="container content_body">
+      <div class="company_profile">
+        <div class="content_title"></div>
+      </div>
+      <div class="second_content"></div>
+    </div>
+    <!--  大数据解决方案  开始  -->
+
+    <!--  底部内容 开始  -->
+    <footer class="footer_content"></footer>
+
+  </body>
+
+  <script type="text/javascript">
+    $(function(){
+
+      var dataFirst = datas[0].first
+      var dataSecond = datas[1].second
+
+      $(".content_title").html(
+        '<h2 class="fl">'+dataFirst.title+'</h2>'+
+        '<hr class="title_hr fr" style="width:81%;">'
+      )
+
+      $.each(dataSecond,function(i,el){
+
+        $(".second_content").append(
+            '<div class="content_lists" style="margin-bottom:100px;">'+
+              '<h3>'+this.title+'</h3>'+
+            '</div>'
+        );
+
+        $.each(this.text,function(index,v){
+
+          if(v.secondTitle != null){
+            $(".content_lists").eq(i).append(
+              '<h4 style="font-weight:700;">'+v.secondTitle+'</h4>'
+            );
+          }
+          $(".content_lists").eq(i).append(
+            '<p class="p_texts" style="margin-bottom:20px;">'+v.detail+'</p>'
+          );
+
+          if(v.url != null){
+            $(".content_lists").eq(i).append(
+              '<img style="margin:100px auto 60px;display:block;" src="'+v.url+'"/>'
+            );
+          };
+          
+        });
+
+        $.each(this.conlists,function(k,vle){
+          $(".content_lists").eq(1).append(
+            '<p style="line-height:28px;margin-bottom:30px;">'+'<span class="iconbg">'+'</span>'+vle.conliststex+'</p>'
+          );
+        });
+
+      });
+
+
+    });
+
+    var datas = [
+      {"first":
+        {"title":"大数据解决方案","text":null}
+      },
+      {"second":[
+        {"title":"介绍",
+         "type":"1",
+         "url":null,
+         "text":[
+          {"secondTitle":null,"url":null,"detail":"广亿为企业提供大数据专业服务及创新性的解决方案，驱动数据价值从传统业务支持向推进商业决策的业务模式转型。从对数据的智能分析中，我们可以帮助客户确定他们应重点关注的业务，挖掘核心价值，实现利益最大化，并针对具体业务系统设计开发定制化的解决方案。文思海辉的战略咨询和核心技术能力可以帮助客户从源头上获取结构化和非结构化数据，并将其转换成专业深入的价值洞察系统，快速捕捉市场机遇，促进收入增长。"}
+        ]},
+        {"title":"服务特点",
+        "type":"2",
+        "url":null,
+        "text":[
+          {"secondTitle":null,"url":null,"detail":"大数据解决方案是广亿的核心业务之一。由于我们的解决方案不断推进，我们通过创建我们专有的大数据集成平台ReUnion做出了响应。ReUnion是自主开发，并提供了多种来源的数据收集和集成服务。该平台还可基于自有平台为客户专属定制大数据应用产品。"}
+        ],
+        "conlists":[
+          {"conliststex":"定制数据分类"},
+          {"conliststex":"定制的高精度数据采集"},
+          {"conliststex":"定制专业级的语义分析"},
+          {"conliststex":"定制数据集成应用"},
+          {"conliststex":"定制大数据应用"},
+          {"conliststex":"数据清理"},
+          {"conliststex":"多国语言，包括英语，法语，日语，德语和韩语"},
+          {"conliststex":"多种格式，包括HTML，PDF，Word，Excel和电子邮件"}
+        ]},
+        {"title":"我们的优势",
+         "type":"1",
+         "url":null,
+         "text":[
+          {"secondTitle":"利与决策","url":null,"detail":"我们的大数据解决方案利用先进的可视化分析工具，清晰显示趋势和分析，确保快速和有效的决策进程。"},
+          {"secondTitle":"行业领域的专业知识","url":null,"detail":"在制造业、银行和金融、汽车等行业上拥有成熟的，最好的解决方案、技术和流程知识。"},
+          {"secondTitle":"卓越往绩","url":null,"detail":"在大数据咨询、设计、开发和维护经验上逾10年的资深经验。"},
+        ]}
+      ]}
+    ]
+  </script>
+</html>

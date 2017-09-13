@@ -16,7 +16,7 @@ $(function(){
                     '<i>'+'<img src="../../static/images/nav/icons01.png"/>'+'</i>'+'<p>'+'P.C:200235'+'</p>'+
                   '</li>'+
                   '<li class="col-sm-4">'+
-                    '<i style="background: #399bff;">'+'<img src="../../static/images/nav/icons02.png"/>'+'</i>'+'<p>'+'上海市徐汇区中山西路2020号华宜大厦1902室'+'</p>'+
+                    '<i style="background: #399bff;">'+'<img src="../../static/images/nav/icons02.png"/>'+'</i>'+'<p>'+'上海市徐汇区中山西路2020号华宜大厦1102室'+'</p>'+
                   '</li>'+
                   '<li class="col-sm-4">'+
                     '<i>'+'<img src="../../static/images/nav/icons03.png"/>'+'</i>'+'<p>'+'TEL:021-64812228'+'</p>'+

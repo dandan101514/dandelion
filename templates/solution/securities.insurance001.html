@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name=" Keywords" content="......">      <!--content中，网页关键字-->
+    <meta name=" description" content="......">   <!--content中，网页描述文字-->
+    <meta name="author" content="......">        <!--标注作者-->
+    <title>证券保险-财险核心系统</title>
+    <link rel="stylesheet" href="../../bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../../static/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../static/css/common/reset.css">
+    <link rel="stylesheet" href="../../static/css/common/nav.css">
+    <link rel="stylesheet" href="../../static/css/common/foot.css">
+    <link rel="stylesheet" href="../../static/css/view/solution/solution.css">
+
+    <script src="https://cdn.bootcss.com/jquery/3.0.0/jquery.js"></script>
+    <script type="text/javascript" src="../../bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../static/js/common/nav.js"></script>
+    <script type="text/javascript" src="../../static/js/common/foot.js"></script>
+    <script type="text/javascript" src="../../static/js/common/public.js"></script>
+    <script type="text/javascript" src="../../static/js/views/solution/solution.js"></script>
+  </head>
+  <body>
+    <!--  导航 开始 -->
+    <div class="top"></div>
+    <!--  导航结束  -->
+
+    <!--  下拉导航  开始  -->
+    <nav class="nav_content"></nav>
+    <!--  下拉导航  开始  -->
+
+    <!--  财险核心系统 banner  开始  -->
+    <div class="banner">
+      <img src="../../static/images/itserverimg/itserverbanner1.png" alt="">
+      <div class="banner_details">
+        <h1>证券/保险</h1>
+        <span>商业银行需要积极主动地认识、管理和有效控制信用风险，通过实施全面有效的信用风险管理</span>
+        <span>将能够帮助银行处置风险，以最低成本实现最大安全保障的科学管理</span>
+      </div>
+    </div>
+    <!--  财险核心系统 banner  结束  -->
+
+    <!--  财险核心系统  开始  -->
+    <div class="container content_body">
+      <div class="company_profile">
+        <div class="content_title"></div>
+      </div>
+      <div class="second_content"></div>
+    </div>
+    <!--  财险核心系统  开始  -->
+
+    <!--  底部内容 开始  -->
+    <footer class="footer_content"></footer>
+
+  </body>
+
+  <script type="text/javascript">
+    $(function(){
+
+      var dataFirst = datas[0].first
+      var dataSecond = datas[1].second
+
+      $(".content_title").html(
+        '<h2 class="fl">'+dataFirst.title+'</h2>'+
+        '<hr class="title_hr fr" style="width:82.5%;">'
+      )
+
+      $.each(dataSecond,function(i,el){
+
+        $(".second_content").append(
+            '<div class="content_lists" style="margin-bottom:100px;">'+
+              '<h3>'+this.title+'</h3>'+
+            '</div>'
+        );
+
+        $.each(this.text,function(k,v){
+          if(v.secondTitle != null){
+            $(".content_lists").eq(i).append(
+              '<h4>'+v.secondTitle+'</h4>'
+            );
+          };
+          $(".content_lists").eq(i).append(
+            '<div style="margin-bottom:18px;">'+'</div>'
+          );  
+          if(v.url != null){
+            $(".content_lists").eq(i).append(
+              '<img src="'+v.url+'" />'
+            );
+          };
+
+          $.each(v.detail,function(j,content){
+            $(".content_lists").eq(i).find("div").eq(k).append(
+              '<p style="margin-bottom:15px;">'+content.contenttext+'</p>'
+            );
+          });
+
+        });
+
+      });
+      $(".content_lists img").css({"margin":"0 auto","display":"block","marginTop":"60px"})
+      $(".content_lists").eq(0).find("p").css("textIndent","2em");
+      $(".content_lists").eq(2).find("p").css("textIndent","2em");
+
+
+    });
+
+    var datas = [
+      {"first":
+        {"title":"财险核心系统","text":null}
+      },
+      {"second":[
+        {"title":"概述",
+        "url":null,
+        "text":[
+          {"secondTitle":null,
+           "url":null,
+           "detail":[{"contenttext":"广亿财险业务系统基于客户中心理念设计，能够实现业务处理全过程管理，支持多级管理体系架构，支持集中控制、分散展业的业务处理模式，是一套支持财产保险公司业务处理的完美系统，并且随着技术的发展，广亿已实现云部署，能够全面支持互联网保险公司或传统保险公司的互联网业务模式。"}]
+          },
+          {"secondTitle":null,
+           "url":null,
+           "detail":[{"contenttext":"该系统基于SOA架构设计，充分应用WEB技术、通讯技术、影像技术，为保险公司提供全面稳定、高效先进的核心业务管理平台，能有效帮助保险公司控制业务风险，降低运营成本，提升客户服务水平和市场竞争力。"}]
+          },
+          {"secondTitle":null,
+           "url":"../../static/images/securitiesInsurance/caixianhexin01.png",
+           "detail":[{"contenttext":"从应用架构上，该系统分为业务模块和管理模块两大模块。"}]
+          }          
+        ]},
+        {"title":"系统特点",
+        "url":null,
+        "text":[
+          {"secondTitle":"稳定可靠",
+           "url":null,
+           "detail":[{"contenttext":"系统设计充分屏蔽单点故障隐患，可用率高达99.9%；"},
+                     {"contenttext":"系统服务器采用分布式部署方式，有效实现应用互备和可扩展性；"},
+                     {"contenttext":"数据库服务器采用双机热备，保证系统运行稳定，数据安全可靠；"},
+                     {"contenttext":"系统统一事务管理，保证交易完整及数据可靠；"}
+                    ]
+          },
+          {"secondTitle":"高性能、高并发",
+           "url":null,
+           "detail":[{"contenttext":"采用多级缓存策略：浏览器段静态资源缓存；浏览器段下拉框数据缓存，通过数据版本管理自动更新；"},
+                     {"contenttext":"服务器端缓存：web层静态资源缓存；APP静态数据缓存；Dao层数据缓存;"}
+                    ]
+          },
+          {"secondTitle":"易维护、可扩展",
+           "url":null,
+           "detail":[{"contenttext":"支持数据日志记录，并把异常交易有效记录到数据库中；"},
+                     {"contenttext":"支持标准接口，支持与其它系统交互，可随需增加部署节点，应需扩容；"}
+                    ]
+          },
+          {"secondTitle":"良好开发能力",
+           "url":null,
+           "detail":[{"contenttext":"系统开发平台独立；"},
+                     {"contenttext":"模块化web开发模式；"},
+                     {"contenttext":"组件管理框架；"},
+                     {"contenttext":"系统开发模式化；"},
+                     {"contenttext":"程序开发规范化；"}
+                    ]
+          }
+        ]},
+        {"title":"系统功能",
+        "url":null,
+        "text":[
+          {"secondTitle":"",
+           "url":"../../static/images/securitiesInsurance/caixianhexin02.png",
+           "detail":[{"contenttext":"广亿财险核心系统主要功能包括：承保管理、理赔管理、再保管理、收付管理、单证管理、客户管理、产品管理、查询报表、系统设置、系统管理。"}]
+          }
+        ]}
+      ]}
+    ]
+  </script>
+</html>
