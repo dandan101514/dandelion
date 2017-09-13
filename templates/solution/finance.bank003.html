@@ -7,21 +7,20 @@
 		<meta name=" Keywords" content="......">      <!--content中，网页关键字-->
     <meta name=" description" content="......">   <!--content中，网页描述文字-->
     <meta name="author" content="......">        <!--标注作者-->
-    <title>软件外包-项目开发服务</title>
+    <title>金融银行-反洗钱解决方案</title>
     <link rel="stylesheet" href="../../bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="../../static/css/font-awesome.min.css">
     <link rel="stylesheet" href="../../static/css/common/reset.css">
     <link rel="stylesheet" href="../../static/css/common/nav.css">
     <link rel="stylesheet" href="../../static/css/common/foot.css">
-    <link rel="stylesheet" href="../../static/css/view/outsource/outsource.css">
-
+    <link rel="stylesheet" href="../../static/css/view/solution/solution.css">
 
     <script src="https://cdn.bootcss.com/jquery/3.0.0/jquery.js"></script>
     <script type="text/javascript" src="../../bootstrap/bootstrap.min.js"></script>
     <script type="text/javascript" src="../../static/js/common/nav.js"></script>
     <script type="text/javascript" src="../../static/js/common/foot.js"></script>
     <script type="text/javascript" src="../../static/js/common/public.js"></script>
-    <script type="text/javascript" src="../../static/js/views/outsource/outsource.js"></script>
+    <script type="text/javascript" src="../../static/js/views/solution/solution.js"></script>
   </head>
   <body>
     <!--  导航 开始 -->
@@ -32,16 +31,16 @@
     <nav class="nav_content"></nav>
     <!--  下拉导航  开始  -->
 
-    <!--  项目开发服务 banner  开始  -->
+    <!--  反洗钱解决方案 banner  开始  -->
     <div class="banner">
       <img src="../../static/images/itserverimg/itserverbanner1.png" alt="">
       <div class="banner_details">
-        <h1>项目开发服务</h1>
+        <h1>金融/银行</h1>
       </div>
     </div>
-    <!--  项目开发服务 banner  结束  -->
+    <!--  反洗钱解决方案 banner  结束  -->
 
-    <!--  项目开发服务内容  开始  -->
+    <!--  反洗钱解决方案  开始  -->
     <div class="container content_body">
       <div class="company_profile">
         <div class="content_title"></div>
@@ -49,7 +48,7 @@
       </div>
       <div class="second_content"></div>
     </div>
-    <!--  项目开发服务内容  开始  -->
+    <!--  反洗钱解决方案  开始  -->
 
     <!--  底部内容 开始  -->
     <footer class="footer_content"></footer>
@@ -64,26 +63,26 @@
 
       $(".content_title").html(
         '<h2 class="fl">'+dataFirst.title+'</h2>'+
-        '<hr class="title_hr fr" style="width:83%;">'
-      );
+        '<hr class="title_hr fr"  style="width:81%;">'
+      )
 
-      $.each(dataSecond,function(i, el) {
-        if(this.url != null){
-          $(".second_content").append(
-            '<div class="content_lists">'+
-              '<img src="'+this.url+'" />'+
-              '<ul style="padding-bottom:100px;">'+'</ul>'+
-            '</div>'
-          );
-        };
-        
+      $.each(dataSecond,function(i,el){
+
+        $(".second_content").append(
+          '<div class="content_lists" style="margin-bottom:100px;">'+
+            '<h3>'+this.title+'</h3>'+
+        '</div>'
+        );
+
         $.each(this.text,function(index,v){
-          if(v.detail != null ){
-            $(".content_lists ul").append(
-              '<li style="padding-top:35px;">'+
-                '<h4>'+v.secondTitle+'</h4>'+
-                '<p>'+v.detail+'</p>'+
-              '</li>'
+           $(".content_lists").eq(i).append(
+            '<p style="text-indent:2em;">'+v.detail+'</p>'
+           )
+          if(v.url != null){
+            $(".content_lists").eq(1).append(
+              '<div style="width:100%;text-align:center;margin:60px 0;">'+
+                '<img src="'+v.url+'" alt="" />'+
+              '</div>'
             );
           };
         });
@@ -92,25 +91,20 @@
 
     });
 
-
     var datas = [
       {"first":
-        {"title":"项目开发服务","text":null}
+        {"title":"反洗钱解决方案","text":null}
       },
       {"second":[
-        {"title":"软件外包项目流程：",
-        "url":"../../static/images/outsource/liuchen.png",
+        {"title":"简介",
         "text":[
-          {"secondTitle":"","detail":null,},
-          {"secondTitle":"需求分析","detail":"建立合作意向后，我们首先会对客户要求有详尽的了解，准确知道客户需求、客户的商业模式和业务流程，并结合自身的经验，为客户提出改进建议。"},
-          {"secondTitle":"总体设计","detail":"在需求确定并获得客户认可后，由系统设计师进行系统架构设计，并与客户一起制定项目实施计划。"},
-          {"secondTitle":"详细设计","detail":"由程序设计人员根据系统架构，针对不同模块的功能和规格进行详细设计。"},
-          {"secondTitle":"开发编码","detail":"由程序员根据详细设计及计划，进行软件程序代码的编写。"},
-          {"secondTitle":"系统测试","detail":"不同模块的编程工作完成后，经过测试，并进行系统的整合。"},
-          {"secondTitle":"部署实施","detail":"软件系统开发最终完成后，到客户现场进行安装、调试、培训。"}
+          {"secondTitle":null,"url":null,"detail":"OneSumX 反洗钱解决方案是一款完全集成的反洗钱解决方案，保护金融机构避免违规、制裁和处罚。该解决方案涵盖反洗钱和恐怖主义融资风险的所有关键领域，自动生成现金交易报表和可疑交易报表，报送至监管机构。这使金融机构在满足单个国家监管要求的同时满足金融行动专责委员会制定的国际标准。"}
+        ]},
+        {"title":"OneSumX 解决方案模块方法",
+        "text":[
+          {"secondTitle":null,"url":"../../static/images/solution/finance.bank/fanxiqian_03.png","detail":"OneSumX 反洗钱解决方案帮助金融机构对其客户、业务和雇员执行准确、一致的检查。"}
         ]}
       ]}
     ]
-
   </script>
 </html>

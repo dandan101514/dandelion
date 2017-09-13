@@ -1,7 +1,7 @@
 $(function(){
   // 一级菜单项
   var menu = '<div class="menu">'+
-                '<h1 class="logo cl">'+'<a href="http://www.dowebok.com/">'+'</a>'+'上海广亿信息技术有限公司'+'</h1>'+
+                '<h1 class="logo cl">'+'<a href="javascript:;">'+'</a>'+'上海广亿信息技术有限公司'+'</h1>'+
                 '<ul class="nav navAll">'+'</ul>'+
                 '<span class="change_language">'+'English'+'</span>'+
              '</div>'
@@ -19,44 +19,56 @@ $(function(){
   $(".nav_content").html(navShow)
 
 
-
   var data = menus
-  // console.log(menus[1].menuNav)
-  var path = "/guangyi/guangyi.com/"
-  var imgpath = "/guangyi/guangyi.com/static/images/nav/"
+  var path = "./../../"
+  var imgpathA = "./static/images/nav/"
+  var imgpath = "./../../static/images/nav/"
 
     $.each(menus,function(i,v){ 
 
       var Nav = v.menuNav;
-      //  循环添加一级导航
-      $(".navAll").append('<li class="navlis">'+'<a class="navlis_text" href="'+path+v.id+'.html">'+Nav.firstMenu+'</a>'+'</li>');
-      
-        $(".nav_left").append('<ul class="second_nav list-group fr" style="display:none;">'+'</ul>');
-        $(".nav_third").append('<div class="sanjiliebiao" style="display:none;">'+'</div>');
-        $(".nav_details").append('<div class="details_texts" style="display:none;"></div>');   
-        $(".nav_right").append('<div class="imgcontent" style="display:none;"></div>')     
-
-        //  循环添加二级导航
-        $.each(Nav.secondNav,function(j,vle){
-          $(".second_nav").eq(i).append('<li>'+'<a href="javascript:;">'+vle.secondtext+'</a>'+'<i class="fa" aria-hidden="true">'+'</i>'+'</li>');
-          $(".sanjiliebiao").append('<ul class="nav_third_lists" style="display:none;">'+'</ul>');
+          //  循环添加一级导航
+            var urls = window.location.href
+            if(urls.substr(urls.length-10) == "index.html"){
+              $(".navAll").append('<li class="navlis">'+'<a class="navlis_text" href="'+v.id+'.html">'+Nav.firstMenu+'</a>'+'</li>');
+            }else{
+              $(".navAll").append('<li class="navlis">'+'<a class="navlis_text" href="'+path+v.id+'.html">'+Nav.firstMenu+'</a>'+'</li>');
+            }
           
-          $(".imgcontent").eq(i).append('<img class="imgblock" src="'+imgpath+vle.detailurl+'" style="width:380px;display:none;" alt="">')
+            $(".nav_left").append('<ul class="second_nav list-group fr" style="display:none;">'+'</ul>');
+            $(".nav_third").append('<div class="sanjiliebiao" style="display:none;">'+'</div>');
+            $(".nav_details").append('<div class="details_texts" style="display:none;"></div>');   
+            $(".nav_right").append('<div class="imgcontent" style="display:none;"></div>')      
+    
+            //  循环添加二级导航
+            $.each(Nav.secondNav,function(j,vle){
+              $(".second_nav").eq(i).append('<li>'+'<a href="javascript:;">'+vle.secondtext+'</a>'+'<i class="fa" aria-hidden="true">'+'</i>'+'</li>');
+              $(".sanjiliebiao").append('<ul class="nav_third_lists" style="display:none;">'+'</ul>');
+              if(urls.substr(urls.length-10) == "index.html"){
+                $(".imgcontent").eq(i).append('<img class="imgblock" src="'+imgpathA+vle.detailurl+'" style="width:380px;display:none;" alt="">')
+              }else{
+                $(".imgcontent").eq(i).append('<img class="imgblock" src="'+imgpath+vle.detailurl+'" style="width:380px;display:none;" alt="">')
+              }
+              
+            });
+    
+            //  下拉导航右侧内容
+            $.each(Nav.rightDetail,function(j,vel){
+              $(".details_texts").eq(i).append('<div class="details_texts_ever" style="display:none;">'+'<h3>'+vel.title+'</h3>'+'<p>'+vel.text+'</p>'+'</div>');
+            });
+    
+            //  循环添加三级导航
+            $.each(Nav.thirdNav,function(j,vles){
+    
+              $.each(vles.thirdtext,function(k,contents){
+                if(urls.substr(urls.length-10) == "index.html"){
+                  $(".sanjiliebiao").eq(i).find(".nav_third_lists").eq(j).append('<li class="click_third_nav">'+'<a href="'+contents.Id+'.html">'+contents.detailstexts+'</a>'+'<i class="fa" aria-hidden="true">'+'</i>'+'</li>');
+                }else{
+                  $(".sanjiliebiao").eq(i).find(".nav_third_lists").eq(j).append('<li class="click_third_nav">'+'<a href="'+path+contents.Id+'.html">'+contents.detailstexts+'</a>'+'<i class="fa" aria-hidden="true">'+'</i>'+'</li>');
+                }
+              });
+            });
         });
-
-        //  下拉导航右侧内容
-        $.each(Nav.rightDetail,function(j,vel){
-          $(".details_texts").eq(i).append('<div class="details_texts_ever" style="display:none;">'+'<h3>'+vel.title+'</h3>'+'<p>'+vel.text+'</p>'+'</div>');
-        });
-
-        //  循环添加三级导航
-        $.each(Nav.thirdNav,function(j,vles){
-
-          $.each(vles.thirdtext,function(k,contents){
-            $(".sanjiliebiao").eq(i).find(".nav_third_lists").eq(j).append('<li class="click_third_nav">'+'<a href="'+path+contents.Id+'.html">'+contents.detailstexts+'</a>'+'<i class="fa" aria-hidden="true">'+'</i>'+'</li>');
-          });
-        });
-    });
 
   // 导航默认样式
   $(".second_nav li:first-child").addClass('hover_second_nav').find("i").addClass('fa-long-arrow-right');
@@ -68,12 +80,16 @@ $(function(){
       $this.addClass('firthNav');
     }
   });
+  
+  // 下拉导航定位
+  var nav_tops = $(".top").height()
+  $(".nav_content").css("top",nav_tops)
 
   // 导航下拉内容的显示隐藏
   $(".nav_content").hover(function(){
     $(this).show()
   },function(){
-    $(this).fadeOut(400);
+    $(this).hide();
     $(".second_nav li").removeClass('hover_second_nav');
     $(".second_nav li i").removeClass('fa-long-arrow-right');
     $(".second_nav li:first-child").addClass('hover_second_nav').find("i").addClass('fa-long-arrow-right');
@@ -81,28 +97,26 @@ $(function(){
   })
 
   $(".nav_third_lists").css({"position":"relative","left":"-250px","z-index":"-2"})
-  $(".details_texts_ever").css("opacity","0")
-  // $(".imgblock").css("opacity","0")
 
   // 一级导航的hover事件
   $(".navlis").hover(function(k){
     k = $(this).index()
     if(k == 0 || k == 4 || k == 5){
-      $(".nav_content").stop().stop().hide();
+      $(".nav_content").hide();
     }else{
-      $(".nav_content").fadeIn(300);
+      $(".nav_content").show();
       $(".details_texts").eq(k).show().siblings().hide();
       $(".second_nav").eq(k).show().siblings().hide();
       $(".sanjiliebiao").eq(k).show().siblings().hide();
       $(".sanjiliebiao").eq(k).find(".nav_third_lists").stop().stop().eq(0).show().animate({left:"0px",zIndex:999},300).siblings().hide().animate({zIndex:-2,left:"-250px"});
       $(".details_texts").eq(k).show();
-      $(".details_texts").eq(k).find(".details_texts_ever").stop().stop().eq(0).show().animate({opacity:"1"},1000).siblings().hide().animate({opacity:"0"});
+      $(".details_texts").eq(k).find(".details_texts_ever").eq(0).show().siblings().hide();
       $(".imgcontent").eq(k).show().siblings().hide();
       $(".imgcontent").eq(k).find(".imgblock").eq(0).show().siblings().hide();
     }
     
   },function(){
-    $(".nav_content").stop().stop().hide();
+    $(".nav_content").hide();
     $(".second_nav li").removeClass('hover_second_nav');
     $(".second_nav li i").removeClass('fa-long-arrow-right');
     $(".second_nav li:first-child").addClass('hover_second_nav').find("i").addClass('fa-long-arrow-right');
@@ -117,7 +131,7 @@ $(function(){
       $(".second_nav li i").removeClass('fa-long-arrow-right');
       $(this).find("i").addClass('fa-long-arrow-right');
       $(".sanjiliebiao").eq(pIndex).find(".nav_third_lists").stop().stop().eq(p).show().animate({left:"0px",zIndex:999},300).siblings().hide().animate({zIndex:-2,left:"-250px"});
-      $(".details_texts").eq(pIndex).find(".details_texts_ever").stop().stop().eq(p).show().animate({opacity:"1"},1000).siblings().hide().animate({opacity:"0"});
+      $(".details_texts").eq(pIndex).find(".details_texts_ever").eq(p).show().siblings().hide();
       $(".imgcontent").eq(pIndex).find(".imgblock").eq(p).show().siblings().hide();
 
     });
@@ -132,7 +146,7 @@ $(function(){
 
 
 var menus = [{
-    "id":"templates/index/index",
+    "id":"index",
     "indexs":"0",
     "menuNav":{
       "firstMenu":"首页",
@@ -158,9 +172,9 @@ var menus = [{
         {"Id":"templates/ITservice/technical.consultation","detailstexts":"技术咨询"}
       ]},
       {"thirdtext":[
-        {"Id":"templates/ITservice/technicalService/technical.service001","detailstexts":"信息系统设计与开发"},
-        {"Id":"templates/ITservice/technicalService/technical.service002","detailstexts":"测试"},
-        {"Id":"templates/ITservice/technicalService/technical.service003","detailstexts":"业务流程外包(BPO)"},
+        {"Id":"templates/ITservice/technical.service001","detailstexts":"信息系统设计与开发"},
+        {"Id":"templates/ITservice/technical.service002","detailstexts":"测试"},
+        {"Id":"templates/ITservice/technical.service003","detailstexts":"业务流程外包(BPO)"},
       ]},
       {"thirdtext":[
         {"Id":"templates/ITservice/software.development","detailstexts":"软件开发"}
@@ -226,49 +240,49 @@ var menus = [{
     ],
     "thirdNav":[
       {"thirdtext":[
-        {"Id":"templates/solution/financeBank/finance.bank","detailstexts":"金融授信融资解决方案"},
-        {"Id":"templates/solution/financeBank/finance.bank002","detailstexts":"监管报表解决方案"},
-        {"Id":"templates/solution/financeBank/finance.bank003","detailstexts":"反洗钱解决方案"},
-        {"Id":"templates/solution/financeBank/finance.bank004","detailstexts":"微信银行解决方案"},
-        {"Id":"templates/solution/financeBank/finance.bank005","detailstexts":"资产管理解决方案"}
+        {"Id":"templates/solution/finance.bank","detailstexts":"金融授信融资解决方案"},
+        {"Id":"templates/solution/finance.bank002","detailstexts":"监管报表解决方案"},
+        {"Id":"templates/solution/finance.bank003","detailstexts":"反洗钱解决方案"},
+        {"Id":"templates/solution/finance.bank004","detailstexts":"微信银行解决方案"},
+        {"Id":"templates/solution/finance.bank005","detailstexts":"资产管理解决方案"}
       ]},
       {"thirdtext":[
-        {"Id":"templates/solution/securitiesInsurance/securities.insurance001","detailstexts":"财险核心系统解决方案"},
-        {"Id":"templates/solution/securitiesInsurance/securities.insurance002","detailstexts":"资产管理系统解决方案"},
-        {"Id":"templates/solution/securitiesInsurance/securities.insurance003","detailstexts":"保险监管系统解决方案"},
-        {"Id":"templates/solution/securitiesInsurance/securities.insurance004","detailstexts":"保险微信营销服务平台解决方案"}
+        {"Id":"templates/solution/securities.insurance001","detailstexts":"财险核心系统解决方案"},
+        {"Id":"templates/solution/securities.insurance002","detailstexts":"资产管理系统解决方案"},
+        {"Id":"templates/solution/securities.insurance003","detailstexts":"保险监管系统解决方案"},
+        {"Id":"templates/solution/securities.insurance004","detailstexts":"保险微信营销服务平台解决方案"}
       ]},
       {"thirdtext":[
-        {"Id":"templates/solution/mobileInternet/mobile.internet001","detailstexts":"移动医疗解决方案"},
-        {"Id":"templates/solution/mobileInternet/mobile.internet002","detailstexts":"电子商务解决方案"},
-        {"Id":"templates/solution/mobileInternet/mobile.internet003","detailstexts":"微商城解决方案"}
+        {"Id":"templates/solution/mobile.internet001","detailstexts":"移动医疗解决方案"},
+        {"Id":"templates/solution/mobile.internet002","detailstexts":"电子商务解决方案"},
+        {"Id":"templates/solution/mobile.internet003","detailstexts":"微商城解决方案"}
       ]},
       {"thirdtext":[
-        {"Id":"templates/solution/education/education001","detailstexts":"终身教育学分银行解决方案"},
-        {"Id":"templates/solution/education/education002","detailstexts":"智慧校园解决方案"}
+        {"Id":"templates/solution/education001","detailstexts":"终身教育学分银行解决方案"},
+        {"Id":"templates/solution/education002","detailstexts":"智慧校园解决方案"}
       ]},
       {"thirdtext":[
-        {"Id":"templates/solution/manufacturing.enterprises/manufacturing.enterprises001","detailstexts":"客户关系系统(CRM)解决方案"},
-        {"Id":"templates/solution/manufacturing.enterprises/manufacturing.enterprises002","detailstexts":"企业生产管理系统(MES)解决方案"},
-        {"Id":"templates/solution/manufacturing.enterprises/manufacturing.enterprises003","detailstexts":"人事管理解决方案"}
+        {"Id":"templates/solution/manufacturing.enterprises001","detailstexts":"客户关系系统(CRM)解决方案"},
+        {"Id":"templates/solution/manufacturing.enterprises002","detailstexts":"企业生产管理系统(MES)解决方案"},
+        {"Id":"templates/solution/manufacturing.enterprises003","detailstexts":"人事管理解决方案"}
       ]},
       {"thirdtext":[
-        {"Id":"templates/solution/cloud.computing/cloud.computing001","detailstexts":"广亿云"},
-        {"Id":"templates/solution/cloud.computing/cloud.computing002","detailstexts":"企业云"}
+        {"Id":"templates/solution/cloud.computing001","detailstexts":"广亿云"},
+        {"Id":"templates/solution/cloud.computing002","detailstexts":"企业云"}
       ]},
       {"thirdtext":[
-        {"Id":"templates/solution/big.data/big.data001","detailstexts":"大数据解决方案"},
-        {"Id":"templates/solution/big.data/big.data002","detailstexts":"大数据集成开发平台"}
+        {"Id":"templates/solution/big.data001","detailstexts":"大数据解决方案"},
+        {"Id":"templates/solution/big.data002","detailstexts":"大数据集成开发平台"}
       ]},
       {"thirdtext":[
-        {"Id":"templates/solution/business.intelligence/business.intelligence001","detailstexts":"数据仓库（EDW)"},
-        {"Id":"templates/solution/business.intelligence/business.intelligence002","detailstexts":"数据挖掘(DM)"}
+        {"Id":"templates/solution/business.intelligence001","detailstexts":"数据仓库（EDW)"},
+        {"Id":"templates/solution/business.intelligence002","detailstexts":"数据挖掘(DM)"}
       ]},
       {"thirdtext":[
-        {"Id":"templates/solution/data.migration/data.migration001","detailstexts":"数据迁移"}
+        {"Id":"templates/solution/data.migration001","detailstexts":"数据迁移"}
       ]},
       {"thirdtext":[
-        {"Id":"templates/solution/testing.service/testing.service001","detailstexts":"测试服务"}
+        {"Id":"templates/solution/testing.service001","detailstexts":"测试服务"}
       ]}
     ],
     "rightDetail":[

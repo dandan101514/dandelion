@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name=" Keywords" content="......">      <!--content中，网页关键字-->
+    <meta name=" description" content="......">   <!--content中，网页描述文字-->
+    <meta name="author" content="......">        <!--标注作者-->
+    <title>IT服务-信息系统设计与开发</title>
+    <link rel="stylesheet" href="../../bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../../static/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../static/css/common/reset.css">
+    <link rel="stylesheet" href="../../static/css/common/nav.css">
+    <link rel="stylesheet" href="../../static/css/common/foot.css">
+    <link rel="stylesheet" href="../../static/css/view/itservice.css">
+
+
+    <script src="https://cdn.bootcss.com/jquery/3.0.0/jquery.js"></script>
+    <script type="text/javascript" src="../../bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../static/js/common/nav.js"></script>
+    <script type="text/javascript" src="../../static/js/common/foot.js"></script>
+    <script type="text/javascript" src="../../static/js/common/public.js"></script>
+    <script type="text/javascript" src="../../static/js/views/ITservice/itservice.js"></script>
+
+    <style>
+      h4{
+        font-weight: 700 !important;
+      }
+      p{
+        margin-bottom:15px;
+      }
+    </style>
+  </head>
+  <body>
+    <!--  导航 开始 -->
+    <div class="top"></div>
+    <!--  导航结束  -->
+
+    <!--  下拉导航  开始  -->
+    <nav class="nav_content"></nav>
+    <!--  下拉导航  开始  -->
+
+    <!--  信息系统设计与开发 banner  开始  -->
+    <div class="banner">
+      <img src="../../static/images/itserverimg/itserverbanner1.png" alt="">
+      <div class="banner_details">
+        <h1>信息系统设计与开发</h1>
+      </div>
+    </div>
+    <!--  信息系统设计与开发 banner  结束  -->
+
+    <!--  信息系统设计与开发  开始  -->
+    <div class="container content_body">
+      <div class="company_profile">
+        <div class="content_title" style="height:auto;"></div>
+      </div>
+
+        <!-- 我们的服务 -->
+        <div class="ourserver"></div>
+
+      </div>
+    </div>
+    <!--  信息系统设计与开发  结束  -->
+
+    <!--  底部内容 开始  -->
+    <footer class="footer_content"></footer>
+
+  </body>
+
+  <script type="text/javascript">
+    $(function(){
+
+      var dataFirst = datas[0].first     //页面标题
+      var dataSecond = datas[1].second   //我们的服务
+
+      // 页面标题块内容
+      $(".content_title").html(
+        '<h2 class="fl">'+dataFirst.title+'</h2>'+
+        '<hr class="title_hr fr" style="width:76%;">'+
+        '<div style="clear:both;"></div>'+
+        '<div class="content_text" style="margin-top:50px;"></div>'
+      );
+      
+      $.each(dataFirst.text,function(i,v){
+        $(".content_text").append('<p class="jishuText">'+v.detail+'</p>');
+      });
+
+
+    // 我们的服务
+    $.each(dataSecond,function(i,v){
+      $(".ourserver").append('<h3>'+this.title+'</h3>');
+
+      $.each(v.contents,function(j,vle){
+        $(".ourserver").append('<h4>'+vle.contentsTitle+'</h4>'+'<p>'+vle.contentsText+'</p>');
+      });
+      
+    });
+      
+  });
+
+    var datas = [
+      {"first":
+        {"title":"信息系统设计与开发",
+        "text":[
+          {"detail":"随着企业信息化的不断深入，信息化系统变的更加庞大和复杂。企业应用系统运维的难度和压力也在随之增加。广亿提供客户化应用系统设计、开发服务，并在预算范围内按时按质交付项目。我们能够帮助客户确定对应用系统或产品的具体需求，并管理和维护其整个生命周期。"},
+          {"detail":"广亿凭借经验丰富的全球化开发团队和技术专家，为客户提供更规范、更专业的定制化应用系统及解决方案，使应用系统运行更加高效稳定，并及时响应应用系统的各种故障。"}
+        ]}
+      },
+      {"second":[
+        {"title":"我们的服务",
+         "url":"../../static/images/itserverimg/itserver01.png",
+         "text":null,
+         "contents":[
+          {"contentsTitle":"行业应用开发与维护","contentsText":"基于SAP、Oracle、Siebel和Microsoft Dynamics等成熟软件包，提供构建、实施和维护服务。"},
+          {"contentsTitle":"定制化软件包服务","contentsText":"定制、集成和管理即装即用的软件，帮助客户实现业务目标。"},
+          {"contentsTitle":"移动应用与嵌入式开发","contentsText":"设计、构建、维护移动设备和嵌入式系统的定制化应用开发。"},
+          {"contentsTitle":"增值业务应用开发","contentsText":"设计、构建移动通信增值业务应用，提供端到端的开发服务。"},
+          {"contentsTitle":"供应链管理应用开发","contentsText":"设计、构建和维护定制化应用开发，优化业务流程。"},
+          {"contentsTitle":"企业应用集成","contentsText":"进行有效的业务流程整合，帮助企业机构获取、管理和开发数据，为业务决策提供支持。"},
+          {"contentsTitle":"应用系统生命周期支持","contentsText":"进行有效的业务流程整合，帮助企业机构获取、管理和开发数据，为业务决策提供支持。"},
+          {"contentsTitle":"服务导向架构（SOA）","contentsText":"充分利用SOA降低风险、增加业务敏捷性。"},
+          {"contentsTitle":"质量保证与测试","contentsText":"提供全面的系统缺陷检测，提高测试效率，扩大测试的覆盖范围。规划、设计、实施各种应用软件的测试策略与测试案例，提供黑盒测试、白盒测试、系统故障点追踪测试等。"},
+        ]}
+      ]}
+    ]
+  </script>
+</html>

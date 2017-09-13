@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name=" Keywords" content="......">      <!--content中，网页关键字-->
+    <meta name=" description" content="......">   <!--content中，网页描述文字-->
+    <meta name="author" content="......">        <!--标注作者-->
+    <title>证券保险-保险微信营销服务平台</title>
+    <link rel="stylesheet" href="../../bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../../static/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../static/css/common/reset.css">
+    <link rel="stylesheet" href="../../static/css/common/nav.css">
+    <link rel="stylesheet" href="../../static/css/common/foot.css">
+    <link rel="stylesheet" href="../../static/css/view/solution/solution.css">
+
+    <script src="https://cdn.bootcss.com/jquery/3.0.0/jquery.js"></script>
+    <script type="text/javascript" src="../../bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../static/js/common/nav.js"></script>
+    <script type="text/javascript" src="../../static/js/common/foot.js"></script>
+    <script type="text/javascript" src="../../static/js/common/public.js"></script>
+    <script type="text/javascript" src="../../static/js/views/solution/solution.js"></script>
+  </head>
+  <body>
+    <!--  导航 开始 -->
+    <div class="top"></div>
+    <!--  导航结束  -->
+
+    <!--  下拉导航  开始  -->
+    <nav class="nav_content"></nav>
+    <!--  下拉导航  开始  -->
+
+    <!--  保险微信营销服务平台 banner  开始  -->
+    <div class="banner">
+      <img src="../../static/images/itserverimg/itserverbanner1.png" alt="">
+      <div class="banner_details">
+        <h1>证券/保险</h1>
+        <span>商业银行需要积极主动地认识、管理和有效控制信用风险，通过实施全面有效的信用风险管理</span>
+        <span>将能够帮助银行处置风险，以最低成本实现最大安全保障的科学管理</span>
+      </div>
+    </div>
+    <!--  保险微信营销服务平台 banner  结束  -->
+
+    <!--  保险微信营销服务平台  开始  -->
+    <div class="container content_body">
+      <div class="company_profile">
+        <div class="content_title"></div>
+      </div>
+      <div class="second_content"></div>
+    </div>
+    <!--  保险微信营销服务平台  开始  -->
+
+    <!--  底部内容 开始  -->
+    <footer class="footer_content"></footer>
+
+  </body>
+
+  <script type="text/javascript">
+    $(function(){
+
+      var dataFirst = datas[0].first
+      var dataSecond = datas[1].second
+
+      $(".content_title").html(
+        '<h2 class="fl">'+dataFirst.title+'</h2>'+
+        '<hr class="title_hr fr" style="width:73.5%;">'
+      )
+
+      $.each(dataSecond,function(i,el){
+
+        $(".second_content").append(
+            '<div class="content_lists" style="margin-bottom:100px;">'+
+              '<h3>'+this.title+'</h3>'+
+            '</div>'
+        );
+
+        $.each(this.text,function(index,v){
+          if(v.secondTitle != null ){
+            $(".content_lists").eq(i).append(
+              '<h4>'+v.secondTitle+'</h4>'             
+            );
+          };
+
+          $(".content_lists").eq(i).append(
+            '<p style="text-indent:2em;margin-bottom:15px;">'+v.detail+'</p>'
+          );
+
+          if(v.url != null){
+            $(".content_lists").eq(i).append(
+              '<img style="margin:100px auto 60px;display:block;" src="'+v.url+'"/>'
+            );
+          };
+          
+        });
+
+      });
+
+      $(".content_lists").eq(1).find("p").css({"textIndent":"0"});
+
+    });
+
+    var datas = [
+      {"first":
+        {"title":"保险微信营销服务平台","text":null}
+      },
+      {"second":[
+        {"title":"概述",
+         "url":null,
+         "text":[
+          {"secondTitle":null,"url":"../../static/images/securitiesInsurance/baoxianweixin01.png","detail":"广亿保险微信营销系统旨在为有车险、意外险、家财险需求的客户提供更为便捷的投保体验、理赔查询等服务。保险公司可通过该系统及时向客户传递各类服务信息，与客户进行针对性更强的互动交流，提高客户服务水平，增强营销服务能力。同时，保险公司可利用该平台扩展其客户视图,助力客户分析及营销服务分析,制定营销策略。"}
+        ]},
+        {"title":"系统特点",
+        "url":null,
+        "text":[
+          {"secondTitle":"动态扩展","url":null,"detail":"该平台具有高度可扩展性(通过规范调度中心,发送中心和接收中心的统一数据交换模型), 不仅可适配现有的微信,微博及短信服务，还能为新的社交平台提供新的接入接口定义，对新社交平台的接入只需要按照统一的消息规范配置相应的适配器即可."},
+          {"secondTitle":"模块化设计","url":null,"detail":"系统采用多功能模块化设计，各模块间的耦合性降到最低，各模块均采用参数配置。"},
+          {"secondTitle":"易维护","url":null,"detail":"界面简洁明了、操作方便；系统配置方便。该系统扩展性强，便于二次开发。"},
+          {"secondTitle":"可移植","url":null,"detail":"采用标准SQL数据库语言，方便在不同操作系统（Unix/Linux）下的数据移植。"},
+          {"secondTitle":"安全可靠","url":null,"detail":"系统可屏蔽非法交易，保证交易信息真实准确。"}
+        ]},
+        {"title":"系统功能",
+        "url":null,
+        "text":[
+          {"secondTitle":null,"url":"../../static/images/securitiesInsurance/baoxianweixin02.png","detail":"该系统主要包括两部分功能：微信公众号管理运维平台及微信客户端业务服务平台。"}
+        ]}
+      ]}
+    ]
+  </script>
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name=" Keywords" content="......">      <!--content中，网页关键字-->
+    <meta name=" description" content="......">   <!--content中，网页描述文字-->
+    <meta name="author" content="......">        <!--标注作者-->
+    <title>商业智能-数据挖掘</title>
+    <link rel="stylesheet" href="../../bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../../static/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../static/css/common/reset.css">
+    <link rel="stylesheet" href="../../static/css/common/nav.css">
+    <link rel="stylesheet" href="../../static/css/common/foot.css">
+    <link rel="stylesheet" href="../../static/css/view/solution/solution.css">
+
+    <script src="https://cdn.bootcss.com/jquery/3.0.0/jquery.js"></script>
+    <script type="text/javascript" src="../../bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../static/js/common/nav.js"></script>
+    <script type="text/javascript" src="../../static/js/common/foot.js"></script>
+    <script type="text/javascript" src="../../static/js/common/public.js"></script>
+    <script type="text/javascript" src="../../static/js/views/solution/solution.js"></script>
+
+    <style>
+      h4{
+        font-weight: 700 !important;
+      }
+      p{
+        margin-bottom:15px;
+      }
+      .content_body h3{
+        margin-top:70px;
+      }
+      .youshi img{
+        display: block;
+        margin:60px auto;
+      }
+    </style>
+  </head>
+  <body>
+    <!--  导航 开始 -->
+    <div class="top"></div>
+    <!--  导航结束  -->
+
+    <!--  下拉导航  开始  -->
+    <nav class="nav_content"></nav>
+    <!--  下拉导航  开始  -->
+
+    <!--  数据挖掘 banner  开始  -->
+    <div class="banner">
+      <img src="../../static/images/itserverimg/itserverbanner1.png" alt="">
+      <div class="banner_details">
+        <h1>商业智能</h1>
+        <span>广亿多媒体信息发布平台主要针对高端酒店、商场超市、医疗行业、连锁机构、会展场馆、企业楼宇、交通枢纽、金融</span>
+        <span>及电信营业厅等用户需求定制开发的内容丰富的信息显示平台和稳定成熟的多媒体数字信息发布系统</span>
+      </div>
+    </div>
+    <!--  数据挖掘 banner  结束  -->
+
+    <!--  数据挖掘  开始  -->
+    <div class="container content_body">
+      <div class="company_profile">
+        <div class="content_title"></div>
+      </div>
+      <div class="second_content">
+        <!-- 介绍 -->
+        <div class="jieshao"></div>
+
+        <!-- 数据挖掘常用方法 -->
+        <div class="data_fangfa"></div>
+
+        <!-- 数据挖掘的过程 -->
+        <div class="data_guochen"></div>
+
+        <!-- 数据挖掘的功能 -->
+        <div class="data_gongneng"></div>
+
+      </div>
+    </div>
+    <!--  数据挖掘  开始  -->
+
+    <!--  底部内容 开始  -->
+    <footer class="footer_content"></footer>
+
+  </body>
+
+  <script type="text/javascript">
+    $(function(){
+
+      var dataFirst = datas[0].first     //页面标题
+      var dataSecond = datas[1].second   //介绍
+      var dataThird = datas[2].third     //数据挖掘常用方法
+      var dataFourth = datas[3].fourth   //数据挖掘的过程
+      var dataFifth = datas[4].fifth     //数据挖掘的功能
+
+      // 页面标题块内容
+      $(".content_title").html(
+        '<h2 class="fl">'+dataFirst.title+'</h2>'+
+        '<hr class="title_hr fr" style="width:79%;">'
+      );
+
+      // 介绍
+      $.each(dataSecond,function(i,v){
+        $(".jieshao").append(
+          '<h3>'+this.title+'</h3>'+'<p style="margin-bottom:15px;text-indent:2em;">'+this.text+'</p>'
+        );
+      });
+      // 介绍  结束
+
+
+      //数据挖掘常用方法
+      $.each(dataThird,function(i,v){
+        $(".data_fangfa").append('<h3>'+this.title+'</h3>'+'<div class="data_fangfa_detail"></div>'+'<p>'+this.text+'</p>');
+
+        $.each(v.contents,function(j,vle){
+          $(".data_fangfa_detail").append(
+            '<h4>'+vle.contentsTitle+'</h4>'+'<p>'+vle.contentsText+'</p>'
+          );
+        });
+
+      });
+      //数据挖掘常用方法  结束
+
+
+      //数据挖掘的过程
+      $.each(dataFourth,function(i,v){
+        $(".data_guochen").append('<h3>'+this.title+'</h3>'+'<img style="margin:40px 0;" src="'+this.url+'" />');
+      });
+      //数据挖掘的过程  结束
+
+
+      //数据挖掘的功能
+      $.each(dataFifth,function(i,v){
+        $(".data_gongneng").append('<h3>'+this.title+'</h3>'+'<div class="data_gongneng_detail"></div>'+'<p>'+this.text+'</p>');
+
+        $.each(v.contents,function(j,vle){
+          $(".data_gongneng_detail").append(
+            '<h4>'+vle.contentsTitle+'</h4>'+'<p>'+vle.contentsText+'</p>'
+          );
+        });
+
+      });
+      //数据挖掘的功能  结束
+      
+
+    });
+
+    var datas = [
+      {"first":
+        {"title":"数据仓库（EDW)","text":null}
+      },
+      {"second":[
+        {"title":"介绍",
+         "url":null,
+         "text":"数据挖掘（Data Mining，DM）又称数据库中的知识发现（Knowledge Discover in Database，KDD），是目前人工智能和数据库领域研究的热点问题，所谓数据挖掘是指从数据库的大量数据中揭示出隐含的、先前未知的并有潜在价值的信息的非平凡过程。数据挖掘是一种决策支持过程，它主要基于人工智能、机器学习、模式识别、统计学、数据库、可视化技术等，高度自动化地分析企业的数据，做出归纳性的推理，从中挖掘出潜在的模式，帮助决策者调整市场策略，减少风险，做出正确的决策。"
+        }
+      ]},
+      {"third":[
+        {"title":"数据挖掘常用的方法",
+         "url":null,
+         "text":"利用数据挖掘进行数据分析常用的方法主要有分类、回归分析、聚类、关联规则、特征、变化和偏差分析、Web页挖掘等，它们分别从不同的角度对数据进行挖掘。",
+         "contents":[
+          {"contentsTitle":"分类",
+           "contentsText":"分类是找出数据库中一组数据对象的共同特点并按照分类模式将其划分为不同的类，其目的是通过分类模型，将数据库中的数据项映射到某个给定的类别。它可以应用到客户的分类、客户的属性和特征分析、客户满意度分析、客户的购买趋势预测等，如一个汽车零售商将客户按照对汽车的喜好划分成不同的类，这样营销人员就可以将新型汽车的广告手册直接邮寄到有这种喜好的客户手中，从而大大增加了商业机会。",
+          },
+          {"contentsTitle":"回归分析",
+           "contentsText":"回归分析方法反映的是事务数据库中属性值在时间上的特征，产生一个将数据项映射到一个实值预测变量的函数，发现变量或属性间的依赖关系，其主要研究问题包括数据序列的趋势特征、数据序列的预测以及数据间的相关关系等。它可以应用到市场营销的各个方面，如客户寻求、保持和预防客户流失活动、产品生命周期分析、销售趋势预测及有针对性的促销活动等。",
+          },
+          {"contentsTitle":"聚类",
+           "contentsText":"聚类分析是把一组数据按照相似性和差异性分为几个类别，其目的是使得属于同一类别的数据间的相似性尽可能大，不同类别中的数据间的相似性尽可能小。它可以应用到客户群体的分类、客户背景分析、客户购买趋势预测、市场的细分等。",
+          },
+          {"contentsTitle":"特征",
+           "contentsText":"特征分析是从数据库中的一组数据中提取出关于这些数据的特征式，这些特征式表达了该数据集的总体特征。如营销人员通过对客户流失因素的特征提取，可以得到导致客户流失的一系列原因和主要特征，利用这些特征可以有效地预防客户的流失。",
+          },
+          {"contentsTitle":"变化和偏差分析",
+           "contentsText":"偏差包括很大一类潜在有趣的知识，如分类中的反常实例，模式的例外，观察结果对期望的偏差等，其目的是寻找观察结果与参照量之间有意义的差别。在企业危机管理及其预警中，管理者更感兴趣的是那些意外规则。意外规则的挖掘可以应用到各种异常信息的发现、分析、识别、评价和预警等方面。",
+          },
+          {"contentsTitle":"Web页挖掘",
+           "contentsText":"随着Internet的迅速发展及Web 的全球普及， 使得Web上的信息量无比丰富，通过对Web的挖掘，可以利用Web 的海量数据进行分析，收集政治、经济、政策、科技、金融、各种市场、竞争对手、供求信息、客户等有关的信息，集中精力分析和处理那些对企业有重大或潜在重大影响的外部环境信息和内部经营信息，并根据分析结果找出企业管理过程中出现的各种问题和可能引起危机的先兆，对这些信息进行分析和处理，以便识别、分析、评价和管理危机。",
+          }
+        ]}
+      ]},
+      {"fourth":[
+        {"title":"数据挖掘的过程",
+         "url":"../../static/images/solution/business/business02.png",
+         "text":null
+        }
+      ]},
+      {"fifth":[
+        {"title":"数据挖掘的功能",
+         "url":null,
+         "text":"数据挖掘通过预测未来趋势及行为，做出前摄的、基于知识的决策。数据挖掘的目标是从数据库中发现隐含的、有意义的知识，主要有以下五类功能。",
+         "contents":[
+          {"contentsTitle":"自动预测趋势和行为",
+           "contentsText":"数据关联是数据库中存在的一类重要的可被发现的知识。若两个或多个变量的取值之间存在某种规律性，就称为关联。关联可分为简单关联、时序关联、因果关联。关联分析的目的是找出数据库中隐藏的关联网。有时并不知道数据库中数据的关联函数，即使知道也是不确定的，因此关联分析生成的规则带有可信度。",
+          },
+          {"contentsTitle":"关联分析",
+           "contentsText":"数据挖掘自动在大型数据库中寻找预测性信息，以往需要进行大量手工分析的问题如今可以迅速直接由数据本身得出结论。一个典型的例子是市场预测问题，数据挖掘使用过去有关促销的数据来寻找未来投资中回报最大的用户，其它可预测的问题包括预报破产以及认定对指定事件最可能作出反应的群体。",
+          },
+          {"contentsTitle":"聚类",
+           "contentsText":"数据库中的记录可被化分为一系列有意义的子集，即聚类。聚类增强了人们对客观现实的认识，是概念描述和偏差分析的先决条件。聚类技术主要包括传统的模式识别方法和数学分类学。80年代初，Mchalski提出了概念聚类技术牞其要点是，在划分对象时不仅考虑对象之间的距离，还要求划分出的类具有某种内涵描述，从而避免了传统技术的某些片面性。",
+          },
+          {"contentsTitle":"概念描述",
+           "contentsText":"概念描述就是对某类对象的内涵进行描述，并概括这类对象的有关特征。概念描述分为特征性描述和区别性描述，前者描述某类对象的共同特征，后者描述不同类对象之间的区别。生成一个类的特征性描述只涉及该类对象中所有对象的共性。生成区别性描述的方法很多，如决策树方法、遗传算法等。",
+          },
+          {"contentsTitle":"偏差检测",
+           "contentsText":"数据库中的数据常有一些异常记录，从数据库中检测这些偏差很有意义。偏差包括很多潜在的知识，如分类中的反常实例、不满足规则的特例、观测结果与模型预测值的偏差、量值随时间的变化等。偏差检测的基本方法是，寻找观测结果与参照值之间有意义的差别。",
+          }
+        ]}
+      ]}
+    ]
+  </script>
+</html>
