@@ -96,28 +96,6 @@
 /*轮播区域*/
 #section0 {
   position: relative;
-  // .carousel-control{
-  //   position: absolute;
-  //   top:0;
-  //   height: inherit;
-  //   display: inline-block;
-  //   .pre_left,
-  //   .pre_right{
-  //     position: absolute;
-  //     top: 50%;
-  //     z-index: 999;
-  //     margin-top: -100px;
-  //     display: inline-block;
-  //     width: 100px;
-  //     height: 200px;
-  //   }
-  //   .pre_left {
-  //     left: 100px;
-  //   }
-  //   .pre_right {
-  //     right: 100px;
-  //   }
-  // }
   .icon_li{
     width:60px;
     height:10px;
@@ -338,7 +316,7 @@
         a {
           position: absolute;
           bottom: 5px;
-          right: 7px;
+          right: 45px;
           color: #399bff;
         }
       }

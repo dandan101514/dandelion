@@ -15,7 +15,7 @@
 @mixin secondTitle{
   color:#444444;
   font-size: 24px;
-  font-weight: 600;
+  // font-weight: 600;
   padding-bottom: 60px;
 }
 /*   四级标题 h4   */
@@ -63,7 +63,7 @@ $SIXTY:60px;  //二级标题距离内容的 marginbottom
     }
     span{
       display: block;
-      font-size: 20px;
+      font-size: 16px;
       color:#fff;
       padding-top: 15px;
     }
@@ -81,7 +81,7 @@ $SIXTY:60px;  //二级标题距离内容的 marginbottom
     min-width:7%;
   }
   .title_hr{
-    height:2px;
+    height:1px;
     background:$lineColor;
     width: 93%;
     margin: 0;

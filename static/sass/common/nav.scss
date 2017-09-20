@@ -20,7 +20,7 @@
       font-weight: 700;
       a {
         display: inline-block;
-        width: 75px;
+        width: 108px;
         height: 60px;
         background: url("../../images/logo.png") center center no-repeat;
         position: relative;
@@ -30,19 +30,19 @@
     .nav {
       float: left;
       height: 100px;
+      max-width:1200px;
       line-height: 100px;
-      margin-left: 40px;
       li {
         display: inline-block;
         min-width: 105px;
-        padding: 0 32px;
+        padding-left: 80px;
         a {
           display: inline-block;
           height: 40px;
           line-height: 35px;
           font-size: 16px;
           font-weight: 700;
-          padding: 0 20px !important;
+          padding: 0 32px;
           background: none !important;
         }
       }
@@ -80,6 +80,10 @@ div{
   }
 }
 .click_third_nav{
+  margin: 20px 0;
+  &:first-child{
+    margin-top:0;
+  }
   &:nth-child(1) a{
     color:#399bff !important;
   }
@@ -137,12 +141,15 @@ nav{
     width:29.68%;
     .nav_third{
       float: left;
-      width: 45%;
+      width: 48%;
+      // min-width: 140px;
+      // background:red;
       .nav_third_lists{
         width: 100%;
         height: 400px;
-        text-align: center;
+        text-align: left;
         padding-top: 40px;
+        padding-left:15px;
         li{
           line-height: 36px;
           a{
@@ -155,10 +162,12 @@ nav{
     }
     .nav_details{
       float: right;
-      width: 55%;
+      width: 52%;
+      // width:380px;
+      // background:green;
       height: inherit;
       overflow:hidden;
-      padding:40px 20px 0 40px;
+      padding:40px 0 0 20px;
 
       h3{
         font-size: 18px;

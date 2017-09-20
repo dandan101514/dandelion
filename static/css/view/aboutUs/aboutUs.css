@@ -26,7 +26,7 @@
       color: white; }
     .banner .banner_details span {
       display: block;
-      font-size: 20px;
+      font-size: 16px;
       color: #fff;
       padding-top: 15px; }
 
@@ -41,7 +41,7 @@
     font-weight: 600;
     min-width: 7%; }
   .content_title .title_hr {
-    height: 2px;
+    height: 1px;
     background: #cfcfcf;
     width: 93%;
     margin: 0;
@@ -56,7 +56,6 @@
 .content_body h3 {
   color: #444444;
   font-size: 24px;
-  font-weight: 600;
   padding-bottom: 60px; }
 .content_body h4 {
   color: #444444;
@@ -73,9 +72,12 @@
   margin-right: 30px; }
   .about_nav_left ul {
     width: inherit;
-    height: auto; }
+    height: auto;
+    border-left: 1px solid #ccc; }
     .about_nav_left ul .lists_li {
       margin-bottom: 20px; }
+      .about_nav_left ul .lists_li:hover a {
+        color: #399bff; }
       .about_nav_left ul .lists_li a {
         display: block;
         width: inherit;
@@ -154,5 +156,24 @@
 
 .content_lists:nth-child(4) .content_img {
   text-align: right; }
+
+.list_icon img {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  transition: transform 1s ease-out;
+  -ms-transition: -ms-transform 1ss ease-out;
+  -moz-transition: -moz-transform 1s ease-out;
+  -o-transition: -o-transform 1s ease-out;
+  -webkit-transition: -webkit-transform 1s ease-out;
+  transform: rotate(0); }
+
+.list_icon:hover img {
+  transition: transform 1s ease-out;
+  -ms-transition: -ms-transform 1s ease-out;
+  -moz-transition: -moz-transform 1s ease-out;
+  -o-transition: -o-transform 1s ease-out;
+  -webkit-transition: -webkit-transform 1s ease-out;
+  transform: rotate(360deg); }
 
 /*# sourceMappingURL=aboutUs.css.map */

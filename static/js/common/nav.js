@@ -1,9 +1,9 @@
 $(function(){
   // 一级菜单项
   var menu = '<div class="menu">'+
-                '<h1 class="logo cl">'+'<a href="javascript:;">'+'</a>'+'上海广亿信息技术有限公司'+'</h1>'+
+                '<h1 class="logo cl">'+'<a style="cursor:default;" href="javascript:;">'+'</a>'+'上海广亿信息技术有限公司'+'</h1>'+
                 '<ul class="nav navAll">'+'</ul>'+
-                '<span class="change_language">'+'English'+'</span>'+
+                // '<span class="change_language">'+'English'+'</span>'+
              '</div>'
   $(".top").html(menu)
 
@@ -98,8 +98,25 @@ $(function(){
 
   $(".nav_third_lists").css({"position":"relative","left":"-250px","z-index":"-2"})
 
+  if(window.screen.width <= 1600){
+    $(".menu").css("paddingLeft","20px")
+    $(".navAll .navlis").css("paddingLeft","60px")
+    $(".footer_contents .contact_us").css("height","37em")
+  }
+  if(window.screen.width <= 1440){
+    $(".menu").css("paddingLeft","30px")
+    $(".navAll .navlis").css("paddingLeft","30px")
+    $(".footer_contents .contact_us").css("height","37em")
+  }
+  if(window.screen.width <1200){
+    $(".menu").css("paddingLeft","10px")
+    $(".navAll .navlis").css("paddingLeft","25px")
+    $(".navAll .navlis .navlis_text").css("padding","0 15px")
+  }
+
   // 一级导航的hover事件
   $(".navlis").hover(function(k){
+    // sss()
     k = $(this).index()
     if(k == 0 || k == 4 || k == 5){
       $(".nav_content").hide();
@@ -165,7 +182,7 @@ var menus = [{
       {"id":"2","secondtext":"技术服务","detailurl":"jishufuwu.jpg"},
       {"id":"3","secondtext":"软件开发","detailurl":"ruanjiankaifa.jpg"},
       {"id":"4","secondtext":"服务特点","detailurl":"fuwutedian.jpg"},
-      {"id":"5","secondtext":"核心特点","detailurl":"hexintedian.jpg"}
+      {"id":"5","secondtext":"核心能力","detailurl":"hexintedian.jpg"}
     ],
     "thirdNav":[
       {"thirdtext":[
@@ -191,7 +208,7 @@ var menus = [{
       {"title":"技术服务","text":"企业应用系统运维的难度和压力也在随之增加。广亿提供客户化应用系统设计、开发服务，并在预算范围内按时按质交付项目。我们能够帮助客户确定对应用系统或产品的具体需求，并管理和维护其整个生命周期。"},
       {"title":"软件开发","text":"1. 金融银行业决策分析管理系统 2. 保险业数据挖掘分析系统 3. 电信业增值业务管理软件"},
       {"title":"服务特点","text":"广亿咨询为客户提供的是涵盖企业运营、绩效考核和业绩提升的综合性整体解决方案，从而实现客户资源的最优化配置和效益的最大化提升。"},
-      {"title":"核心特点","text":"一个可执行的外包策略的关键因素之一是确保和客户业务发展目标保持一致，另一个关键因素是需要强有力的治理机制来确保策略的成功执行。一旦确定策略，广亿将与您携手构建为您量身定制的治理和沟通模式。"}
+      {"title":"核心能力","text":"一个可执行的外包策略的关键因素之一是确保和客户业务发展目标保持一致，另一个关键因素是需要强有力的治理机制来确保策略的成功执行。一旦确定策略，广亿将与您携手构建为您量身定制的治理和沟通模式。"}
     ]}
 },
   {
@@ -250,7 +267,7 @@ var menus = [{
         {"Id":"templates/solution/securities.insurance001","detailstexts":"财险核心系统解决方案"},
         {"Id":"templates/solution/securities.insurance002","detailstexts":"资产管理系统解决方案"},
         {"Id":"templates/solution/securities.insurance003","detailstexts":"保险监管系统解决方案"},
-        {"Id":"templates/solution/securities.insurance004","detailstexts":"保险微信营销服务平台解决方案"}
+        {"Id":"templates/solution/securities.insurance004","detailstexts":"微信营销服务平台解决方案"}
       ]},
       {"thirdtext":[
         {"Id":"templates/solution/mobile.internet001","detailstexts":"移动医疗解决方案"},

@@ -8,8 +8,12 @@
   ul{
     width:inherit;
     height: auto;
+    border-left: 1px solid #ccc;
     .lists_li{
       margin-bottom:20px;
+      &:hover a{
+        color:#399bff;
+      }
       a{
         display: block;
         width:inherit;
@@ -121,4 +125,26 @@
   .content_img{
     text-align: right;
   }
+}
+
+// 竞争优势
+.list_icon img {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  transition: transform 1s ease-out;
+  -ms-transition: -ms-transform 1ss ease-out;
+  -moz-transition: -moz-transform 1s ease-out;
+  -o-transition: -o-transform 1s ease-out;
+  -webkit-transition: -webkit-transform 1s ease-out;
+  transform: rotate(0);
+  
+}
+.list_icon:hover img{
+  transition: transform 1s ease-out;
+  -ms-transition: -ms-transform 1s ease-out;
+  -moz-transition: -moz-transform 1s ease-out;
+  -o-transition: -o-transform 1s ease-out;
+  -webkit-transition: -webkit-transform 1s ease-out;
+  transform: rotate(360deg);
 }
