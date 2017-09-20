@@ -23,9 +23,11 @@
     <script type="text/javascript" src="../../static/js/views/solution/solution.js"></script>
 
     <style type="text/css">
-      
+      .lists_core{width:225px;height:265px;border:1px solid #ccc;margin-right:16px;padding:25px 12px;overflow:hidden;cursor: default}
+      .lists_core:hover{ box-shadow: 0 0 5px #ccc;}
     </style>
   </head>
+  
   <body>
     <!--  导航 开始 -->
     <div class="top"></div>
@@ -107,13 +109,15 @@
 
           $.each(v.content,function(k,con){
               $(".content_lists").eq(i).find("ul").append(
-                  '<li class="fl lists_core" style="width:225px;height:265px;border:1px solid #ccc;box-shadow:2px 2px 5px #ccc;margin-right:16px;padding:25px 12px;overflow:hidden;">'+
+                  '<li class="fl lists_core">'+
                     '<img src="'+con.conurl+'" />'+
                     '<h4 style="margin-top:15px;">'+con.contitle+'</h4>'+
                     '<p>'+con.context+'</p>'+
                   '</li>'
               );
           });
+
+          
           
         });
         
